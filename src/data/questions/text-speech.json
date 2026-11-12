@@ -1,0 +1,796 @@
+[
+  {
+    "id": "AI901-066",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A lightweight application must label written customer feedback as positive, negative, or neutral. Which capability should it use?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Speech recognition"
+      },
+      {
+        "id": "B",
+        "text": "Named entity recognition"
+      },
+      {
+        "id": "C",
+        "text": "Sentiment analysis"
+      },
+      {
+        "id": "D",
+        "text": "Image generation"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Sentiment analysis evaluates expressed opinion. Entity recognition identifies entities such as people and organizations; it does not classify the overall opinion.",
+    "learningObjective": "Build a lightweight application that includes text analysis",
+    "tags": [
+      "text-&-speech",
+      "text-analysis"
+    ],
+    "optionExplanations": {
+      "A": "This converts spoken audio into text; sentiment analysis evaluates expressed opinion.",
+      "B": "This identifies named people, organizations, locations, and other entities in text; sentiment analysis evaluates expressed opinion.",
+      "C": "Sentiment analysis evaluates expressed opinion.",
+      "D": "This creates new visual content from a prompt; sentiment analysis evaluates expressed opinion."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-067",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A lightweight app must identify organisations mentioned in support messages. Which capability should it include?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Video extraction"
+      },
+      {
+        "id": "B",
+        "text": "Entity detection"
+      },
+      {
+        "id": "C",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "D",
+        "text": "Image generation"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Entity detection is a text-analysis technique.",
+    "learningObjective": "Build a lightweight application that includes text analysis",
+    "tags": [
+      "text-&-speech",
+      "text-analysis"
+    ],
+    "optionExplanations": {
+      "A": "This analyzes recorded media rather than identifying organizations in written messages; entity detection is a text-analysis technique.",
+      "B": "Entity detection is a text-analysis technique.",
+      "C": "This converts text into spoken audio; entity detection is a text-analysis technique.",
+      "D": "This creates new visual content from a prompt; entity detection is a text-analysis technique."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-068",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A lightweight app must create concise versions of long text passages. Which capability should it include?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Summarisation"
+      },
+      {
+        "id": "B",
+        "text": "Speech recognition"
+      },
+      {
+        "id": "C",
+        "text": "Image generation"
+      },
+      {
+        "id": "D",
+        "text": "Object detection"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Summarisation is a text-analysis technique.",
+    "learningObjective": "Build a lightweight application that includes text analysis",
+    "tags": [
+      "text-&-speech",
+      "text-analysis"
+    ],
+    "optionExplanations": {
+      "A": "Summarisation is a text-analysis technique.",
+      "B": "This converts spoken audio into text; summarisation is a text-analysis technique.",
+      "C": "This creates new visual content from a prompt; summarisation is a text-analysis technique.",
+      "D": "This locates individual objects and can return their bounding boxes; summarisation is a text-analysis technique."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-069",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Multimodal speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A client sends a spoken request directly to a deployed multimodal model. What must its model request contain?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Only the Speech resource display name"
+      },
+      {
+        "id": "B",
+        "text": "A text embedding of the audio file name"
+      },
+      {
+        "id": "C",
+        "text": "A generated image in place of the recording"
+      },
+      {
+        "id": "D",
+        "text": "Audio input in a format supported by the deployed model"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Direct spoken-prompt handling requires an audio-capable deployment and audio input supplied in a supported request format.",
+    "learningObjective": "Respond to spoken prompts by using a deployed multimodal model",
+    "tags": [
+      "text-&-speech",
+      "multimodal-speech"
+    ],
+    "optionExplanations": {
+      "A": "This identifies or labels a deployment but does not provide the required model capability by itself; direct spoken-prompt handling requires an audio-capable deployment and audio input supplied in a supported request format.",
+      "B": "This represents content as numeric vectors for semantic similarity comparisons; direct spoken-prompt handling requires an audio-capable deployment and audio input supplied in a supported request format.",
+      "C": "A generated image does not transmit the recording's spoken content; the request must include the supported audio input.",
+      "D": "Direct spoken-prompt handling requires an audio-capable deployment and audio input supplied in a supported request format."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/audio-completions-quickstart"
+    ]
+  },
+  {
+    "id": "AI901-070",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Azure Speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A Python utility must convert microphone audio to text with Azure Speech. Which SDK component is appropriate?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A sentiment analyzer"
+      },
+      {
+        "id": "B",
+        "text": "SpeechRecognizer"
+      },
+      {
+        "id": "C",
+        "text": "SpeechSynthesizer"
+      },
+      {
+        "id": "D",
+        "text": "An image-generation deployment"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "SpeechRecognizer performs speech-to-text; SpeechSynthesizer converts text into spoken audio.",
+    "learningObjective": "Build a lightweight application by using Azure Speech in Foundry Tools",
+    "tags": [
+      "text-&-speech",
+      "azure-speech"
+    ],
+    "optionExplanations": {
+      "A": "This classifies the opinion expressed in text; speechRecognizer performs speech-to-text; SpeechSynthesizer converts text into spoken audio.",
+      "B": "SpeechRecognizer performs speech-to-text; SpeechSynthesizer converts text into spoken audio.",
+      "C": "This converts text into spoken audio; SpeechRecognizer converts microphone speech into text; speechRecognizer performs speech-to-text; SpeechSynthesizer converts text into spoken audio.",
+      "D": "This creates new visual content from a prompt; speechRecognizer performs speech-to-text; SpeechSynthesizer converts text into spoken audio."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition"
+    ]
+  },
+  {
+    "id": "AI901-071",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Azure Speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A service processes an archive of recorded customer calls rather than listening to a live microphone. Which Azure Speech approach fits this workflow?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Create a new image from each audio file"
+      },
+      {
+        "id": "B",
+        "text": "Submit the stored audio for batch transcription and retrieve results asynchronously"
+      },
+      {
+        "id": "C",
+        "text": "Use text-to-speech to turn calls into audio"
+      },
+      {
+        "id": "D",
+        "text": "Classify each call as an image"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Azure Speech supports asynchronous batch transcription for stored audio files, while real-time recognition is intended for streaming or live input.",
+    "learningObjective": "Build a lightweight application by using Azure Speech in Foundry Tools",
+    "tags": [
+      "text-&-speech",
+      "azure-speech"
+    ],
+    "optionExplanations": {
+      "A": "This creates new visual content from a prompt; azure Speech supports asynchronous batch transcription for stored audio files, while real-time recognition is intended for streaming or live input.",
+      "B": "Azure Speech supports asynchronous batch transcription for stored audio files, while real-time recognition is intended for streaming or live input.",
+      "C": "This converts text into spoken audio; azure Speech supports asynchronous batch transcription for stored audio files, while real-time recognition is intended for streaming or live input.",
+      "D": "This assigns an image-level category rather than locating individual objects; azure Speech supports asynchronous batch transcription for stored audio files, while real-time recognition is intended for streaming or live input."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition"
+    ]
+  },
+  {
+    "id": "AI901-072",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Text analysis",
+    "questionType": "multiple_choice",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Which TWO capabilities belong in a lightweight text-analysis app?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sentiment analysis"
+      },
+      {
+        "id": "B",
+        "text": "Entity detection"
+      },
+      {
+        "id": "C",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "D",
+        "text": "Image generation"
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "B"
+    ],
+    "explanation": "Sentiment analysis evaluates opinion in text, and entity recognition detects named entities. Speech synthesis produces audio; image generation produces visual content.",
+    "learningObjective": "Build a lightweight application that includes text analysis",
+    "tags": [
+      "text-&-speech",
+      "text-analysis"
+    ],
+    "optionExplanations": {
+      "A": "Sentiment analysis evaluates opinion in text, and entity recognition detects named entities.",
+      "B": "Sentiment analysis evaluates opinion in text, and entity recognition detects named entities.",
+      "C": "This converts text into spoken audio; sentiment analysis evaluates opinion in text, and entity recognition detects named entities.",
+      "D": "This creates new visual content from a prompt; sentiment analysis evaluates opinion in text, and entity recognition detects named entities."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-073",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Capabilities",
+    "questionType": "matching",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Match the requirement to the capability.",
+    "items": [
+      {
+        "id": "1",
+        "text": "Find sentiment in text"
+      },
+      {
+        "id": "2",
+        "text": "Accept and process spoken prompts with a deployed multimodal model"
+      },
+      {
+        "id": "3",
+        "text": "Build speech processing with the service named in Foundry Tools"
+      }
+    ],
+    "targets": [
+      {
+        "id": "A",
+        "text": "Text analysis"
+      },
+      {
+        "id": "B",
+        "text": "Multimodal spoken prompt"
+      },
+      {
+        "id": "C",
+        "text": "Azure Speech"
+      }
+    ],
+    "correctAnswer": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explanation": "The requirements map to text analysis, multimodal spoken prompts and Azure Speech.",
+    "learningObjective": "Implement AI solutions for text and speech by using Foundry",
+    "tags": [
+      "text-&-speech"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition",
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language",
+      "https://learn.microsoft.com/azure/foundry/openai/audio-completions-quickstart"
+    ]
+  },
+  {
+    "id": "AI901-074",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A support application should identify important terms in written feedback. Which implementation area should form the primary part of the application?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "B",
+        "text": "Sentiment analysis"
+      },
+      {
+        "id": "C",
+        "text": "Text analysis"
+      },
+      {
+        "id": "D",
+        "text": "Image generation"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Keyword extraction is a text-analysis technique, so this belongs in text analysis.",
+    "learningObjective": "Build a lightweight application that includes text analysis",
+    "tags": [
+      "text-&-speech",
+      "text-analysis"
+    ],
+    "optionExplanations": {
+      "A": "This converts text into spoken audio; keyword extraction is a text-analysis technique, so this belongs in text analysis.",
+      "B": "This classifies the opinion expressed in text; keyword extraction is a text-analysis technique, so this belongs in text analysis.",
+      "C": "Keyword extraction is a text-analysis technique, so this belongs in text analysis.",
+      "D": "This creates new visual content from a prompt; keyword extraction is a text-analysis technique, so this belongs in text analysis."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-075",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Multimodal speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Before building an app that responds to spoken prompts with a deployed multimodal model, what should you verify when selecting the deployment?",
+    "options": [
+      {
+        "id": "A",
+        "text": "It supports image input only"
+      },
+      {
+        "id": "B",
+        "text": "It supports direct audio input for a spoken user prompt"
+      },
+      {
+        "id": "C",
+        "text": "It has the longest catalog description"
+      },
+      {
+        "id": "D",
+        "text": "It exposes a text-to-speech voice list"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Model modalities and supported inference tasks are deployment-specific; verify that the chosen model supports audio input for the app’s spoken prompts.",
+    "learningObjective": "Respond to spoken prompts by using a deployed multimodal model",
+    "tags": [
+      "text-&-speech",
+      "multimodal-speech"
+    ],
+    "optionExplanations": {
+      "A": "This does not meet the stated requirement for direct audio input from spoken prompts; model modalities and supported inference tasks are deployment-specific; verify that the chosen model supports audio input for the app’s spoken prompts.",
+      "B": "Model modalities and supported inference tasks are deployment-specific; verify that the chosen model supports audio input for the app’s spoken prompts.",
+      "C": "This uses description length rather than verifying that the deployment supports the required audio modality; model modalities and supported inference tasks are deployment-specific; verify that the chosen model supports audio input for the app’s spoken prompts.",
+      "D": "A list of synthesis voices concerns audio output; it does not establish that the deployed model can accept spoken input."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/audio-completions-quickstart"
+    ]
+  },
+  {
+    "id": "AI901-076",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Azure Speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A backend needs a lightweight Azure Speech application. Which component handles speech audio communication and result parsing so application code can focus on its own logic?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The Azure Speech SDK"
+      },
+      {
+        "id": "B",
+        "text": "A Content Understanding document analyzer"
+      },
+      {
+        "id": "C",
+        "text": "An image-generation model"
+      },
+      {
+        "id": "D",
+        "text": "A text embedding index"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "The Azure Speech SDK provides client libraries for sending audio to the Speech service and receiving recognition or synthesis results.",
+    "learningObjective": "Build a lightweight application by using Azure Speech in Foundry Tools",
+    "tags": [
+      "text-&-speech",
+      "azure-speech"
+    ],
+    "optionExplanations": {
+      "A": "The Azure Speech SDK provides client libraries for sending audio to the Speech service and receiving recognition or synthesis results.",
+      "B": "This uses an analyzer and schema to turn supported unstructured content into structured fields; the Azure Speech SDK provides client libraries for sending audio to the Speech service and receiving recognition or synthesis results.",
+      "C": "This creates new visual content from a prompt; the Azure Speech SDK provides client libraries for sending audio to the Speech service and receiving recognition or synthesis results.",
+      "D": "This represents content as numeric vectors for semantic similarity comparisons; the Azure Speech SDK provides client libraries for sending audio to the Speech service and receiving recognition or synthesis results."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition"
+    ]
+  },
+  {
+    "id": "AI901-077",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A text-analysis app must identify the language in which feedback is written before further processing. Which capability should the implementation select as its primary mechanism?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "B",
+        "text": "Image classification"
+      },
+      {
+        "id": "C",
+        "text": "Object detection"
+      },
+      {
+        "id": "D",
+        "text": "Language detection"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Language detection identifies the language of supplied text and can be used before downstream text analysis.",
+    "learningObjective": "Build a lightweight application that includes text analysis",
+    "tags": [
+      "text-&-speech",
+      "text-analysis"
+    ],
+    "optionExplanations": {
+      "A": "This converts text into spoken audio; language detection identifies the language of supplied text and can be used before downstream text analysis.",
+      "B": "This assigns an image-level category rather than locating individual objects; language detection identifies the language of supplied text and can be used before downstream text analysis.",
+      "C": "This locates individual objects and can return their bounding boxes; language detection identifies the language of supplied text and can be used before downstream text analysis.",
+      "D": "Language detection identifies the language of supplied text and can be used before downstream text analysis."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-078",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Multimodal speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A user speaks to a deployed multimodal model and expects a spoken response. Which combination of capabilities is required?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Entity detection and image generation"
+      },
+      {
+        "id": "B",
+        "text": "Sentiment analysis"
+      },
+      {
+        "id": "C",
+        "text": "Audio input understanding and audio output generation"
+      },
+      {
+        "id": "D",
+        "text": "OCR and object detection"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "A spoken conversation requires the model or application to process audio input and produce audio output.",
+    "learningObjective": "Respond to spoken prompts by using a deployed multimodal model",
+    "tags": [
+      "text-&-speech",
+      "multimodal-speech"
+    ],
+    "optionExplanations": {
+      "A": "This creates new visual content from a prompt; a spoken conversation requires the model or application to process audio input and produce audio output.",
+      "B": "This classifies the opinion expressed in text; a spoken conversation requires the model or application to process audio input and produce audio output.",
+      "C": "A spoken conversation requires the model or application to process audio input and produce audio output.",
+      "D": "This locates individual objects and can return their bounding boxes; a spoken conversation requires the model or application to process audio input and produce audio output."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/audio-completions-quickstart"
+    ]
+  },
+  {
+    "id": "AI901-079",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Azure Speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A call-centre application needs a written transcript of recorded calls. Which Azure Speech capability should it use?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Image analysis"
+      },
+      {
+        "id": "B",
+        "text": "Speech to text"
+      },
+      {
+        "id": "C",
+        "text": "Text to speech"
+      },
+      {
+        "id": "D",
+        "text": "Audio playback"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Speech to text converts spoken audio into written text.",
+    "learningObjective": "Build a lightweight application by using Azure Speech in Foundry Tools",
+    "tags": [
+      "text-&-speech",
+      "azure-speech"
+    ],
+    "optionExplanations": {
+      "A": "This analyzes visual input rather than producing a written call transcript; speech to text converts spoken audio into written text.",
+      "B": "Speech to text converts spoken audio into written text.",
+      "C": "This converts text into spoken audio; speech to text converts spoken audio into written text.",
+      "D": "Audio playback lets a listener hear the recording; it does not generate a written transcript."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition"
+    ]
+  },
+  {
+    "id": "AI901-080",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Azure Speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An application must read generated text aloud to a user. Which Azure Speech capability should it use?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Text to speech"
+      },
+      {
+        "id": "B",
+        "text": "Speech to text"
+      },
+      {
+        "id": "C",
+        "text": "Key phrase extraction"
+      },
+      {
+        "id": "D",
+        "text": "Image captioning"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Text to speech synthesises spoken audio from text.",
+    "learningObjective": "Build a lightweight application by using Azure Speech in Foundry Tools",
+    "tags": [
+      "text-&-speech",
+      "azure-speech"
+    ],
+    "optionExplanations": {
+      "A": "Text to speech synthesises spoken audio from text.",
+      "B": "This converts spoken audio into text; text to speech synthesises spoken audio from text.",
+      "C": "This extracts important terms or phrases from text; text to speech synthesises spoken audio from text.",
+      "D": "This describes an image rather than converting generated text into spoken audio; text to speech synthesises spoken audio from text."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition"
+    ]
+  },
+  {
+    "id": "AI901-114",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A text-analysis app must return the most important phrases from each customer message. Which capability should it call?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Image generation"
+      },
+      {
+        "id": "B",
+        "text": "Object detection"
+      },
+      {
+        "id": "C",
+        "text": "Key phrase extraction"
+      },
+      {
+        "id": "D",
+        "text": "Speech synthesis"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Key phrase extraction identifies the main concepts or important phrases in text.",
+    "learningObjective": "Build a lightweight application that includes text analysis",
+    "tags": [
+      "text-&-speech",
+      "text-analysis",
+      "key-phrases"
+    ],
+    "optionExplanations": {
+      "A": "This creates new visual content from a prompt; key phrase extraction identifies the main concepts or important phrases in text.",
+      "B": "This locates individual objects and can return their bounding boxes; key phrase extraction identifies the main concepts or important phrases in text.",
+      "C": "Key phrase extraction identifies the main concepts or important phrases in text.",
+      "D": "This converts text into spoken audio; key phrase extraction identifies the main concepts or important phrases in text."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-115",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Azure Speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An Azure Speech SDK application transcribes audio spoken in Finnish, but its recognition language is configured for English. Which change most directly addresses the language mismatch?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Lower the text sentiment threshold"
+      },
+      {
+        "id": "B",
+        "text": "Set the speech-recognition language to the appropriate Finnish locale, such as fi-FI"
+      },
+      {
+        "id": "C",
+        "text": "Increase image resolution"
+      },
+      {
+        "id": "D",
+        "text": "Use an image-generation deployment"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Match recognition configuration to the language actually spoken. User nationality does not determine the language of an audio recording.",
+    "learningObjective": "Build a lightweight application by using Azure Speech in Foundry Tools",
+    "tags": [
+      "text-&-speech",
+      "azure-speech",
+      "locale"
+    ],
+    "optionExplanations": {
+      "A": "This classifies the opinion expressed in text; match recognition configuration to the language actually spoken.",
+      "B": "Match recognition configuration to the language actually spoken.",
+      "C": "Image resolution does not affect the recognition language used to transcribe spoken Finnish.",
+      "D": "This creates new visual content from a prompt; match recognition configuration to the language actually spoken."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition",
+      "https://learn.microsoft.com/azure/ai-services/speech-service/how-to-recognize-speech#change-the-source-language",
+      "https://learn.microsoft.com/azure/ai-services/speech-service/language-support"
+    ]
+  }
+]

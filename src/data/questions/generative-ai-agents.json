@@ -1,0 +1,1280 @@
+[
+  {
+    "id": "AI901-041",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You need to define overarching behavioural instructions for a generative AI assistant. Which artefact should you define to express this requirement most appropriately?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A user prompt"
+      },
+      {
+        "id": "B",
+        "text": "An image output"
+      },
+      {
+        "id": "C",
+        "text": "A speech transcript"
+      },
+      {
+        "id": "D",
+        "text": "A system prompt"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "A system prompt supplies overarching instructions and context. Persistence depends on how the application or agent stores and sends that prompt.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "generative-ai-&-agents",
+      "prompts"
+    ],
+    "optionExplanations": {
+      "A": "This carries the current user request or input; a system prompt supplies overarching instructions and context.",
+      "B": "This is media content, not an instruction that defines the assistant's behavior or the user's request; a system prompt supplies overarching instructions and context.",
+      "C": "A speech transcript is recognized input text, not an instruction defining the assistant's overall behavior.",
+      "D": "A system prompt supplies overarching instructions and context. Persistence depends on how the application or agent stores and sends that prompt."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering"
+    ]
+  },
+  {
+    "id": "AI901-042",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which prompt primarily contains the person’s current request?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Deployment name"
+      },
+      {
+        "id": "B",
+        "text": "Audio output"
+      },
+      {
+        "id": "C",
+        "text": "User prompt"
+      },
+      {
+        "id": "D",
+        "text": "A system prompt"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "The user prompt contains the user’s request or input.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "generative-ai-&-agents",
+      "prompts"
+    ],
+    "optionExplanations": {
+      "A": "This identifies or labels a deployment but does not provide the required model capability by itself; the user prompt contains the user’s request or input.",
+      "B": "This is media content, not an instruction that defines the assistant's behavior or the user's request; the user prompt contains the user’s request or input.",
+      "C": "The user prompt contains the user’s request or input.",
+      "D": "This sets general assistant behavior and instructions; the user prompt contains the user’s request or input."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering"
+    ]
+  },
+  {
+    "id": "AI901-043",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You want a chatbot to answer in a concise, professional tone by default. In which part of the interaction should this instruction primarily be expressed?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Model deployment name"
+      },
+      {
+        "id": "B",
+        "text": "System prompt"
+      },
+      {
+        "id": "C",
+        "text": "Every generated answer"
+      },
+      {
+        "id": "D",
+        "text": "Image input"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "A system prompt is the best place for default behavioural guidance. Because generative output is probabilistic, applications should still test and validate responses when strict enforcement is required.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "generative-ai-&-agents",
+      "prompts"
+    ],
+    "optionExplanations": {
+      "A": "This identifies or labels a deployment but does not provide the required model capability by itself; a system prompt is the best place for default behavioural guidance.",
+      "B": "A system prompt is the best place for default behavioural guidance. Because generative output is probabilistic, applications should still test and validate responses when strict enforcement is required.",
+      "C": "This is output content, not a persistent instruction for the assistant’s default behavior; a system prompt is the best place for default behavioural guidance.",
+      "D": "This is media content, not an instruction that defines the assistant's behavior or the user's request; a system prompt is the best place for default behavioural guidance."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering"
+    ]
+  },
+  {
+    "id": "AI901-044",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Model deployment",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You selected a chat model for a support app. Before adding client code, which sequence lets you verify prompts against an actual deployment?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Create a deployment for the selected model, then test prompts in the Foundry model playground"
+      },
+      {
+        "id": "B",
+        "text": "Save the catalog card and assume the model is callable without a deployment"
+      },
+      {
+        "id": "C",
+        "text": "Create a system prompt without deploying or testing a model"
+      },
+      {
+        "id": "D",
+        "text": "Build a Content Understanding schema for customer feedback"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Deploying the selected model makes it available for inference, and the Foundry playground lets you test prompts before writing application code.",
+    "learningObjective": "Deploy a model and interact with it in the Foundry portal",
+    "tags": [
+      "generative-ai-&-agents",
+      "model-deployment"
+    ],
+    "optionExplanations": {
+      "A": "Deploying the selected model makes it available for inference, and the Foundry playground lets you test prompts before writing application code.",
+      "B": "This describes a catalog entry but does not make an undeployed model callable; deploying the selected model makes it available for inference, and the Foundry playground lets you test prompts before writing application code.",
+      "C": "This sets general assistant behavior and instructions; deploying the selected model makes it available for inference, and the Foundry playground lets you test prompts before writing application code.",
+      "D": "This uses an analyzer and schema to turn supported unstructured content into structured fields; deploying the selected model makes it available for inference, and the Foundry playground lets you test prompts before writing application code."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models",
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/3-using-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-045",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Foundry SDK",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A lightweight Python chat client sends a user message through the Foundry SDK. Which returned value should it display as the generated answer?",
+    "options": [
+      {
+        "id": "A",
+        "text": "response.id"
+      },
+      {
+        "id": "B",
+        "text": "response.output_text"
+      },
+      {
+        "id": "C",
+        "text": "deployment_name"
+      },
+      {
+        "id": "D",
+        "text": "response.status"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "The Responses API result exposes generated text through output_text. The response ID and deployment name are metadata, not the answer content.",
+    "learningObjective": "Create a lightweight chat client application by using the Foundry SDK",
+    "tags": [
+      "generative-ai-&-agents",
+      "foundry-sdk"
+    ],
+    "optionExplanations": {
+      "A": "This identifies a response but does not contain its generated answer text; the Responses API result exposes generated text through output_text.",
+      "B": "The Responses API result exposes generated text through output_text.",
+      "C": "This identifies the model deployment rather than the response content; the Responses API result exposes generated text through output_text.",
+      "D": "This reports response state rather than the generated answer text; the Responses API result exposes generated text through output_text."
+    },
+    "code": "response = client.responses.create(\n    model=deployment_name,\n    input=user_message,\n)\nprint(response.output_text)",
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/foundry-models/how-to/generate-responses"
+    ]
+  },
+  {
+    "id": "AI901-046",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agents",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A team has configured an agent with a ticket-lookup tool. Before integrating it into a service, which test best checks the agent’s behavior?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Copy the agent instructions into every user prompt"
+      },
+      {
+        "id": "B",
+        "text": "Change the model display name and assume the tool is available"
+      },
+      {
+        "id": "C",
+        "text": "Run representative requests in the Foundry playground and inspect the response and tool use"
+      },
+      {
+        "id": "D",
+        "text": "Raise temperature without testing any example requests"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Testing representative requests in the Foundry playground lets the team check whether the configured agent responds appropriately and uses its tool as intended.",
+    "learningObjective": "Create and test a single-agent solution in the Foundry portal",
+    "tags": [
+      "generative-ai-&-agents",
+      "agents"
+    ],
+    "optionExplanations": {
+      "A": "Repeating agent instructions as a user message does not test whether the configured ticket-lookup tool is used correctly; use representative requests and inspect tool calls.",
+      "B": "Changing a model display name does not make the ticket-lookup tool available; test whether the configured agent invokes the tool in representative scenarios.",
+      "C": "Testing representative requests in the Foundry playground lets the team check whether the configured agent responds appropriately and uses its tool as intended.",
+      "D": "Increasing temperature can change response variability, but it does not verify whether the agent correctly calls the ticket-lookup tool."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview"
+    ]
+  },
+  {
+    "id": "AI901-047",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agent client",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A web application lets users submit requests to a saved Foundry agent and view its answers. Which responsibility belongs in the lightweight client?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Edit the deployed model weights in the browser"
+      },
+      {
+        "id": "B",
+        "text": "Collect the request, call the agent through a supported API, and present the returned response"
+      },
+      {
+        "id": "C",
+        "text": "Create a new model deployment for every user message"
+      },
+      {
+        "id": "D",
+        "text": "Send the agent’s system instructions as the deployment name"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "A lightweight client collects user input, invokes the remote agent through its API, and displays the returned result.",
+    "learningObjective": "Create a lightweight client application for an agent",
+    "tags": [
+      "generative-ai-&-agents",
+      "agent-client"
+    ],
+    "optionExplanations": {
+      "A": "This attempts to change model internals from a client; a lightweight client sends requests to a supported API; a lightweight client collects user input, invokes the remote agent through its API, and displays the returned result.",
+      "B": "A lightweight client collects user input, invokes the remote agent through its API, and displays the returned result.",
+      "C": "This makes a selected model available for inference; a lightweight client collects user input, invokes the remote agent through its API, and displays the returned result.",
+      "D": "Instructions belong in the supported instruction fields, not in the deployment-name argument used to select a deployment."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview"
+    ]
+  },
+  {
+    "id": "AI901-048",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which choice best separates system and user prompts?",
+    "options": [
+      {
+        "id": "A",
+        "text": "System prompts guide overall behaviour; user prompts provide the current request"
+      },
+      {
+        "id": "B",
+        "text": "System prompts contain images; user prompts deploy models"
+      },
+      {
+        "id": "C",
+        "text": "System prompts are audio; user prompts are video"
+      },
+      {
+        "id": "D",
+        "text": "They are always identical"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "System and user prompts serve different roles: overarching instructions versus the current request.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "generative-ai-&-agents",
+      "prompts"
+    ],
+    "optionExplanations": {
+      "A": "System and user prompts serve different roles: overarching instructions versus the current request.",
+      "B": "Prompt roles are not defined by image content, and a user prompt does not itself deploy a model; deployment is a separate operation.",
+      "C": "System and user are instruction/message roles, not names for audio and video modalities.",
+      "D": "This incorrectly assumes system and user prompts have the same role in every interaction; system and user prompts serve different roles: overarching instructions versus the current request."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering"
+    ]
+  },
+  {
+    "id": "AI901-049",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agents",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which solution is the best candidate for an agent?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A system prompt"
+      },
+      {
+        "id": "B",
+        "text": "A user prompt"
+      },
+      {
+        "id": "C",
+        "text": "A model deployment in the Foundry portal"
+      },
+      {
+        "id": "D",
+        "text": "A solution expected to carry out a task using its configured capabilities"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Agentic solutions are appropriate when an agent is expected to perform tasks.",
+    "learningObjective": "Create and test a single-agent solution in the Foundry portal",
+    "tags": [
+      "generative-ai-&-agents",
+      "agents"
+    ],
+    "optionExplanations": {
+      "A": "This sets general assistant behavior and instructions; agentic solutions are appropriate when an agent is expected to perform tasks.",
+      "B": "This carries the current user request or input; agentic solutions are appropriate when an agent is expected to perform tasks.",
+      "C": "A model deployment exposes an inference endpoint; it does not by itself define an agent's tools or action workflow.",
+      "D": "Agentic solutions are appropriate when an agent is expected to perform tasks."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview"
+    ]
+  },
+  {
+    "id": "AI901-050",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Model deployment",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You have deployed a chat model in Microsoft Foundry. Where can you interactively test prompts before writing application code?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The Azure subscription billing page"
+      },
+      {
+        "id": "B",
+        "text": "The Azure resource’s Access control (IAM) page"
+      },
+      {
+        "id": "C",
+        "text": "The model playground in the Foundry portal"
+      },
+      {
+        "id": "D",
+        "text": "The Azure subscription’s Activity log"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "The model playground lets you test prompts and generation settings against a deployed model.",
+    "learningObjective": "Deploy a model and interact with it in the Foundry portal",
+    "tags": [
+      "generative-ai-&-agents",
+      "model-deployment"
+    ],
+    "optionExplanations": {
+      "A": "This describes portal or resource metadata rather than the AI task or evaluation evidence; the model playground lets you test prompts and generation settings against a deployed model.",
+      "B": "This concerns protecting data, establishing identity, or controlling permission to use a resource; the model playground lets you test prompts and generation settings against a deployed model.",
+      "C": "The model playground lets you test prompts and generation settings against a deployed model.",
+      "D": "This describes portal or resource metadata rather than the AI task or evaluation evidence; the model playground lets you test prompts and generation settings against a deployed model."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models",
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/3-using-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-051",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "multiple_choice",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Which TWO statements correctly distinguish prompt roles?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A system prompt is an image-generation model"
+      },
+      {
+        "id": "B",
+        "text": "A system prompt can define overall assistant behaviour"
+      },
+      {
+        "id": "C",
+        "text": "A user prompt can contain the current user request"
+      },
+      {
+        "id": "D",
+        "text": "A user prompt deploys an Azure resource automatically"
+      }
+    ],
+    "correctAnswer": [
+      "B",
+      "C"
+    ],
+    "explanation": "System prompts guide behaviour and user prompts carry user requests.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "generative-ai-&-agents",
+      "prompts"
+    ],
+    "optionExplanations": {
+      "A": "A system prompt is instruction text, not an image-generation model.",
+      "B": "System prompts guide behaviour and user prompts carry user requests.",
+      "C": "System prompts guide behaviour and user prompts carry user requests.",
+      "D": "A user prompt supplies a request; resource deployment requires application/tool execution and appropriate permissions, not merely a prompt role."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering"
+    ]
+  },
+  {
+    "id": "AI901-052",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Foundry workflow",
+    "questionType": "matching",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Match each implementation scenario to the appropriate Foundry task.",
+    "items": [
+      {
+        "id": "1",
+        "text": "A manager wants to try a configured agent with sample questions and inspect its responses before application integration."
+      },
+      {
+        "id": "2",
+        "text": "A developer needs a small program to send a prompt to a deployed chat model and display its answer."
+      },
+      {
+        "id": "3",
+        "text": "A service needs to invoke a saved Foundry agent from application code."
+      }
+    ],
+    "targets": [
+      {
+        "id": "A",
+        "text": "Single-agent solution in Foundry portal"
+      },
+      {
+        "id": "B",
+        "text": "Foundry SDK chat client"
+      },
+      {
+        "id": "C",
+        "text": "Agent client application"
+      }
+    ],
+    "correctAnswer": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explanation": "Use the Foundry portal playground to test an agent, the Foundry SDK for a model chat client, and an agent-capable client/API to invoke a saved agent.",
+    "learningObjective": "Implement generative AI apps and agents by using Foundry",
+    "tags": [
+      "generative-ai-&-agents"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview"
+    ]
+  },
+  {
+    "id": "AI901-053",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A user asks a new question during an existing chat. Which prompt type should carry that request?",
+    "options": [
+      {
+        "id": "A",
+        "text": "System prompt"
+      },
+      {
+        "id": "B",
+        "text": "Deployment option"
+      },
+      {
+        "id": "C",
+        "text": "Vision output"
+      },
+      {
+        "id": "D",
+        "text": "User prompt"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "The current request belongs in a user prompt.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "generative-ai-&-agents",
+      "prompts"
+    ],
+    "optionExplanations": {
+      "A": "This sets general assistant behavior and instructions; the current request belongs in a user prompt.",
+      "B": "This configures model availability rather than carrying a user’s current request; the current request belongs in a user prompt.",
+      "C": "This is generated content rather than the user’s current request; the current request belongs in a user prompt.",
+      "D": "The current request belongs in a user prompt."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering"
+    ]
+  },
+  {
+    "id": "AI901-054",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agents",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which Foundry task most directly checks an agent before you build a separate client?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Run OCR on a receipt"
+      },
+      {
+        "id": "B",
+        "text": "Synthesize an audio file"
+      },
+      {
+        "id": "C",
+        "text": "Create and test the single-agent solution in the Foundry portal"
+      },
+      {
+        "id": "D",
+        "text": "Generate an image"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "The objective explicitly includes creating and testing a single-agent solution in the portal.",
+    "learningObjective": "Create and test a single-agent solution in the Foundry portal",
+    "tags": [
+      "generative-ai-&-agents",
+      "agents"
+    ],
+    "optionExplanations": {
+      "A": "This reads text characters from an image but does not by itself map them to named business fields; the objective explicitly includes creating and testing a single-agent solution in the portal.",
+      "B": "This converts text into audio rather than extracting information from existing media; the objective explicitly includes creating and testing a single-agent solution in the portal.",
+      "C": "The objective explicitly includes creating and testing a single-agent solution in the portal.",
+      "D": "Image generation creates new visual content; it doesn't let you test an agent before building a client."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview"
+    ]
+  },
+  {
+    "id": "AI901-055",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Foundry SDK",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A developer is building a lightweight Python chat client for a deployed Foundry model. Which SDK approach provides a project client and a model-inference client?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Use Azure Speech’s SpeechRecognizer for model prompts"
+      },
+      {
+        "id": "B",
+        "text": "Connect with AIProjectClient and obtain its OpenAI-compatible client for Responses requests"
+      },
+      {
+        "id": "C",
+        "text": "Use an image-generation tool as the only model client"
+      },
+      {
+        "id": "D",
+        "text": "Use a Content Understanding analyzer as a chat endpoint"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "The Azure AI Projects SDK provides AIProjectClient for the project and an OpenAI-compatible client for model inference through the Responses API.",
+    "learningObjective": "Create a lightweight chat client application by using the Foundry SDK",
+    "tags": [
+      "generative-ai-&-agents",
+      "foundry-sdk"
+    ],
+    "optionExplanations": {
+      "A": "This recognizes spoken audio; it is not the project and inference client for sending model prompts; the Azure AI Projects SDK provides AIProjectClient for the project and an OpenAI-compatible client for model inference through the Responses API.",
+      "B": "The Azure AI Projects SDK provides AIProjectClient for the project and an OpenAI-compatible client for model inference through the Responses API.",
+      "C": "This creates new visual content from a prompt; the Azure AI Projects SDK provides AIProjectClient for the project and an OpenAI-compatible client for model inference through the Responses API.",
+      "D": "This uses an analyzer and schema to turn supported unstructured content into structured fields; the Azure AI Projects SDK provides AIProjectClient for the project and an OpenAI-compatible client for model inference through the Responses API."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/python/api/overview/azure/ai-projects-readme?view=azure-python"
+    ]
+  },
+  {
+    "id": "AI901-056",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agent client",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A developer invokes a saved Foundry agent through the current Responses API using an agent_reference. Which value identifies the saved agent in that reference?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The agent name in the reference's name property"
+      },
+      {
+        "id": "B",
+        "text": "The model catalog filter"
+      },
+      {
+        "id": "C",
+        "text": "The image aspect ratio"
+      },
+      {
+        "id": "D",
+        "text": "A speech-synthesis voice name"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "A current Responses API agent_reference identifies the saved agent by name and can optionally specify a version. This is distinct from classic assistant/thread/run identifiers.",
+    "learningObjective": "Create a lightweight client application for an agent",
+    "tags": [
+      "generative-ai-&-agents",
+      "agent-client"
+    ],
+    "optionExplanations": {
+      "A": "The reference's name property selects the saved agent; an optional version can select a particular agent version.",
+      "B": "A catalog filter narrows model discovery results; it does not identify a saved agent in a Responses request.",
+      "C": "Image aspect ratio describes image proportions, not the agent to invoke.",
+      "D": "A speech voice selects synthesized audio characteristics, not a saved agent."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/rest/api/microsoft-foundry/aiproject#components"
+    ]
+  },
+  {
+    "id": "AI901-057",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A model invents facts when answering questions about company policy. Which approach most directly grounds the response in approved information?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Increase temperature"
+      },
+      {
+        "id": "B",
+        "text": "Remove the system prompt"
+      },
+      {
+        "id": "C",
+        "text": "Increase maximum output tokens"
+      },
+      {
+        "id": "D",
+        "text": "Add relevant approved context to the prompt"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Providing relevant, trusted context helps ground a response. Higher temperature or token limits do not make the information more factual.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "generative-ai-&-agents",
+      "prompts"
+    ],
+    "optionExplanations": {
+      "A": "This affects generation variability, not the permitted response length; providing relevant, trusted context helps ground a response.",
+      "B": "Removing system instructions does not supply approved policy facts and can remove useful constraints on the answer.",
+      "C": "This caps the amount of generated output rather than changing sampling randomness; providing relevant, trusted context helps ground a response.",
+      "D": "Providing relevant, trusted context helps ground a response. Higher temperature or token limits do not make the information more factual."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering",
+      "https://learn.microsoft.com/azure/foundry/concepts/retrieval-augmented-generation"
+    ]
+  },
+  {
+    "id": "AI901-058",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agents",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Compared with a text-only, single-turn chatbot that has no tools or action loop, which capability makes a task-oriented agent suitable for carrying out external actions?",
+    "options": [
+      {
+        "id": "A",
+        "text": "An agent does not use a model"
+      },
+      {
+        "id": "B",
+        "text": "An agent requires image input for every request"
+      },
+      {
+        "id": "C",
+        "text": "An agent can select and use configured tools to take actions"
+      },
+      {
+        "id": "D",
+        "text": "A system prompt"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "An agent can orchestrate model decisions and configured tools to work toward a goal. Tool-capable model APIs can also be building blocks of an agent.",
+    "learningObjective": "Create and test a single-agent solution in the Foundry portal",
+    "tags": [
+      "generative-ai-&-agents",
+      "agents"
+    ],
+    "optionExplanations": {
+      "A": "Foundry generative AI agents use a model for reasoning and action selection; eliminating the model is not their distinguishing capability.",
+      "B": "Image input is required only for tasks that need it; agents can act on text requests using configured tools.",
+      "C": "Agents can combine model reasoning with instructions, knowledge, and tools to perform tasks or take actions.",
+      "D": "This sets general assistant behavior and instructions; an agent can orchestrate model decisions and configured tools to work toward a goal."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview"
+    ]
+  },
+  {
+    "id": "AI901-059",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Foundry SDK",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A chat client must authenticate to Microsoft Foundry without embedding a secret in source control. Which approach provides the most appropriate balance of functionality and security?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Disable authentication for the endpoint"
+      },
+      {
+        "id": "B",
+        "text": "Use Microsoft Entra ID credentials such as DefaultAzureCredential"
+      },
+      {
+        "id": "C",
+        "text": "Commit an API key to the repository"
+      },
+      {
+        "id": "D",
+        "text": "Place a key in browser-side JavaScript"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Microsoft Entra ID credentials avoid hard-coded secrets and are the preferred secure approach when supported.",
+    "learningObjective": "Create a lightweight chat client application by using the Foundry SDK",
+    "tags": [
+      "generative-ai-&-agents",
+      "foundry-sdk",
+      "security"
+    ],
+    "optionExplanations": {
+      "A": "Disabling authentication is not a supported way to invoke a protected Foundry endpoint and would remove identity verification.",
+      "B": "Microsoft Entra ID credentials avoid hard-coded secrets and are the preferred secure approach when supported.",
+      "C": "Committing a reusable API key exposes it to repository readers and potentially repository history; use supported identity-based authentication instead.",
+      "D": "Browser-side JavaScript is visible to users; embedding a reusable service key exposes that credential."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/python/api/overview/azure/ai-projects-readme?view=azure-python"
+    ]
+  },
+  {
+    "id": "AI901-060",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agent client",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A client application sends several messages as part of one ongoing agent conversation. What must it preserve?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The conversation or thread context"
+      },
+      {
+        "id": "B",
+        "text": "The model catalogue filter"
+      },
+      {
+        "id": "C",
+        "text": "A system prompt"
+      },
+      {
+        "id": "D",
+        "text": "The image resolution"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Clients preserve conversation context using the mechanism supported by their API, such as a conversation reference or Responses API continuation; clients using Foundry Agent Service classic use thread context.",
+    "learningObjective": "Create a lightweight client application for an agent",
+    "tags": [
+      "generative-ai-&-agents",
+      "agent-client"
+    ],
+    "optionExplanations": {
+      "A": "Conversation or thread context associates new messages with the existing interaction.",
+      "B": "This filters model discovery results but does not preserve messages or conversation history; clients preserve conversation context using the mechanism supported by their API, such as a conversation reference or Responses API continuation; clients using Foundry Agent Service classic use thread context.",
+      "C": "This sets general assistant behavior and instructions; clients preserve conversation context using the mechanism supported by their API, such as a conversation reference or Responses API continuation; clients using Foundry Agent Service classic use thread context.",
+      "D": "This is a visual-output setting and does not identify a conversation; clients preserve conversation context using the mechanism supported by their API, such as a conversation reference or Responses API continuation; clients using Foundry Agent Service classic use thread context."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview",
+      "https://learn.microsoft.com/azure/foundry-classic/agents/concepts/threads-runs-messages",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/responses"
+    ]
+  },
+  {
+    "id": "AI901-061",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "single_choice",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "A model produces inconsistently formatted summaries. You are improving the prompt, not configuring API-level structured outputs. Which revision most clearly communicates the required format?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ask for “a good summary” without defining its structure"
+      },
+      {
+        "id": "B",
+        "text": "Use a longer model deployment name"
+      },
+      {
+        "id": "C",
+        "text": "Remove formatting instructions to give the model more freedom"
+      },
+      {
+        "id": "D",
+        "text": "Specify the required format and include an example of a valid response"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Explicit instructions and an example clarify the expected structure. They do not guarantee schema compliance; validate the result when strict formatting matters.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "generative-ai-&-agents",
+      "prompts"
+    ],
+    "optionExplanations": {
+      "A": "This does not specify the required summary format, so the model has no clear structure to follow; explicit instructions and an example clarify the expected structure.",
+      "B": "This identifies or labels a deployment but does not provide the required model capability by itself; explicit instructions and an example clarify the expected structure.",
+      "C": "This removes the constraints needed to produce the requested format; explicit instructions and an example clarify the expected structure.",
+      "D": "Explicit instructions and an example clarify the expected structure."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/structured-outputs"
+    ]
+  },
+  {
+    "id": "AI901-062",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agents",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An agent can answer questions but cannot currently create support tickets. Which additional capability is required to enable that external action?",
+    "options": [
+      {
+        "id": "A",
+        "text": "An image-generation deployment"
+      },
+      {
+        "id": "B",
+        "text": "A sentiment label"
+      },
+      {
+        "id": "C",
+        "text": "A tool or function that connects to the ticketing system"
+      },
+      {
+        "id": "D",
+        "text": "A system prompt"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Agents use tools or functions to interact with external systems and perform actions.",
+    "learningObjective": "Create and test a single-agent solution in the Foundry portal",
+    "tags": [
+      "generative-ai-&-agents",
+      "agents",
+      "tools"
+    ],
+    "optionExplanations": {
+      "A": "This creates new visual content from a prompt; agents use tools or functions to interact with external systems and perform actions.",
+      "B": "This classifies the opinion expressed in text; agents use tools or functions to interact with external systems and perform actions.",
+      "C": "Agents use tools or functions to interact with external systems and perform actions.",
+      "D": "This sets general assistant behavior and instructions; agents use tools or functions to interact with external systems and perform actions."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview"
+    ]
+  },
+  {
+    "id": "AI901-063",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Model deployment",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "During playground testing, a deployed Azure OpenAI model returns HTTP 429 after a burst of prompts. Which response best addresses rate-limit throttling?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Recreate the deployment before sending every prompt"
+      },
+      {
+        "id": "B",
+        "text": "Reduce the request rate and retry after the indicated delay, using bounded exponential backoff if no delay is provided"
+      },
+      {
+        "id": "C",
+        "text": "Immediately resend every failed prompt in parallel without a retry limit"
+      },
+      {
+        "id": "D",
+        "text": "Increase the maximum output-token setting for every request"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "HTTP 429 can indicate that the deployment's request or token rate limit was exceeded. Reduce request bursts and respect retry timing; use bounded retries with exponential backoff and jitter when needed, and surface an error if retries are exhausted.",
+    "learningObjective": "Deploy a model and interact with it in the Foundry portal",
+    "tags": [
+      "generative-ai-&-agents",
+      "model-deployment",
+      "rate-limits"
+    ],
+    "optionExplanations": {
+      "A": "Recreating a deployment is not a request-throttling strategy and interrupts access instead of controlling traffic.",
+      "B": "Rate control and delayed, bounded retries let capacity become available without creating an uncontrolled retry loop.",
+      "C": "Immediate parallel retries increase the request burst and can prolong throttling; retries need delays and a limit.",
+      "D": "A larger output-token setting can increase estimated token consumption; it does not raise the deployment's rate limits."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/quota#understanding-rate-limits",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/quota#understanding-429-throttling-errors-and-what-to-do"
+    ]
+  },
+  {
+    "id": "AI901-064",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agent client",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A client invokes a current Microsoft Foundry agent through the Responses API. Which behavior is appropriate before presenting a final answer?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Check the response status and handle incomplete, refused, or failed responses instead of assuming every response is complete"
+      },
+      {
+        "id": "B",
+        "text": "Redeploy the model for every message"
+      },
+      {
+        "id": "C",
+        "text": "Delete the agent instructions after each request"
+      },
+      {
+        "id": "D",
+        "text": "Convert every response to an image"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "A current Responses API client should inspect the response status and handle incomplete, refused, or failed results; only present a final answer when a usable response is available.",
+    "learningObjective": "Create a lightweight client application for an agent",
+    "tags": [
+      "generative-ai-&-agents",
+      "agent-client"
+    ],
+    "optionExplanations": {
+      "A": "A current Responses API client should inspect the response status and handle incomplete, refused, or failed results; only present a final answer when a usable response is available.",
+      "B": "A model deployment is created ahead of inference; redeploying for every message does not check whether the response completed.",
+      "C": "Removing agent instructions after each request changes agent behavior; it does not determine whether the response is complete or usable.",
+      "D": "This changes the response modality instead of checking whether the text response completed successfully; a current Responses API client should inspect the response status and handle incomplete, refused, or failed results; only present a final answer when a usable response is available."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview",
+      "https://learn.microsoft.com/azure/foundry/foundry-models/how-to/generate-responses",
+      "https://learn.microsoft.com/rest/api/microsoft-foundry/aiproject#components",
+      "https://learn.microsoft.com/rest/api/microsoft-foundry/azureopenai/responses#components"
+    ]
+  },
+  {
+    "id": "AI901-065",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "multiple_choice",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Which TWO prompt-writing practices generally improve response quality?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Provide relevant context"
+      },
+      {
+        "id": "B",
+        "text": "Use ambiguous pronouns without context"
+      },
+      {
+        "id": "C",
+        "text": "Omit the source context and ask the model to guess missing details"
+      },
+      {
+        "id": "D",
+        "text": "State the task and constraints clearly"
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "D"
+    ],
+    "explanation": "Relevant context and clear constraints help the model address the task. Asking it to guess missing details increases the risk of unsupported output.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "generative-ai-&-agents",
+      "prompts"
+    ],
+    "optionExplanations": {
+      "A": "Relevant context and clear constraints help the model address the task.",
+      "B": "This makes references unclear and can prevent the model from resolving what the prompt refers to; relevant context and clear constraints help the model address the task.",
+      "C": "This withholds grounding information and encourages unsupported guesses; relevant context and clear constraints help the model address the task.",
+      "D": "Relevant context and clear constraints help the model address the task."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering"
+    ]
+  },
+  {
+    "id": "AI901-112",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Model deployment",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Before selecting a model from the Foundry model catalogue, what should you do first?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Identify the application requirements and evaluation criteria"
+      },
+      {
+        "id": "B",
+        "text": "A system prompt"
+      },
+      {
+        "id": "C",
+        "text": "Maximise temperature"
+      },
+      {
+        "id": "D",
+        "text": "A user prompt"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Requirements such as modality, quality, latency, safety, and cost should drive model selection.",
+    "learningObjective": "Deploy a model and interact with it in the Foundry portal",
+    "tags": [
+      "generative-ai-&-agents",
+      "model-deployment",
+      "model-selection"
+    ],
+    "optionExplanations": {
+      "A": "Requirements such as modality, quality, latency, safety, and cost should drive model selection.",
+      "B": "This sets general assistant behavior and instructions; requirements such as modality, quality, latency, safety, and cost should drive model selection.",
+      "C": "This affects generation variability, not the permitted response length; requirements such as modality, quality, latency, safety, and cost should drive model selection.",
+      "D": "This carries the current user request or input; requirements such as modality, quality, latency, safety, and cost should drive model selection."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models",
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/3-using-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-113",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agents",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An agent should search approved knowledge but must not change external systems. Which capability should it receive?",
+    "options": [
+      {
+        "id": "A",
+        "text": "An unrestricted write tool"
+      },
+      {
+        "id": "B",
+        "text": "A system prompt"
+      },
+      {
+        "id": "C",
+        "text": "A higher response temperature"
+      },
+      {
+        "id": "D",
+        "text": "A read-only knowledge retrieval tool"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Provide only the tools and permissions needed for the task. A read-only retrieval tool follows least privilege.",
+    "learningObjective": "Create and test a single-agent solution in the Foundry portal",
+    "tags": [
+      "generative-ai-&-agents",
+      "agents",
+      "least-privilege"
+    ],
+    "optionExplanations": {
+      "A": "This allows broad changes and exceeds the read-only access required for approved knowledge search; provide only the tools and permissions needed for the task.",
+      "B": "This sets general assistant behavior and instructions; provide only the tools and permissions needed for the task.",
+      "C": "This affects generation variability, not the permitted response length; provide only the tools and permissions needed for the task.",
+      "D": "Provide only the tools and permissions needed for the task. A read-only retrieval tool follows least privilege."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview",
+      "https://learn.microsoft.com/azure/foundry/concepts/retrieval-augmented-generation"
+    ]
+  }
+]

@@ -1,0 +1,1410 @@
+[
+  {
+    "id": "AI901-131",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Fairness",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A recruiting model has comparable overall accuracy for two demographic groups, yet its false-negative rate is substantially higher for one group. Which concern should be investigated first?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Reliability and safety, because every statistical difference is primarily a stability failure"
+      },
+      {
+        "id": "B",
+        "text": "Transparency, because disclosing the model automatically corrects the disparity"
+      },
+      {
+        "id": "C",
+        "text": "Inclusiveness, because accessibility testing is the principal remedy"
+      },
+      {
+        "id": "D",
+        "text": "Fairness, because similar aggregate accuracy can conceal unequal error distributions"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "optionExplanations": {
+      "A": "Not every statistical disparity is a stability failure; different false-negative rates across demographic groups call for a fairness investigation.",
+      "B": "Disclosure supports transparency but does not itself correct unequal error rates across groups.",
+      "C": "Accessibility testing supports inclusiveness, but it does not by itself diagnose or remedy unequal rejection errors across demographic groups.",
+      "D": "Fairness analysis should examine group-specific error rates; aggregate accuracy alone can conceal unequal outcomes."
+    },
+    "explanation": "Fairness analysis should examine group-specific error rates; aggregate accuracy alone can conceal unequal outcomes.",
+    "learningObjective": "Describe considerations for fairness in an AI solution",
+    "tags": [
+      "fairness",
+      "error-rates"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-132",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Privacy and security",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A support assistant can complete its task using an order number, but the implementation also stores full payment-card details from every conversation. Which design change most directly applies the relevant principle?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Minimise collection to data required for the task and protect retained data"
+      },
+      {
+        "id": "B",
+        "text": "Retain every field but disclose the retention period"
+      },
+      {
+        "id": "C",
+        "text": "Increase model temperature so stored conversations vary"
+      },
+      {
+        "id": "D",
+        "text": "Publish the system prompt to demonstrate transparency"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "optionExplanations": {
+      "A": "Data minimisation and appropriate protection are central privacy and security considerations.",
+      "B": "Disclosing retention does not justify collecting unnecessary payment-card details; minimize collection and protect what must be retained.",
+      "C": "Changing sampling variability does not prevent the application from collecting or storing sensitive data.",
+      "D": "Publishing instructions does not remove unnecessary payment-card data from collection or storage."
+    },
+    "explanation": "Data minimisation and appropriate protection are central privacy and security considerations.",
+    "learningObjective": "Describe considerations for privacy and security in an AI solution",
+    "tags": [
+      "privacy",
+      "data-minimisation"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/well-architected/ai/responsible-ai"
+    ]
+  },
+  {
+    "id": "AI901-133",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Configuration",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "The API indicates that generation stopped because the response reached its configured output-token limit. The prompt and context are adequate. Which adjustment is most targeted?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Lower temperature"
+      },
+      {
+        "id": "B",
+        "text": "Increase the maximum output-token limit"
+      },
+      {
+        "id": "C",
+        "text": "Replace the model with an embedding model"
+      },
+      {
+        "id": "D",
+        "text": "Reduce the context window"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "optionExplanations": {
+      "A": "This affects generation variability, not the permitted response length; increase the allowed output-token budget within the model’s supported limits.",
+      "B": "A maximum-output-token limit can truncate an otherwise valid response; temperature affects variability, not permitted response length.",
+      "C": "This represents content as numeric vectors for semantic similarity comparisons; increase the allowed output-token budget within the model’s supported limits.",
+      "D": "This concerns how much tokenized input and output the model can process; increase the allowed output-token budget within the model’s supported limits."
+    },
+    "explanation": "Increase the allowed output-token budget within the model’s supported limits. For reasoning models, the output budget can include reasoning tokens as well as visible answer text.",
+    "learningObjective": "Identify appropriate model deployment options and configuration parameters",
+    "tags": [
+      "tokens",
+      "configuration"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/dotnet/ai/conceptual/understanding-tokens",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/reasoning#how-reasoning-works"
+    ]
+  },
+  {
+    "id": "AI901-134",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Model selection",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A solution must compare the semantic meaning of short incident descriptions and cluster similar incidents without generating prose. Which model capability is the closest fit?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A chat model configured with a low temperature"
+      },
+      {
+        "id": "B",
+        "text": "An image-classification model"
+      },
+      {
+        "id": "C",
+        "text": "An embedding model that produces vector representations"
+      },
+      {
+        "id": "D",
+        "text": "A speech-recognition model with diarisation"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "optionExplanations": {
+      "A": "This affects generation variability, not the permitted response length; embeddings encode semantic meaning as vectors suitable for similarity and clustering.",
+      "B": "This assigns an input to one or more predefined categories; embeddings encode semantic meaning as vectors suitable for similarity and clustering.",
+      "C": "Embeddings encode semantic meaning as vectors suitable for similarity and clustering.",
+      "D": "This labels speech segments by speaker without identifying real-world names; embeddings encode semantic meaning as vectors suitable for similarity and clustering."
+    },
+    "explanation": "Embeddings encode semantic meaning as vectors suitable for similarity and clustering.",
+    "learningObjective": "Identify an appropriate AI model, based on capabilities",
+    "tags": [
+      "embeddings",
+      "model-selection"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure#embeddings"
+    ]
+  },
+  {
+    "id": "AI901-135",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Generative AI",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A model must answer from a policy corpus that changes weekly. Retraining the base model for every update is impractical. Which pattern most directly addresses the requirement?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Increase maximum output tokens"
+      },
+      {
+        "id": "B",
+        "text": "Use an image-generation model with the policy as a negative prompt"
+      },
+      {
+        "id": "C",
+        "text": "Raise temperature so the model explores more possible policies"
+      },
+      {
+        "id": "D",
+        "text": "Use retrieval-augmented generation to add relevant current policy text to the prompt context"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "optionExplanations": {
+      "A": "This caps the amount of generated output rather than changing sampling randomness; rAG retrieves current trusted information and supplies it as context at inference time.",
+      "B": "This creates new visual content from a prompt; rAG retrieves current trusted information and supplies it as context at inference time.",
+      "C": "This affects generation variability, not the permitted response length; rAG retrieves current trusted information and supplies it as context at inference time.",
+      "D": "RAG retrieves current trusted information and supplies it as context at inference time."
+    },
+    "explanation": "RAG retrieves current trusted information and supplies it as context at inference time.",
+    "learningObjective": "Describe how generative AI models work",
+    "tags": [
+      "rag",
+      "grounding"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering",
+      "https://learn.microsoft.com/azure/foundry/concepts/retrieval-augmented-generation"
+    ]
+  },
+  {
+    "id": "AI901-136",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Computer vision",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A warehouse solution must identify damaged cartons and return a bounding box around each damaged carton. Which capability is more appropriate than whole-image classification?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Object detection"
+      },
+      {
+        "id": "B",
+        "text": "OCR"
+      },
+      {
+        "id": "C",
+        "text": "Image generation"
+      },
+      {
+        "id": "D",
+        "text": "Sentiment analysis"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "optionExplanations": {
+      "A": "Object detection identifies instances and their locations, whereas classification labels the image as a whole.",
+      "B": "This reads text characters from an image but does not by itself map them to named business fields; object detection locates individual objects with bounding boxes.",
+      "C": "This creates new visual content from a prompt; object detection locates individual objects with bounding boxes.",
+      "D": "This classifies the opinion expressed in text; object detection locates individual objects with bounding boxes."
+    },
+    "explanation": "Object detection locates individual objects with bounding boxes. If the requirement were pixel-precise damaged-region masks, segmentation would be more specific.",
+    "learningObjective": "Identify features and capabilities of computer vision and image-generation models",
+    "tags": [
+      "object-detection",
+      "vision"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/introduction-computer-vision/2-overview"
+    ]
+  },
+  {
+    "id": "AI901-137",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Information extraction",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A scanned form has clear printed text. One component returns every line as plain text, while the business process requires named fields and values. Which distinction is most accurate?",
+    "options": [
+      {
+        "id": "A",
+        "text": "OCR extracts structured business fields; information extraction only improves image contrast"
+      },
+      {
+        "id": "B",
+        "text": "OCR reads text; information extraction organises required values into a structured result"
+      },
+      {
+        "id": "C",
+        "text": "Both capabilities are equivalent whenever the source is a PDF"
+      },
+      {
+        "id": "D",
+        "text": "Information extraction generates a new form rather than analysing the original"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "optionExplanations": {
+      "A": "This reverses the distinction: OCR recognizes text, while information extraction structures the required fields; extraction is not merely image-contrast adjustment.",
+      "B": "OCR recognises textual content; information extraction identifies and structures fields or facts needed by the application.",
+      "C": "This confuses OCR text recognition with schema-based extraction; a PDF can contain either plain text or structured values; oCR recognises textual content; information extraction identifies and structures fields or facts needed by the application.",
+      "D": "This describes content creation, whereas information extraction analyzes the supplied source; oCR recognises textual content; information extraction identifies and structures fields or facts needed by the application."
+    },
+    "explanation": "OCR recognises textual content; information extraction identifies and structures fields or facts needed by the application.",
+    "learningObjective": "Identify techniques to extract information from text, images, audio, and videos",
+    "tags": [
+      "ocr",
+      "information-extraction"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents",
+      "https://learn.microsoft.com/azure/ai-services/computer-vision/overview-ocr"
+    ]
+  },
+  {
+    "id": "AI901-138",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A customer-support model must answer only from supplied policy excerpts and explicitly state when the excerpts are insufficient. Which prompt design is strongest?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ask for a confident answer and increase temperature"
+      },
+      {
+        "id": "B",
+        "text": "Put the policy title in the deployment name"
+      },
+      {
+        "id": "C",
+        "text": "Provide the excerpts, instruct the model to use only that context, and define the fallback response"
+      },
+      {
+        "id": "D",
+        "text": "Use a user prompt without constraints so the model can rely on general knowledge"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "optionExplanations": {
+      "A": "A demand for confidence and higher sampling variability do not supply policy evidence or tell the model how to handle insufficient context.",
+      "B": "This identifies or labels a deployment but does not provide the required model capability by itself; supplying approved context and an insufficiency response reduces unsupported answers, but does not guarantee factual correctness or enforce access control.",
+      "C": "Grounded context plus an explicit insufficiency rule reduces unsupported answers.",
+      "D": "Unconstrained reliance on general knowledge conflicts with the requirement to answer only from the supplied policy excerpts."
+    },
+    "explanation": "Supplying approved context and an insufficiency response reduces unsupported answers, but does not guarantee factual correctness or enforce access control. Validate outputs and apply application-level controls when required.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "prompts",
+      "grounding"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering",
+      "https://learn.microsoft.com/azure/foundry/concepts/retrieval-augmented-generation"
+    ]
+  },
+  {
+    "id": "AI901-139",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A system prompt requests JSON, but responses occasionally contain introductory prose. Which revision most directly improves format adherence?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Increase temperature and remove the example"
+      },
+      {
+        "id": "B",
+        "text": "Move the schema into the deployment name"
+      },
+      {
+        "id": "C",
+        "text": "Replace the chat model with an embedding model"
+      },
+      {
+        "id": "D",
+        "text": "Specify the exact schema, prohibit additional text, and include a valid example"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "optionExplanations": {
+      "A": "Increasing variability and removing the example do not clarify the required JSON structure or prohibit introductory prose.",
+      "B": "This identifies or labels a deployment but does not provide the required model capability by itself; a clear instruction and valid example can improve prompt adherence, but they do not enforce a JSON Schema.",
+      "C": "This represents content as numeric vectors for semantic similarity comparisons; a clear instruction and valid example can improve prompt adherence, but they do not enforce a JSON Schema.",
+      "D": "An explicit schema, constraints and example make the required output contract materially clearer."
+    },
+    "explanation": "A clear instruction and valid example can improve prompt adherence, but they do not enforce a JSON Schema. For a strict output contract, use structured outputs on a supported model/API and validate completion, refusal, and error conditions.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "structured-output",
+      "prompts"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/structured-outputs"
+    ]
+  },
+  {
+    "id": "AI901-140",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Model deployment",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A team compares two catalogue models. One has higher benchmark quality but materially greater latency and cost than the application permits. Which selection rationale is strongest?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Choose the model whose quality, latency, safety and cost satisfy the application requirements"
+      },
+      {
+        "id": "B",
+        "text": "Always choose the highest-quality benchmark result irrespective of constraints"
+      },
+      {
+        "id": "C",
+        "text": "Choose the newest model because recency guarantees suitability"
+      },
+      {
+        "id": "D",
+        "text": "Choose whichever model has the longest context window even if unused"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "optionExplanations": {
+      "A": "Model selection should balance quality, safety, performance and cost against actual requirements.",
+      "B": "This ignores the application’s latency, safety, and cost constraints; model selection should balance quality, safety, performance and cost against actual requirements.",
+      "C": "This uses model age as a proxy; recency alone does not demonstrate task suitability; model selection should balance quality, safety, performance and cost against actual requirements.",
+      "D": "This concerns how much tokenized input and output the model can process; model selection should balance quality, safety, performance and cost against actual requirements."
+    },
+    "explanation": "Model selection should balance quality, safety, performance and cost against actual requirements.",
+    "learningObjective": "Deploy a model and interact with it in the Foundry portal",
+    "tags": [
+      "benchmarks",
+      "deployment"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models",
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/3-using-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-141",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Foundry SDK",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A Python client authenticates successfully but receives an authorisation error when invoking a deployment. Which interpretation is most accurate?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The Python syntax is necessarily invalid"
+      },
+      {
+        "id": "B",
+        "text": "The identity was established, but it lacks the required permission for the resource or action"
+      },
+      {
+        "id": "C",
+        "text": "The deployment must be an image-generation model"
+      },
+      {
+        "id": "D",
+        "text": "Increasing maximum output tokens will grant access"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "optionExplanations": {
+      "A": "This confuses an authorization failure with a syntax error; the identity can authenticate but lack permission; authentication proves identity; authorisation determines permitted actions.",
+      "B": "Authentication proves identity; authorisation determines permitted actions.",
+      "C": "This creates new visual content from a prompt; authentication proves identity; authorisation determines permitted actions.",
+      "D": "This caps the amount of generated output rather than changing sampling randomness; authentication proves identity; authorisation determines permitted actions."
+    },
+    "explanation": "Authentication proves identity; authorisation determines permitted actions.",
+    "learningObjective": "Create a lightweight chat client application by using the Foundry SDK",
+    "tags": [
+      "authentication",
+      "authorization",
+      "python"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/concepts/rbac-foundry"
+    ]
+  },
+  {
+    "id": "AI901-142",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Foundry SDK",
+    "questionType": "code_analysis",
+    "presentation": "code",
+    "difficulty": "hard",
+    "question": "A Python backend must connect to a Foundry project using keyless Microsoft Entra authentication. Which credential expression should replace the placeholder?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A literal API-key string"
+      },
+      {
+        "id": "B",
+        "text": "The user’s prompt text"
+      },
+      {
+        "id": "C",
+        "text": "DefaultAzureCredential()"
+      },
+      {
+        "id": "D",
+        "text": "The model deployment name"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "optionExplanations": {
+      "A": "A literal API-key string is not the Microsoft Entra token credential required by AIProjectClient.",
+      "B": "The user's prompt is application input, not an object capable of obtaining Microsoft Entra tokens.",
+      "C": "AIProjectClient authenticates using a Microsoft Entra token credential.",
+      "D": "A deployment name selects a model deployment; it cannot authenticate a project client."
+    },
+    "code": "from azure.ai.projects import AIProjectClient\nfrom azure.identity import DefaultAzureCredential\n\nproject_client = AIProjectClient(\n    endpoint=project_endpoint,\n    credential=...,  # Replace this placeholder.\n)",
+    "explanation": "AIProjectClient authenticates using a Microsoft Entra token credential. DefaultAzureCredential() can obtain developer or managed-identity credentials, depending on its environment. The identity still needs the required permissions.",
+    "learningObjective": "Create a lightweight chat client application by using the Foundry SDK",
+    "tags": [
+      "security",
+      "sdk",
+      "code-analysis"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/python/api/overview/azure/ai-projects-readme?view=azure-python"
+    ]
+  },
+  {
+    "id": "AI901-143",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agents",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "An agent may search approved knowledge and create tickets, but it must not delete records. Which configuration best follows least privilege?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Give the agent one unrestricted administration tool"
+      },
+      {
+        "id": "B",
+        "text": "Increase temperature to reduce deterministic tool use"
+      },
+      {
+        "id": "C",
+        "text": "Store administrator credentials in the system prompt"
+      },
+      {
+        "id": "D",
+        "text": "Provide separate read/search and ticket-creation tools, without a delete capability"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "optionExplanations": {
+      "A": "An unrestricted administration tool could delete records and grants more authority than search and ticket creation require.",
+      "B": "Temperature changes sampling behavior, not tool permissions; it cannot enforce a prohibition on deletion.",
+      "C": "Administrator credentials in a prompt expose a secret and grant excessive authority; prompts are not a secure credential store.",
+      "D": "Least privilege means exposing only the permissions and tools required for the intended task."
+    },
+    "explanation": "Least privilege means exposing only the permissions and tools required for the intended task.",
+    "learningObjective": "Create and test a single-agent solution in the Foundry portal",
+    "tags": [
+      "agents",
+      "least-privilege"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview"
+    ]
+  },
+  {
+    "id": "AI901-144",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agent client",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A current Microsoft Foundry agent is invoked with the Responses API. A response is marked incomplete rather than completed. What should the client do?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Inspect the response status and incomplete details, then handle the condition before presenting a final answer"
+      },
+      {
+        "id": "B",
+        "text": "Display it as a successful final answer without checking the response details"
+      },
+      {
+        "id": "C",
+        "text": "Redeploy the agent after every response"
+      },
+      {
+        "id": "D",
+        "text": "Discard all conversation state and resubmit the same request indefinitely"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "optionExplanations": {
+      "A": "The current Responses API exposes response status and incomplete details.",
+      "B": "This treats an incomplete response as complete and can present missing output as final; the current Responses API exposes response status and incomplete details.",
+      "C": "Redeploying an agent does not resolve an incomplete response; inspect its status and incomplete details, then handle the result appropriately.",
+      "D": "This retries without handling the incomplete response details and can duplicate work; the current Responses API exposes response status and incomplete details."
+    },
+    "explanation": "The current Responses API exposes response status and incomplete details. The client should handle an incomplete response rather than treating it as successful final output.",
+    "learningObjective": "Create a lightweight client application for an agent",
+    "tags": [
+      "agent-client",
+      "run-lifecycle"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview",
+      "https://learn.microsoft.com/azure/foundry/foundry-models/how-to/generate-responses",
+      "https://learn.microsoft.com/rest/api/microsoft-foundry/aiproject#components",
+      "https://learn.microsoft.com/rest/api/microsoft-foundry/azureopenai/responses#components"
+    ]
+  },
+  {
+    "id": "AI901-145",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A multilingual feedback pipeline must first route each message to a language-specific downstream process, then identify organisations. Which sequence is most appropriate?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Entity recognition, then speech synthesis"
+      },
+      {
+        "id": "B",
+        "text": "Language detection, then entity recognition"
+      },
+      {
+        "id": "C",
+        "text": "Speech recognition, then image classification"
+      },
+      {
+        "id": "D",
+        "text": "Sentiment analysis, then OCR"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "optionExplanations": {
+      "A": "This starts entity extraction before the required language routing and then synthesizes speech instead of performing language detection.",
+      "B": "Language detection supports routing; entity recognition then identifies organisations in the text.",
+      "C": "Speech recognition and image classification do not identify the language and named organizations in the supplied written feedback.",
+      "D": "Sentiment analysis evaluates opinion and OCR reads image text; neither stage implements the required language-detection and entity-recognition sequence."
+    },
+    "explanation": "Language detection supports routing; entity recognition then identifies organisations in the text.",
+    "learningObjective": "Build a lightweight application that includes text analysis",
+    "tags": [
+      "language-detection",
+      "entities"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-146",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Azure Speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A meeting recording contains several speakers. The primary requirement is a transcript; the application may also need to distinguish which segments were spoken by the same or different speakers. Which capability is foundational?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Text to speech with a neural voice"
+      },
+      {
+        "id": "B",
+        "text": "Image classification followed by OCR"
+      },
+      {
+        "id": "C",
+        "text": "Speech to text, optionally combined with speaker diarisation"
+      },
+      {
+        "id": "D",
+        "text": "Key phrase extraction without transcription"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "optionExplanations": {
+      "A": "This converts text into spoken audio; speech-to-text provides the transcript.",
+      "B": "Image classification and OCR process visual content; they do not transcribe speech from a meeting recording.",
+      "C": "Speech to text creates the transcript; diarisation can distinguish speakers where supported and required.",
+      "D": "This extracts important terms or phrases from text; speech-to-text provides the transcript."
+    },
+    "explanation": "Speech-to-text provides the transcript. Speaker diarization assigns speaker labels to speech segments where supported; those labels do not, by themselves, identify a person’s real-world name.",
+    "learningObjective": "Build a lightweight application by using Azure Speech in Foundry Tools",
+    "tags": [
+      "speech-to-text",
+      "diarisation"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition",
+      "https://learn.microsoft.com/azure/ai-services/speech-service/get-started-stt-diarization"
+    ]
+  },
+  {
+    "id": "AI901-147",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Multimodal speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A deployed multimodal model accepts audio directly. Which architecture most clearly differs from a traditional speech-to-text-first pipeline?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The model can only receive plain text"
+      },
+      {
+        "id": "B",
+        "text": "The application must generate an image before accepting audio"
+      },
+      {
+        "id": "C",
+        "text": "The model performs OCR on the waveform"
+      },
+      {
+        "id": "D",
+        "text": "The model reasons over the audio input without requiring a separate transcript as the only intermediate representation"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "optionExplanations": {
+      "A": "This rules out direct audio input, which the scenario requires the deployment to support; a multimodal model with audio capability can process spoken input directly instead of relying exclusively on a separate transcription stage.",
+      "B": "This adds an unrelated image-generation step and does not provide audio input support; a multimodal model with audio capability can process spoken input directly instead of relying exclusively on a separate transcription stage.",
+      "C": "OCR reads visible text in images; applying it to a waveform is not direct understanding of spoken audio.",
+      "D": "A multimodal model with audio capability can process spoken input directly instead of relying exclusively on a separate transcription stage."
+    },
+    "explanation": "A multimodal model with audio capability can process spoken input directly instead of relying exclusively on a separate transcription stage.",
+    "learningObjective": "Respond to spoken prompts by using a deployed multimodal model",
+    "tags": [
+      "multimodal",
+      "audio"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/audio-completions-quickstart"
+    ]
+  },
+  {
+    "id": "AI901-148",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Multimodal vision",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A chart image contains several series, and the user asks which series has the largest increase. Which request is most likely to produce a useful answer?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Include the chart and a precise question identifying the comparison and relevant interval"
+      },
+      {
+        "id": "B",
+        "text": "Submit the chart without a question and rely on the model to infer the task"
+      },
+      {
+        "id": "C",
+        "text": "Use a text-only model and provide no chart data"
+      },
+      {
+        "id": "D",
+        "text": "Increase speech-synthesis speed"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "optionExplanations": {
+      "A": "The visual input and a precise natural-language instruction should be supplied to a vision-capable multimodal model.",
+      "B": "This omits the task instruction, so the model has no requested comparison to perform; the visual input and a precise natural-language instruction should be supplied to a vision-capable multimodal model.",
+      "C": "This cannot inspect visual details that are absent from its text input; the visual input and a precise natural-language instruction should be supplied to a vision-capable multimodal model.",
+      "D": "This changes audio output speed, not the analysis of a chart image; the visual input and a precise natural-language instruction should be supplied to a vision-capable multimodal model."
+    },
+    "explanation": "The visual input and a precise natural-language instruction should be supplied to a vision-capable multimodal model.",
+    "learningObjective": "Interpret visual input in prompts by using a deployed multimodal model",
+    "tags": [
+      "vision",
+      "prompting"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-149",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Image generation",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A generated banner repeatedly includes unwanted lettering. Which prompt revision is the most targeted?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Increase the speech-recognition locale accuracy"
+      },
+      {
+        "id": "B",
+        "text": "Describe the composition and explicitly require no text, lettering, logos or watermarks"
+      },
+      {
+        "id": "C",
+        "text": "Ask the model to detect entities in the banner"
+      },
+      {
+        "id": "D",
+        "text": "Replace the image model with an embedding model"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "optionExplanations": {
+      "A": "This identifies or configures the language used for speech or text processing; explicit visual constraints and composition guidance improve alignment for image generation.",
+      "B": "Explicit visual constraints and composition guidance improve alignment for image generation.",
+      "C": "This extracts entities from text rather than controlling visual content generation; explicit visual constraints and composition guidance improve alignment for image generation.",
+      "D": "This represents content as numeric vectors for semantic similarity comparisons; explicit visual constraints and composition guidance improve alignment for image generation."
+    },
+    "explanation": "Explicit visual constraints and composition guidance improve alignment for image generation.",
+    "learningObjective": "Create new visual outputs by using generative models",
+    "tags": [
+      "image-generation",
+      "constraints"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/3-image-generation",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/dall-e"
+    ]
+  },
+  {
+    "id": "AI901-150",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Vision application",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A lightweight application sends a local image to a deployed multimodal model. Which implementation concern is most directly relevant?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Convert the image into text with sentiment analysis only"
+      },
+      {
+        "id": "B",
+        "text": "Place the binary image in the deployment name"
+      },
+      {
+        "id": "C",
+        "text": "Provide the image by a supported encoding or reference and include the accompanying instruction"
+      },
+      {
+        "id": "D",
+        "text": "Use text-to-speech as the transport protocol"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "optionExplanations": {
+      "A": "This classifies the opinion expressed in text; the client must send visual input in a format supported by the model endpoint together with the prompt.",
+      "B": "This identifies or labels a deployment but does not provide the required model capability by itself; the client must send visual input in a format supported by the model endpoint together with the prompt.",
+      "C": "The client must send visual input in a format supported by the model endpoint together with the prompt.",
+      "D": "This converts text into spoken audio; the client must send visual input in a format supported by the model endpoint together with the prompt."
+    },
+    "explanation": "The client must send visual input in a format supported by the model endpoint together with the prompt.",
+    "learningObjective": "Build a lightweight application that includes vision capabilities",
+    "tags": [
+      "vision-client",
+      "request-format"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-151",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Documents and forms",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A prototype extracts invoice values with inconsistent property names. The team is moving to a custom Azure Content Understanding analyzer. Which configuration defines consistent field names and types for the result?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A higher temperature"
+      },
+      {
+        "id": "B",
+        "text": "A speech-recognition locale"
+      },
+      {
+        "id": "C",
+        "text": "An image-generation aspect ratio"
+      },
+      {
+        "id": "D",
+        "text": "A field schema in the analyzer definition"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "optionExplanations": {
+      "A": "This affects generation variability, not the permitted response length; a field schema in the analyzer definition specifies consistent output field names and types for extracted results.",
+      "B": "This identifies or configures the language used for speech or text processing; a field schema in the analyzer definition specifies consistent output field names and types for extracted results.",
+      "C": "An image aspect ratio specifies output proportions; it does not define the names or types of extracted invoice fields.",
+      "D": "A field schema in the analyzer definition specifies consistent output field names and types for extracted results."
+    },
+    "explanation": "A field schema in the analyzer definition specifies consistent output field names and types for extracted results.",
+    "learningObjective": "Extract information from documents and forms by using Azure Content Understanding in Foundry Tools",
+    "tags": [
+      "schema",
+      "content-understanding"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents"
+    ]
+  },
+  {
+    "id": "AI901-152",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Content Understanding",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A field value has low confidence but will trigger a financial transaction. Which handling strategy is most defensible?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Route it for validation or human review before the transaction"
+      },
+      {
+        "id": "B",
+        "text": "Accept it automatically because the analyser returned a value"
+      },
+      {
+        "id": "C",
+        "text": "Increase temperature to make the extraction more creative"
+      },
+      {
+        "id": "D",
+        "text": "Generate a replacement invoice image"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "optionExplanations": {
+      "A": "Low-confidence, high-impact extracted values should be validated or reviewed rather than treated as certain.",
+      "B": "This uses a low-confidence value for a high-impact transaction without validation; low-confidence, high-impact extracted values should be validated or reviewed rather than treated as certain.",
+      "C": "This affects generation variability, not the permitted response length; low-confidence, high-impact extracted values should be validated or reviewed rather than treated as certain.",
+      "D": "This creates a new image and does not validate the extracted financial value; low-confidence, high-impact extracted values should be validated or reviewed rather than treated as certain."
+    },
+    "explanation": "Low-confidence, high-impact extracted values should be validated or reviewed rather than treated as certain.",
+    "learningObjective": "Build a lightweight application with information extraction capabilities by using Content Understanding",
+    "tags": [
+      "confidence",
+      "human-review"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/document/analyzer-improvement"
+    ]
+  },
+  {
+    "id": "AI901-153",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Audio and video",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A recorded meeting must yield action items, named owners and due dates rather than only verbatim speech. Which capability most directly fits the complete requirement?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Speech to text alone"
+      },
+      {
+        "id": "B",
+        "text": "Content Understanding for audio/video information extraction"
+      },
+      {
+        "id": "C",
+        "text": "Text to speech"
+      },
+      {
+        "id": "D",
+        "text": "Image classification"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "optionExplanations": {
+      "A": "This converts spoken audio into text; a transcript alone is not the final structured result; Content Understanding can extract structured information from audio or video.",
+      "B": "A transcript alone is not the final structured result; Content Understanding can extract structured information from audio or video.",
+      "C": "This converts text into spoken audio; a transcript alone is not the final structured result; Content Understanding can extract structured information from audio or video.",
+      "D": "This assigns an image-level category rather than locating individual objects; a transcript alone is not the final structured result; Content Understanding can extract structured information from audio or video."
+    },
+    "explanation": "A transcript alone is not the final structured result; Content Understanding can extract structured information from audio or video.",
+    "learningObjective": "Extract information from audio and video by using Content Understanding",
+    "tags": [
+      "audio",
+      "video",
+      "structured-output"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/3-audio-video",
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition"
+    ]
+  },
+  {
+    "id": "AI901-154",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Content Understanding",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A company regularly processes a common document type supported by an appropriate prebuilt analyser. What is the strongest reason to begin with the prebuilt option?",
+    "options": [
+      {
+        "id": "A",
+        "text": "It guarantees perfect extraction for every document"
+      },
+      {
+        "id": "B",
+        "text": "It removes the need for validation or confidence checks"
+      },
+      {
+        "id": "C",
+        "text": "It can reduce custom schema and model-development effort while providing a suitable starting structure"
+      },
+      {
+        "id": "D",
+        "text": "It converts all documents into speech"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "optionExplanations": {
+      "A": "This overstates analyzer accuracy; extracted fields still need testing and validation; a suitable prebuilt analyser can accelerate implementation, though validation and scenario testing remain necessary.",
+      "B": "This incorrectly treats a prebuilt analyzer as infallible; results still need validation; a suitable prebuilt analyser can accelerate implementation, though validation and scenario testing remain necessary.",
+      "C": "A suitable prebuilt analyser can accelerate implementation, though validation and scenario testing remain necessary.",
+      "D": "A prebuilt document analyzer extracts information; it does not automatically convert every document into speech."
+    },
+    "explanation": "A suitable prebuilt analyser can accelerate implementation, though validation and scenario testing remain necessary.",
+    "learningObjective": "Extract information from documents and forms by using Azure Content Understanding in Foundry Tools",
+    "tags": [
+      "prebuilt-analyser"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/document/analyzer-improvement"
+    ]
+  },
+  {
+    "id": "AI901-155",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Accountability",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A model recommendation is reviewed by a human, but staff cannot determine who owns incident escalation or approval policy. Which missing control is most directly implicated?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Accessibility testing"
+      },
+      {
+        "id": "B",
+        "text": "A larger model context window"
+      },
+      {
+        "id": "C",
+        "text": "Speech-language configuration"
+      },
+      {
+        "id": "D",
+        "text": "Documented human ownership and escalation responsibilities"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "optionExplanations": {
+      "A": "This concerns whether people with varied abilities can use the system; accountability requires clear human and organisational responsibility, including escalation paths.",
+      "B": "This concerns how much tokenized input and output the model can process; accountability requires clear human and organisational responsibility, including escalation paths.",
+      "C": "This sets a speech locale and does not assign responsibility for model incidents; accountability requires clear human and organisational responsibility, including escalation paths.",
+      "D": "Accountability requires clear human and organisational responsibility, including escalation paths."
+    },
+    "explanation": "Accountability requires clear human and organisational responsibility, including escalation paths.",
+    "learningObjective": "Describe considerations for accountability in an AI solution",
+    "tags": [
+      "accountability",
+      "governance"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2#accountability"
+    ]
+  },
+  {
+    "id": "AI901-156",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Transparency",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "Users are told that AI is involved, but they are not informed that outputs may be incomplete or unsuitable for high-impact decisions. Which improvement most directly supports transparency?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Explain intended use, material limitations and when human review is required"
+      },
+      {
+        "id": "B",
+        "text": "Collect additional personal data by default"
+      },
+      {
+        "id": "C",
+        "text": "Remove audit records"
+      },
+      {
+        "id": "D",
+        "text": "Suppress uncertainty information"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "optionExplanations": {
+      "A": "Transparency involves understandable disclosure of AI use, intended purpose and relevant limitations.",
+      "B": "This increases collection and conflicts with data minimization; transparency involves understandable disclosure of AI use, intended purpose and relevant limitations.",
+      "C": "This removes evidence needed to understand or review system behavior; transparency involves understandable disclosure of AI use, intended purpose and relevant limitations.",
+      "D": "This hides material limitations instead of informing users; transparency involves understandable disclosure of AI use, intended purpose and relevant limitations."
+    },
+    "explanation": "Transparency involves understandable disclosure of AI use, intended purpose and relevant limitations.",
+    "learningObjective": "Describe considerations for transparency in an AI solution",
+    "tags": [
+      "transparency",
+      "limitations"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2",
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/document/analyzer-improvement"
+    ]
+  },
+  {
+    "id": "AI901-157",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Configuration",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "For a model that supports configurable temperature, a team lowers temperature to zero but expects identical output across every request and model update. Which statement is most accurate?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Temperature controls only the maximum response length"
+      },
+      {
+        "id": "B",
+        "text": "Lower temperature generally reduces variation, but it should not be treated as an absolute cross-version guarantee of identical output"
+      },
+      {
+        "id": "C",
+        "text": "Temperature determines whether the model accepts images"
+      },
+      {
+        "id": "D",
+        "text": "A zero value automatically grounds answers in company data"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "optionExplanations": {
+      "A": "This affects generation variability, not the permitted response length; lower temperature generally reduces variation for models that support the setting, but it is not an absolute guarantee of identical output across requests or model updates.",
+      "B": "Lower temperature usually makes output more focused and repeatable, but application design should not assume universal deterministic identity.",
+      "C": "Image-input support is a model capability; changing temperature does not add or remove a supported input modality.",
+      "D": "This confuses sampling variability with grounding; temperature does not supply trusted facts; lower temperature generally reduces variation for models that support the setting, but it is not an absolute guarantee of identical output across requests or model updates."
+    },
+    "explanation": "Lower temperature generally reduces variation for models that support the setting, but it is not an absolute guarantee of identical output across requests or model updates.",
+    "learningObjective": "Identify appropriate model deployment options and configuration parameters",
+    "tags": [
+      "temperature",
+      "configuration"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/dotnet/ai/conceptual/understanding-tokens",
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/3-using-generative-ai-models",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/reasoning",
+      "https://learn.microsoft.com/en-gb/azure/foundry/openai/concepts/prompt-engineering#temperature-and-top%5C_p-parameters"
+    ]
+  },
+  {
+    "id": "AI901-158",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A support message contains a product name, an organisation and an overall negative opinion. Which pair of techniques extracts the named references and evaluates the opinion?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Key phrase extraction and speech synthesis"
+      },
+      {
+        "id": "B",
+        "text": "OCR and object detection"
+      },
+      {
+        "id": "C",
+        "text": "Entity recognition and sentiment analysis"
+      },
+      {
+        "id": "D",
+        "text": "Summarisation and image generation"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "optionExplanations": {
+      "A": "Key phrase extraction finds important terms, but speech synthesis generates audio rather than evaluating the message's sentiment.",
+      "B": "OCR reads image text and object detection locates visual objects; neither is the requested analysis of named references and opinion in supplied text.",
+      "C": "Entity recognition identifies named references; sentiment analysis evaluates expressed opinion.",
+      "D": "Summarization condenses content and image generation creates visuals; this pair does not specifically identify entities and classify opinion."
+    },
+    "explanation": "Entity recognition identifies named references; sentiment analysis evaluates expressed opinion.",
+    "learningObjective": "Describe common text analysis techniques, including keyword extraction, entity detection, sentiment analysis, and summarization",
+    "tags": [
+      "entities",
+      "sentiment"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language",
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models",
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/3-using-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-159",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Prompts",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A model follows the desired tone but occasionally answers beyond the supplied context. Which modification is more relevant than adjusting tone instructions?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Replace the user request with a longer greeting"
+      },
+      {
+        "id": "B",
+        "text": "Increase maximum output tokens"
+      },
+      {
+        "id": "C",
+        "text": "Add an image-generation deployment"
+      },
+      {
+        "id": "D",
+        "text": "Add explicit grounding constraints and an insufficiency fallback"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "optionExplanations": {
+      "A": "A longer greeting changes conversational wording, not the requirement to stay within the supplied evidence.",
+      "B": "This caps the amount of generated output rather than changing sampling randomness; adding approved context and an insufficiency fallback can reduce unsupported answers, but it does not guarantee factual correctness or enforce access control.",
+      "C": "This creates new visual content from a prompt; adding approved context and an insufficiency fallback can reduce unsupported answers, but it does not guarantee factual correctness or enforce access control.",
+      "D": "Grounding instructions address unsupported content; tone instructions address style, not factual scope."
+    },
+    "explanation": "Adding approved context and an insufficiency fallback can reduce unsupported answers, but it does not guarantee factual correctness or enforce access control. Validate outputs and apply application-level controls when required.",
+    "learningObjective": "Create effective system and user prompts for generative AI models",
+    "tags": [
+      "grounding",
+      "prompts"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering",
+      "https://learn.microsoft.com/azure/foundry/concepts/retrieval-augmented-generation"
+    ]
+  },
+  {
+    "id": "AI901-160",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Application",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "A client submits a document for analysis and immediately expects final structured output, although processing is asynchronous. Which client behaviour is most appropriate?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Poll or monitor the operation until completion, then retrieve and validate the result"
+      },
+      {
+        "id": "B",
+        "text": "Resubmit the document every second as a new job"
+      },
+      {
+        "id": "C",
+        "text": "Treat the initial acknowledgement as the extracted schema"
+      },
+      {
+        "id": "D",
+        "text": "Increase model temperature while waiting"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "optionExplanations": {
+      "A": "Asynchronous analysis requires operation-status handling before final results are consumed.",
+      "B": "This starts repeated analysis jobs instead of checking the status of the existing operation; asynchronous analysis requires operation-status handling before final results are consumed.",
+      "C": "This is an operation receipt, not the completed structured extraction result; asynchronous analysis requires operation-status handling before final results are consumed.",
+      "D": "This affects generation variability, not the permitted response length; asynchronous analysis requires operation-status handling before final results are consumed."
+    },
+    "explanation": "Asynchronous analysis requires operation-status handling before final results are consumed.",
+    "learningObjective": "Build a lightweight application with information extraction capabilities by using Content Understanding",
+    "tags": [
+      "client",
+      "operation-status"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/python/api/overview/azure/ai-contentunderstanding-readme?view=azure-python#asynchronous-operations"
+    ]
+  }
+]

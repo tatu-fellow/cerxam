@@ -1,0 +1,642 @@
+[
+  {
+    "id": "AI901-118",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Generative AI",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "easy",
+    "question": "A language model breaks input text into smaller units before processing it. What are these units called?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Tokens"
+      },
+      {
+        "id": "B",
+        "text": "Endpoints"
+      },
+      {
+        "id": "C",
+        "text": "Agents"
+      },
+      {
+        "id": "D",
+        "text": "Analyzers"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Generative language models process text as tokens. A token can represent a whole word, part of a word, punctuation, or another text unit.",
+    "learningObjective": "Describe how generative AI models work",
+    "tags": [
+      "tokens",
+      "generative-ai"
+    ],
+    "optionExplanations": {
+      "A": "Generative language models process text as tokens.",
+      "B": "This locates the service interface; it does not configure the requested model capability; generative language models process text as tokens.",
+      "C": "This enables an agent to use configured capabilities or invoke external actions; generative language models process text as tokens.",
+      "D": "This refers to configured processing units, not the token units a language model reads; generative language models process text as tokens."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-119",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Generative AI",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You need to send a very large document to a generative AI model in one request. Which model characteristic is especially relevant?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Speech locale"
+      },
+      {
+        "id": "B",
+        "text": "Context window"
+      },
+      {
+        "id": "C",
+        "text": "Image aspect ratio"
+      },
+      {
+        "id": "D",
+        "text": "Agent tool count"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "The model’s context window limits the tokens it can consider for a request. For models with a combined input/output context budget, the document, instructions, conversation history, and generated output must fit within that budget. Also check the model’s separate maximum input and output limits.",
+    "learningObjective": "Describe how generative AI models work",
+    "tags": [
+      "context-window",
+      "tokens"
+    ],
+    "optionExplanations": {
+      "A": "This identifies or configures the language used for speech or text processing; the model’s context window limits the tokens it can consider for a request.",
+      "B": "The model’s context window limits the tokens it can consider for a request.",
+      "C": "This describes image dimensions rather than the model’s token context or requested analysis; the model’s context window limits the tokens it can consider for a request.",
+      "D": "The number of configured tools does not specify how many document tokens fit in a request; the model's context limits do."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/dotnet/ai/conceptual/understanding-tokens",
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/3-using-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-120",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Model selection",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A search feature must find documents with similar meaning even when they use different words. Which model capability is most appropriate?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Embeddings and semantic similarity"
+      },
+      {
+        "id": "B",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "C",
+        "text": "Object detection"
+      },
+      {
+        "id": "D",
+        "text": "Image generation"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Embedding models represent content as numeric vectors so semantic similarity can be measured.",
+    "learningObjective": "Identify an appropriate AI model, based on capabilities",
+    "tags": [
+      "embeddings",
+      "semantic-search"
+    ],
+    "optionExplanations": {
+      "A": "Embedding models represent content as numeric vectors so semantic similarity can be measured.",
+      "B": "This converts text into spoken audio; embedding models represent content as numeric vectors so semantic similarity can be measured.",
+      "C": "This locates individual objects and can return their bounding boxes; embedding models represent content as numeric vectors so semantic similarity can be measured.",
+      "D": "This creates new visual content from a prompt; embedding models represent content as numeric vectors so semantic similarity can be measured."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure#embeddings"
+    ]
+  },
+  {
+    "id": "AI901-121",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Generative AI",
+    "questionType": "ordering",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "Put this simplified retrieval-augmented generation workflow in the most appropriate order.",
+    "items": [
+      {
+        "id": "retrieve",
+        "text": "Retrieve relevant trusted information"
+      },
+      {
+        "id": "augment",
+        "text": "Add retrieved information to the model context"
+      },
+      {
+        "id": "generate",
+        "text": "Generate a grounded response"
+      },
+      {
+        "id": "ask",
+        "text": "Receive the user question"
+      }
+    ],
+    "correctAnswer": [
+      "ask",
+      "retrieve",
+      "augment",
+      "generate"
+    ],
+    "explanation": "RAG starts with a request, retrieves relevant information, adds it to the model context, and then generates an answer grounded in that information.",
+    "learningObjective": "Describe how generative AI models work",
+    "tags": [
+      "rag",
+      "grounding"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/concepts/retrieval-augmented-generation"
+    ]
+  },
+  {
+    "id": "AI901-122",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Foundry SDK",
+    "questionType": "code_analysis",
+    "presentation": "code",
+    "difficulty": "medium",
+    "question": "In this Responses API call, client is an authenticated OpenAI-compatible client connected to Foundry, and model_name contains the deployment name. Which argument value selects the deployment?",
+    "code": "response = client.responses.create(\n    model=model_name,\n    input=\"Summarize this feedback.\"\n)",
+    "options": [
+      {
+        "id": "A",
+        "text": "model_name"
+      },
+      {
+        "id": "B",
+        "text": "response"
+      },
+      {
+        "id": "C",
+        "text": "input"
+      },
+      {
+        "id": "D",
+        "text": "client.responses"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "For this Foundry API, pass the deployment name, which may differ from the underlying model’s catalog name or ID.",
+    "learningObjective": "Create a lightweight chat client application by using the Foundry SDK",
+    "tags": [
+      "foundry-sdk",
+      "python",
+      "code-analysis"
+    ],
+    "optionExplanations": {
+      "A": "For this Foundry API, pass the deployment name, which may differ from the underlying model’s catalog name or ID.",
+      "B": "This is the object returned by the API call; it does not select which model deployment to invoke; for this Foundry API, pass the deployment name, which may differ from the underlying model’s catalog name or ID.",
+      "C": "The input argument supplies the prompt content, not the deployment name used by the model argument.",
+      "D": "client.responses is the client's response API interface; its create method sends the request, while the model argument selects the deployment."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/foundry-models/how-to/generate-responses"
+    ]
+  },
+  {
+    "id": "AI901-123",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Foundry SDK",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An application needs to invoke a deployed model but the team does not want to use an SDK. Which interface can the application use?",
+    "options": [
+      {
+        "id": "A",
+        "text": "REST API"
+      },
+      {
+        "id": "B",
+        "text": "A CSS stylesheet"
+      },
+      {
+        "id": "C",
+        "text": "A speech voice"
+      },
+      {
+        "id": "D",
+        "text": "An image label"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Deployed Azure AI capabilities can be accessed programmatically through supported REST APIs as well as SDKs.",
+    "learningObjective": "Create a lightweight chat client application by using the Foundry SDK",
+    "tags": [
+      "rest",
+      "api",
+      "clients"
+    ],
+    "optionExplanations": {
+      "A": "Deployed Azure AI capabilities can be accessed programmatically through supported REST APIs as well as SDKs.",
+      "B": "This styles a web page; it does not provide an HTTP interface to a model; deployed Azure AI capabilities can be accessed programmatically through supported REST APIs as well as SDKs.",
+      "C": "This selects synthesized voice output rather than an API for model inference; deployed Azure AI capabilities can be accessed programmatically through supported REST APIs as well as SDKs.",
+      "D": "This is a classification result rather than an application interface; deployed Azure AI capabilities can be accessed programmatically through supported REST APIs as well as SDKs."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/foundry-models/how-to/generate-responses"
+    ]
+  },
+  {
+    "id": "AI901-124",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Security",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A user is successfully signed in but cannot invoke a protected Azure AI resource. Which concept determines whether the user has permission to perform the action?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Authentication"
+      },
+      {
+        "id": "B",
+        "text": "Authorization"
+      },
+      {
+        "id": "C",
+        "text": "Tokenization"
+      },
+      {
+        "id": "D",
+        "text": "Image classification"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Authentication establishes identity. Authorization determines what that authenticated identity is permitted to do.",
+    "learningObjective": "Create a lightweight chat client application by using the Foundry SDK",
+    "tags": [
+      "authentication",
+      "authorization",
+      "security"
+    ],
+    "optionExplanations": {
+      "A": "Authentication establishes who the user is; successful sign-in does not itself grant permission to invoke a resource.",
+      "B": "Authorization determines which actions the authenticated user may perform on the protected resource.",
+      "C": "Tokenization splits model input into tokens; it does not grant resource permissions.",
+      "D": "Image classification assigns labels to images; it does not determine whether an authenticated identity is authorized to invoke a resource."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/concepts/rbac-foundry"
+    ]
+  },
+  {
+    "id": "AI901-125",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Agents",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "An agent must create a Jira ticket after diagnosing a support issue. What enables the agent to perform that external action?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A configured tool or function connected to Jira"
+      },
+      {
+        "id": "B",
+        "text": "A larger context window alone"
+      },
+      {
+        "id": "C",
+        "text": "A lower image resolution"
+      },
+      {
+        "id": "D",
+        "text": "Speech synthesis"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Agents use configured tools or functions to interact with external systems and carry out actions.",
+    "learningObjective": "Create and test a single-agent solution in the Foundry portal",
+    "tags": [
+      "agents",
+      "tools",
+      "jira"
+    ],
+    "optionExplanations": {
+      "A": "Agents use configured tools or functions to interact with external systems and carry out actions.",
+      "B": "This concerns how much tokenized input and output the model can process; agents use configured tools or functions to interact with external systems and carry out actions.",
+      "C": "This changes image quality but does not connect an agent to an external ticketing tool; agents use configured tools or functions to interact with external systems and carry out actions.",
+      "D": "This converts text into spoken audio; agents use configured tools or functions to interact with external systems and carry out actions."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent",
+      "https://learn.microsoft.com/azure/foundry/agents/overview"
+    ]
+  },
+  {
+    "id": "AI901-126",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Computer vision",
+    "questionType": "yes_no_matrix",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "For each statement, select Yes or No.",
+    "items": [
+      {
+        "id": "1",
+        "text": "Object detection can locate objects within an image."
+      },
+      {
+        "id": "2",
+        "text": "Image classification normally assigns a category to the image as a whole."
+      },
+      {
+        "id": "3",
+        "text": "OCR is primarily used to synthesise spoken audio."
+      },
+      {
+        "id": "4",
+        "text": "A multimodal model can combine visual and language understanding."
+      }
+    ],
+    "targets": [
+      {
+        "id": "yes",
+        "text": "Yes"
+      },
+      {
+        "id": "no",
+        "text": "No"
+      }
+    ],
+    "correctAnswer": {
+      "1": "yes",
+      "2": "yes",
+      "3": "no",
+      "4": "yes"
+    },
+    "explanation": "Object detection includes location, classification identifies categories, OCR reads text, and multimodal models can process more than one input modality.",
+    "learningObjective": "Identify features and capabilities of computer vision and image-generation models",
+    "tags": [
+      "vision",
+      "matrix"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/introduction-computer-vision/2-overview",
+      "https://learn.microsoft.com/azure/ai-services/computer-vision/overview-ocr",
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-127",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Content Understanding",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "hard",
+    "question": "OCR successfully returns all text from a scanned invoice, but the application needs reliable named fields such as supplier, invoice number, date, and total. Which AI-901 capability is the better fit?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Content Understanding with a structured schema"
+      },
+      {
+        "id": "B",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "C",
+        "text": "Image generation"
+      },
+      {
+        "id": "D",
+        "text": "Sentiment analysis"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "OCR reads textual content, while Content Understanding can extract and organise unstructured multimodal content into a user-defined structured format.",
+    "learningObjective": "Extract information from documents and forms by using Azure Content Understanding in Foundry Tools",
+    "tags": [
+      "content-understanding",
+      "ocr",
+      "schema"
+    ],
+    "optionExplanations": {
+      "A": "OCR reads textual content, while Content Understanding can extract and organise unstructured multimodal content into a user-defined structured format.",
+      "B": "This converts text into spoken audio; oCR reads textual content, while Content Understanding can extract and organise unstructured multimodal content into a user-defined structured format.",
+      "C": "This creates new visual content from a prompt; oCR reads textual content, while Content Understanding can extract and organise unstructured multimodal content into a user-defined structured format.",
+      "D": "This classifies the opinion expressed in text; oCR reads textual content, while Content Understanding can extract and organise unstructured multimodal content into a user-defined structured format."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents",
+      "https://learn.microsoft.com/azure/ai-services/computer-vision/overview-ocr"
+    ]
+  },
+  {
+    "id": "AI901-128",
+    "domain": "foundry",
+    "topic": "Text & Speech",
+    "subtopic": "Azure Speech",
+    "questionType": "matching",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Match each stage of a voice assistant to the appropriate capability.",
+    "items": [
+      {
+        "id": "1",
+        "text": "Microphone audio becomes written text"
+      },
+      {
+        "id": "2",
+        "text": "Written response becomes spoken audio"
+      },
+      {
+        "id": "3",
+        "text": "Positive or negative opinion is identified in written feedback"
+      }
+    ],
+    "targets": [
+      {
+        "id": "A",
+        "text": "Speech recognition"
+      },
+      {
+        "id": "B",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "C",
+        "text": "Sentiment analysis"
+      }
+    ],
+    "correctAnswer": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explanation": "Speech recognition is audio-to-text, speech synthesis is text-to-audio, and sentiment analysis evaluates opinion in text.",
+    "learningObjective": "Build a lightweight application by using Azure Speech in Foundry Tools",
+    "tags": [
+      "speech",
+      "matching"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition",
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/3-speech-synthesis",
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-129",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Principles",
+    "questionType": "matching",
+    "presentation": "case_study",
+    "difficulty": "hard",
+    "question": "A recruitment solution that screens resumes has several governance issues. Match each issue to the most directly relevant responsible AI principle.",
+    "items": [
+      {
+        "id": "1",
+        "text": "Comparable applicant groups experience substantially different rejection rates"
+      },
+      {
+        "id": "2",
+        "text": "Applicants are not told that AI is used"
+      },
+      {
+        "id": "3",
+        "text": "No team is responsible for appeals and escalation"
+      },
+      {
+        "id": "4",
+        "text": "Unnecessary confidential applicant data is retained"
+      }
+    ],
+    "targets": [
+      {
+        "id": "A",
+        "text": "Fairness"
+      },
+      {
+        "id": "B",
+        "text": "Transparency"
+      },
+      {
+        "id": "C",
+        "text": "Accountability"
+      },
+      {
+        "id": "D",
+        "text": "Privacy and security"
+      }
+    ],
+    "correctAnswer": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "explanation": "Different outcomes relate to fairness, disclosure to transparency, ownership to accountability, and unnecessary sensitive-data retention to privacy and security.",
+    "learningObjective": "Describe principles of responsible AI",
+    "tags": [
+      "responsible-ai",
+      "case-study"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-130",
+    "domain": "foundry",
+    "topic": "Generative AI & Agents",
+    "subtopic": "Model deployment",
+    "questionType": "ordering",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Put these steps for a simple Foundry model workflow in the most sensible order.",
+    "items": [
+      {
+        "id": "requirements",
+        "text": "Identify application requirements"
+      },
+      {
+        "id": "select",
+        "text": "Select an appropriate model"
+      },
+      {
+        "id": "deploy",
+        "text": "Deploy the model"
+      },
+      {
+        "id": "test",
+        "text": "Test the deployment in the portal"
+      },
+      {
+        "id": "client",
+        "text": "Call the deployment from application code"
+      }
+    ],
+    "correctAnswer": [
+      "requirements",
+      "select",
+      "deploy",
+      "test",
+      "client"
+    ],
+    "explanation": "Requirements drive selection; the model must be deployed before testing and client integration.",
+    "learningObjective": "Deploy a model and interact with it in the Foundry portal",
+    "tags": [
+      "foundry",
+      "deployment",
+      "ordering"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models"
+    ]
+  }
+]

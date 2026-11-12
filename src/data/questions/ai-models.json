@@ -1,0 +1,619 @@
+[
+  {
+    "id": "AI901-016",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Generative AI",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which statement most accurately characterises a generative AI model?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A model that creates new content in response to input"
+      },
+      {
+        "id": "B",
+        "text": "A model used only to assign predefined labels to existing inputs"
+      },
+      {
+        "id": "C",
+        "text": "A model used only to predict a numeric quantity"
+      },
+      {
+        "id": "D",
+        "text": "A model used only to convert text into vectors for similarity comparison"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Generative AI creates content such as text or images. Classification, regression, and embeddings illustrate other tasks; they are not definitions of generative content creation.",
+    "learningObjective": "Describe how generative AI models work",
+    "tags": [
+      "ai-models-&-configuration",
+      "generative-ai"
+    ],
+    "optionExplanations": {
+      "A": "Generative AI creates content such as text or images.",
+      "B": "This assigns an input to one or more predefined categories; generative AI creates content such as text or images.",
+      "C": "This predicts a numeric value rather than generating content or assigning a category; generative AI creates content such as text or images.",
+      "D": "This represents text as numeric vectors for similarity search; generative AI creates content such as text or images."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-017",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Model selection",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An application must send an image and a text question in the same request. Which input capability must the deployed model support?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Text-only input with a larger context window"
+      },
+      {
+        "id": "B",
+        "text": "Text embeddings for similarity search"
+      },
+      {
+        "id": "C",
+        "text": "Audio-only input"
+      },
+      {
+        "id": "D",
+        "text": "Image and text input in the same request"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "The model must explicitly support both image and text input. A larger text context window or text embedding capability does not add image understanding.",
+    "learningObjective": "Identify an appropriate AI model, based on capabilities",
+    "tags": [
+      "ai-models-&-configuration",
+      "model-selection"
+    ],
+    "optionExplanations": {
+      "A": "This concerns how much tokenized input and output the model can process; the model must explicitly support both image and text input.",
+      "B": "This represents content as numeric vectors for semantic similarity comparisons; the model must explicitly support both image and text input.",
+      "C": "This accepts or processes audio input, subject to the model’s supported modalities; the model must explicitly support both image and text input.",
+      "D": "The model must explicitly support both image and text input."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-018",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Model selection",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You need to generate images from text instructions. Which model capability is required?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Entity detection"
+      },
+      {
+        "id": "B",
+        "text": "Document extraction"
+      },
+      {
+        "id": "C",
+        "text": "Image generation"
+      },
+      {
+        "id": "D",
+        "text": "Speech recognition"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Image-generation capability is required to create visual outputs from prompts.",
+    "learningObjective": "Identify an appropriate AI model, based on capabilities",
+    "tags": [
+      "ai-models-&-configuration",
+      "model-selection"
+    ],
+    "optionExplanations": {
+      "A": "This identifies named people, organizations, locations, and other entities in text; image-generation capability is required to create visual outputs from prompts.",
+      "B": "This extracts named values from documents rather than generating or classifying content; image-generation capability is required to create visual outputs from prompts.",
+      "C": "Image-generation capability is required to create visual outputs from prompts.",
+      "D": "This converts spoken audio into text; image-generation capability is required to create visual outputs from prompts."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/3-image-generation",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/dall-e"
+    ]
+  },
+  {
+    "id": "AI901-019",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Configuration",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "For a model that supports configurable temperature, a generative response is too varied. Which parameter should you normally reduce to make output more predictable?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Endpoint URL"
+      },
+      {
+        "id": "B",
+        "text": "Temperature"
+      },
+      {
+        "id": "C",
+        "text": "Maximum output tokens"
+      },
+      {
+        "id": "D",
+        "text": "Deployment name"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "For a model that supports this setting, lowering temperature generally reduces sampling variability. Maximum output tokens controls length, not randomness.",
+    "learningObjective": "Identify appropriate model deployment options and configuration parameters",
+    "tags": [
+      "ai-models-&-configuration",
+      "configuration"
+    ],
+    "optionExplanations": {
+      "A": "This locates the service interface; it does not configure the requested model capability; for a model that supports this setting, lowering temperature generally reduces sampling variability.",
+      "B": "Temperature controls randomness in token selection. Lower values generally produce more focused and predictable output; maximum output tokens controls length, not creativity.",
+      "C": "This caps the amount of generated output rather than changing sampling randomness; for a model that supports this setting, lowering temperature generally reduces sampling variability.",
+      "D": "This identifies or labels a deployment but does not provide the required model capability by itself; for a model that supports this setting, lowering temperature generally reduces sampling variability."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/dotnet/ai/conceptual/understanding-tokens",
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/3-using-generative-ai-models",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/reasoning",
+      "https://learn.microsoft.com/en-gb/azure/foundry/openai/concepts/prompt-engineering#temperature-and-top%5C_p-parameters"
+    ]
+  },
+  {
+    "id": "AI901-020",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Deployment",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A backend must call a selected chat model through a Microsoft Foundry inference API. Which prerequisite does it need?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A model deployment available through a supported inference endpoint"
+      },
+      {
+        "id": "B",
+        "text": "Only the model catalog description"
+      },
+      {
+        "id": "C",
+        "text": "Only a saved prompt template"
+      },
+      {
+        "id": "D",
+        "text": "Only an embedding of the user’s question"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "A deployed model is exposed through an inference endpoint that the application can call. A catalog description or saved prompt is not a callable deployment.",
+    "learningObjective": "Identify appropriate model deployment options and configuration parameters",
+    "tags": [
+      "ai-models-&-configuration",
+      "deployment"
+    ],
+    "optionExplanations": {
+      "A": "A deployed model is exposed through an inference endpoint that the application can call.",
+      "B": "This stores or describes configuration but does not make an undeployed model callable; a deployed model is exposed through an inference endpoint that the application can call.",
+      "C": "This stores or describes configuration but does not make an undeployed model callable; a deployed model is exposed through an inference endpoint that the application can call.",
+      "D": "This represents content as numeric vectors for semantic similarity comparisons; a deployed model is exposed through an inference endpoint that the application can call."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/foundry-models/how-to/generate-responses",
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/3-using-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-021",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Generative AI",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "What is the role of a user prompt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Deploy the model"
+      },
+      {
+        "id": "B",
+        "text": "Create an Azure subscription"
+      },
+      {
+        "id": "C",
+        "text": "Replace application code"
+      },
+      {
+        "id": "D",
+        "text": "Provide the user’s request or input to the model"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "A user prompt carries the user’s request or input.",
+    "learningObjective": "Describe how generative AI models work",
+    "tags": [
+      "ai-models-&-configuration",
+      "generative-ai"
+    ],
+    "optionExplanations": {
+      "A": "This makes a selected model available for inference; a user prompt carries the user’s request or input.",
+      "B": "This sets up Azure resources or infrastructure rather than supplying a user request; a user prompt carries the user’s request or input.",
+      "C": "This changes the client implementation rather than providing a prompt or request; a user prompt carries the user’s request or input.",
+      "D": "A user prompt carries the user’s request or input."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering"
+    ]
+  },
+  {
+    "id": "AI901-022",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Generative AI",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "What is the role of a system prompt?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Convert speech into audio"
+      },
+      {
+        "id": "B",
+        "text": "Provision networking"
+      },
+      {
+        "id": "C",
+        "text": "Provide overarching instructions for model behaviour"
+      },
+      {
+        "id": "D",
+        "text": "Store image pixels"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "A system prompt supplies behavioural instructions and context for model responses.",
+    "learningObjective": "Describe how generative AI models work",
+    "tags": [
+      "ai-models-&-configuration",
+      "generative-ai"
+    ],
+    "optionExplanations": {
+      "A": "This describes speech synthesis imprecisely; synthesis converts text into spoken audio; a system prompt supplies behavioural instructions and context for model responses.",
+      "B": "This sets up Azure resources or infrastructure rather than supplying a user request; a system prompt supplies behavioural instructions and context for model responses.",
+      "C": "A system prompt supplies behavioural instructions and context for model responses.",
+      "D": "This stores image data but does not provide behavioral instructions to a language model; a system prompt supplies behavioural instructions and context for model responses."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering"
+    ]
+  },
+  {
+    "id": "AI901-023",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Model selection",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A solution must analyse a photograph and answer a natural-language question about it. Choose the best model capability.",
+    "options": [
+      {
+        "id": "A",
+        "text": "A text-generation model with a larger context window"
+      },
+      {
+        "id": "B",
+        "text": "Vision-capable multimodal model"
+      },
+      {
+        "id": "C",
+        "text": "An embedding model for semantic similarity"
+      },
+      {
+        "id": "D",
+        "text": "A text-only summarization model"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "A vision-capable model can interpret the photograph together with the text question. A text-only model cannot directly inspect the image.",
+    "learningObjective": "Identify an appropriate AI model, based on capabilities",
+    "tags": [
+      "ai-models-&-configuration",
+      "model-selection"
+    ],
+    "optionExplanations": {
+      "A": "This concerns how much tokenized input and output the model can process; a vision-capable model can interpret the photograph together with the text question.",
+      "B": "A vision-capable model can interpret the photograph together with the text question.",
+      "C": "This represents content as numeric vectors for semantic similarity comparisons; a vision-capable model can interpret the photograph together with the text question.",
+      "D": "This condenses source text to its main points; a vision-capable model can interpret the photograph together with the text question."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-024",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Model selection",
+    "questionType": "multiple_choice",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Which TWO requirements point towards a multimodal model?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Interpret an uploaded image with a text question"
+      },
+      {
+        "id": "B",
+        "text": "Interpret audio supplied directly to the model alongside text instructions, without a separate transcription-only input pipeline"
+      },
+      {
+        "id": "C",
+        "text": "Produce a text summary from an already supplied text document"
+      },
+      {
+        "id": "D",
+        "text": "Convert plain text to vectors for similarity search"
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "B"
+    ],
+    "explanation": "Image and audio input require model support for those specific modalities. Image support does not automatically imply audio support, and text summarization or embeddings do not add non-text input.",
+    "learningObjective": "Identify an appropriate AI model, based on capabilities",
+    "tags": [
+      "ai-models-&-configuration",
+      "model-selection"
+    ],
+    "optionExplanations": {
+      "A": "Image and audio input require model support for those specific modalities.",
+      "B": "Image and audio input require model support for those specific modalities.",
+      "C": "This summarizes existing text rather than supplying image or audio input; image and audio input require model support for those specific modalities.",
+      "D": "This represents content as numeric vectors for semantic similarity comparisons; image and audio input require model support for those specific modalities."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/audio-completions-quickstart",
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-025",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Capabilities",
+    "questionType": "matching",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Match the requirement to the model capability.",
+    "items": [
+      {
+        "id": "1",
+        "text": "Create an image from a prompt"
+      },
+      {
+        "id": "2",
+        "text": "Interpret image and text together"
+      },
+      {
+        "id": "3",
+        "text": "Generate a text response from instructions"
+      }
+    ],
+    "targets": [
+      {
+        "id": "A",
+        "text": "Image generation"
+      },
+      {
+        "id": "B",
+        "text": "Multimodal vision"
+      },
+      {
+        "id": "C",
+        "text": "Text generation"
+      }
+    ],
+    "correctAnswer": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explanation": "Each requirement maps to the corresponding generation or multimodal capability.",
+    "learningObjective": "Identify an appropriate AI model, based on capabilities",
+    "tags": [
+      "ai-models-&-configuration"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/3-image-generation",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/dall-e",
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering"
+    ]
+  },
+  {
+    "id": "AI901-101",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Model selection",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You are comparing two models for an application. Which benchmark dimensions are most useful for making an informed selection?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Portal colour, file name, and icon"
+      },
+      {
+        "id": "B",
+        "text": "Deployment-name length and portal theme"
+      },
+      {
+        "id": "C",
+        "text": "Model recency alone, regardless of task results"
+      },
+      {
+        "id": "D",
+        "text": "Quality, safety, cost, and performance"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Compare models using task-relevant quality, safety, cost, and performance evidence. Portal appearance or recency alone does not establish suitability.",
+    "learningObjective": "Identify an appropriate AI model, based on capabilities",
+    "tags": [
+      "ai-models-&-configuration",
+      "model-selection",
+      "benchmarks"
+    ],
+    "optionExplanations": {
+      "A": "Portal colour, file names, and icons are presentation metadata, not benchmark evidence; compare models using task-relevant quality, safety, cost, and performance.",
+      "B": "Deployment-name length and portal theme are naming or presentation metadata, not benchmark evidence; compare models using task-relevant quality, safety, cost, and performance.",
+      "C": "This uses model age as a proxy; recency alone does not demonstrate task suitability; compare models using task-relevant quality, safety, cost, and performance evidence.",
+      "D": "Compare models using task-relevant quality, safety, cost, and performance evidence."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/2-generative-ai-models",
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/3-using-generative-ai-models"
+    ]
+  },
+  {
+    "id": "AI901-102",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Configuration",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "The API indicates that generation stopped because the response reached its configured output-token limit. Which setting should you review first?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Deployment display name"
+      },
+      {
+        "id": "B",
+        "text": "Input image width"
+      },
+      {
+        "id": "C",
+        "text": "Maximum output tokens"
+      },
+      {
+        "id": "D",
+        "text": "Temperature"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Increase the allowed output-token budget within the model’s supported limits. For reasoning models, the output budget can include reasoning tokens as well as visible answer text.",
+    "learningObjective": "Identify appropriate model deployment options and configuration parameters",
+    "tags": [
+      "ai-models-&-configuration",
+      "configuration",
+      "tokens"
+    ],
+    "optionExplanations": {
+      "A": "This identifies or labels a deployment but does not provide the required model capability by itself; increase the allowed output-token budget within the model’s supported limits.",
+      "B": "This describes image dimensions rather than the model’s token context or requested analysis; increase the allowed output-token budget within the model’s supported limits.",
+      "C": "The maximum output token setting limits response length. Temperature controls randomness rather than the output limit.",
+      "D": "This affects generation variability, not the permitted response length; increase the allowed output-token budget within the model’s supported limits."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/dotnet/ai/conceptual/understanding-tokens",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/reasoning#how-reasoning-works"
+    ]
+  },
+  {
+    "id": "AI901-103",
+    "domain": "concepts",
+    "topic": "AI Models & Configuration",
+    "subtopic": "Model selection",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A solution needs to convert natural-language text into numeric representations for semantic similarity search. Which model capability is required?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Object detection"
+      },
+      {
+        "id": "B",
+        "text": "Embeddings"
+      },
+      {
+        "id": "C",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "D",
+        "text": "Image generation"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Embedding models convert content into vectors that can be compared for semantic similarity.",
+    "learningObjective": "Identify an appropriate AI model, based on capabilities",
+    "tags": [
+      "ai-models-&-configuration",
+      "model-selection",
+      "embeddings"
+    ],
+    "optionExplanations": {
+      "A": "This locates individual objects and can return their bounding boxes; embedding models convert content into vectors that can be compared for semantic similarity.",
+      "B": "Embedding models convert content into vectors that can be compared for semantic similarity.",
+      "C": "This converts text into spoken audio; embedding models convert content into vectors that can be compared for semantic similarity.",
+      "D": "This creates new visual content from a prompt; embedding models convert content into vectors that can be compared for semantic similarity."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure#embeddings"
+    ]
+  }
+]

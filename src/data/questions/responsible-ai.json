@@ -1,0 +1,859 @@
+[
+  {
+    "id": "AI901-001",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Fairness",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A loan-screening model rejects similarly qualified applicants at very different rates across demographic groups. Which principle should the team investigate first?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "B",
+        "text": "Fairness"
+      },
+      {
+        "id": "C",
+        "text": "Privacy and security"
+      },
+      {
+        "id": "D",
+        "text": "Inclusiveness"
+      },
+      {
+        "id": "E",
+        "text": "Transparency"
+      },
+      {
+        "id": "F",
+        "text": "Accountability"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Fairness focuses on avoiding inappropriate differences in treatment or outcomes across groups.",
+    "learningObjective": "Describe considerations for fairness in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "fairness"
+    ],
+    "optionExplanations": {
+      "A": "This concerns dependable behavior and safe handling of unexpected or harmful cases; fairness focuses on avoiding inappropriate differences in treatment or outcomes across groups.",
+      "B": "Fairness focuses on avoiding inappropriate differences in treatment or outcomes across groups.",
+      "C": "This concerns protecting data, establishing identity, or controlling permission to use a resource; fairness focuses on avoiding inappropriate differences in treatment or outcomes across groups.",
+      "D": "This concerns whether people with varied abilities can use the system; fairness focuses on avoiding inappropriate differences in treatment or outcomes across groups.",
+      "E": "This helps users understand when AI is used, how it behaves, or what its limitations are; fairness focuses on avoiding inappropriate differences in treatment or outcomes across groups.",
+      "F": "This assigns people responsibility for oversight and outcomes; fairness focuses on avoiding inappropriate differences in treatment or outcomes across groups."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-002",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Reliability and safety",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A medical-support model sometimes produces unsafe suggestions when given unusual input. Which principle is most directly concerned?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Privacy and security"
+      },
+      {
+        "id": "B",
+        "text": "Inclusiveness"
+      },
+      {
+        "id": "C",
+        "text": "Transparency"
+      },
+      {
+        "id": "D",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "E",
+        "text": "Accountability"
+      },
+      {
+        "id": "F",
+        "text": "Fairness"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Reliability and safety focuses on dependable behaviour and avoiding harmful outcomes.",
+    "learningObjective": "Describe considerations for reliability and safety in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "reliability-and-safety"
+    ],
+    "optionExplanations": {
+      "A": "This concerns protecting data, establishing identity, or controlling permission to use a resource; reliability and safety focuses on dependable behaviour and avoiding harmful outcomes.",
+      "B": "This concerns whether people with varied abilities can use the system; reliability and safety focuses on dependable behaviour and avoiding harmful outcomes.",
+      "C": "This helps users understand when AI is used, how it behaves, or what its limitations are; reliability and safety focuses on dependable behaviour and avoiding harmful outcomes.",
+      "D": "Reliability and safety focuses on dependable behaviour and avoiding harmful outcomes.",
+      "E": "This assigns people responsibility for oversight and outcomes; reliability and safety focuses on dependable behaviour and avoiding harmful outcomes.",
+      "F": "This concerns whether outcomes or errors differ unfairly across groups; reliability and safety focuses on dependable behaviour and avoiding harmful outcomes."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-003",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Privacy and security",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A chatbot logs confidential customer details that are not needed for its task. Which principle is most directly relevant?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Inclusiveness"
+      },
+      {
+        "id": "B",
+        "text": "Transparency"
+      },
+      {
+        "id": "C",
+        "text": "Accountability"
+      },
+      {
+        "id": "D",
+        "text": "Fairness"
+      },
+      {
+        "id": "E",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "F",
+        "text": "Privacy and security"
+      }
+    ],
+    "correctAnswer": [
+      "F"
+    ],
+    "explanation": "Privacy and security concerns appropriate protection and handling of data.",
+    "learningObjective": "Describe considerations for privacy and security in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "privacy-and-security"
+    ],
+    "optionExplanations": {
+      "A": "This concerns whether people with varied abilities can use the system; privacy and security concerns appropriate protection and handling of data.",
+      "B": "This helps users understand when AI is used, how it behaves, or what its limitations are; privacy and security concerns appropriate protection and handling of data.",
+      "C": "This assigns people responsibility for oversight and outcomes; privacy and security concerns appropriate protection and handling of data.",
+      "D": "This concerns whether outcomes or errors differ unfairly across groups; privacy and security concerns appropriate protection and handling of data.",
+      "E": "This concerns dependable behavior and safe handling of unexpected or harmful cases; privacy and security concerns appropriate protection and handling of data.",
+      "F": "Privacy and security concerns appropriate protection and handling of data."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-004",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Inclusiveness",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A voice interface is redesigned so people with varied abilities can use it. Which principle does this most directly support?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Inclusiveness"
+      },
+      {
+        "id": "B",
+        "text": "Transparency"
+      },
+      {
+        "id": "C",
+        "text": "Accountability"
+      },
+      {
+        "id": "D",
+        "text": "Fairness"
+      },
+      {
+        "id": "E",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "F",
+        "text": "Privacy and security"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Inclusiveness focuses on designing AI so people with varied abilities and circumstances can participate.",
+    "learningObjective": "Describe considerations for inclusiveness in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "inclusiveness"
+    ],
+    "optionExplanations": {
+      "A": "Inclusiveness focuses on designing AI so people with varied abilities and circumstances can participate.",
+      "B": "This helps users understand when AI is used, how it behaves, or what its limitations are; inclusiveness focuses on designing AI so people with varied abilities and circumstances can participate.",
+      "C": "This assigns people responsibility for oversight and outcomes; inclusiveness focuses on designing AI so people with varied abilities and circumstances can participate.",
+      "D": "This concerns whether outcomes or errors differ unfairly across groups; inclusiveness focuses on designing AI so people with varied abilities and circumstances can participate.",
+      "E": "This concerns dependable behavior and safe handling of unexpected or harmful cases; inclusiveness focuses on designing AI so people with varied abilities and circumstances can participate.",
+      "F": "This concerns protecting data, establishing identity, or controlling permission to use a resource; inclusiveness focuses on designing AI so people with varied abilities and circumstances can participate."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2",
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition"
+    ]
+  },
+  {
+    "id": "AI901-005",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Transparency",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Users are clearly told when content was generated by AI and are given information about the system’s limitations. Which principle is demonstrated?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Accountability"
+      },
+      {
+        "id": "B",
+        "text": "Fairness"
+      },
+      {
+        "id": "C",
+        "text": "Transparency"
+      },
+      {
+        "id": "D",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "E",
+        "text": "Privacy and security"
+      },
+      {
+        "id": "F",
+        "text": "Inclusiveness"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Transparency concerns helping people understand AI use, behaviour and limitations.",
+    "learningObjective": "Describe considerations for transparency in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "transparency"
+    ],
+    "optionExplanations": {
+      "A": "This assigns people responsibility for oversight and outcomes; transparency concerns helping people understand AI use, behaviour and limitations.",
+      "B": "This concerns whether outcomes or errors differ unfairly across groups; transparency concerns helping people understand AI use, behaviour and limitations.",
+      "C": "Transparency concerns helping people understand AI use, behaviour and limitations.",
+      "D": "This concerns dependable behavior and safe handling of unexpected or harmful cases; transparency concerns helping people understand AI use, behaviour and limitations.",
+      "E": "This concerns protecting data, establishing identity, or controlling permission to use a resource; transparency concerns helping people understand AI use, behaviour and limitations.",
+      "F": "This concerns whether people with varied abilities can use the system; transparency concerns helping people understand AI use, behaviour and limitations."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-006",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Accountability",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An organisation assigns named owners to supervise an AI system and defines who is responsible for its outcomes. Which principle is demonstrated?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Fairness"
+      },
+      {
+        "id": "B",
+        "text": "Reliability and safety"
+      },
+      {
+        "id": "C",
+        "text": "Privacy and security"
+      },
+      {
+        "id": "D",
+        "text": "Inclusiveness"
+      },
+      {
+        "id": "E",
+        "text": "Accountability"
+      },
+      {
+        "id": "F",
+        "text": "Transparency"
+      }
+    ],
+    "correctAnswer": [
+      "E"
+    ],
+    "explanation": "Accountability concerns human and organisational responsibility for AI systems.",
+    "learningObjective": "Describe considerations for accountability in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "accountability"
+    ],
+    "optionExplanations": {
+      "A": "This concerns whether outcomes or errors differ unfairly across groups; accountability concerns human and organisational responsibility for AI systems.",
+      "B": "This concerns dependable behavior and safe handling of unexpected or harmful cases; accountability concerns human and organisational responsibility for AI systems.",
+      "C": "This concerns protecting data, establishing identity, or controlling permission to use a resource; accountability concerns human and organisational responsibility for AI systems.",
+      "D": "This concerns whether people with varied abilities can use the system; accountability concerns human and organisational responsibility for AI systems.",
+      "E": "Accountability concerns human and organisational responsibility for AI systems.",
+      "F": "This helps users understand when AI is used, how it behaves, or what its limitations are; accountability concerns human and organisational responsibility for AI systems."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-007",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Fairness",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Before deployment, a team compares error rates across user groups. What is the primary purpose?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Generate images"
+      },
+      {
+        "id": "B",
+        "text": "Assess whether outcomes are equitable across groups"
+      },
+      {
+        "id": "C",
+        "text": "Reduce model response length"
+      },
+      {
+        "id": "D",
+        "text": "Convert speech to text"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Comparing performance across groups is a fairness consideration.",
+    "learningObjective": "Describe considerations for fairness in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "fairness"
+    ],
+    "optionExplanations": {
+      "A": "This creates visual content rather than evaluating fairness across applicant groups; comparing performance across groups is a fairness consideration.",
+      "B": "Comparing performance across groups is a fairness consideration.",
+      "C": "This changes response size and does not test outcome differences across groups; comparing performance across groups is a fairness consideration.",
+      "D": "This converts spoken audio into text; comparing performance across groups is a fairness consideration."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2#fairness-and-inclusiveness"
+    ]
+  },
+  {
+    "id": "AI901-008",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Reliability and safety",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which action most directly supports reliability and safety?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Testing behaviour under expected and unusual inputs"
+      },
+      {
+        "id": "B",
+        "text": "Collecting unnecessary personal data"
+      },
+      {
+        "id": "C",
+        "text": "Hiding that AI is being used"
+      },
+      {
+        "id": "D",
+        "text": "Removing human ownership"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Testing normal and edge conditions helps assess dependable and safe behaviour.",
+    "learningObjective": "Describe considerations for reliability and safety in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "reliability-and-safety"
+    ],
+    "optionExplanations": {
+      "A": "Testing normal and edge conditions helps assess dependable and safe behaviour.",
+      "B": "This increases privacy risk and does not test robustness or safety; testing normal and edge conditions helps assess dependable and safe behaviour.",
+      "C": "This reduces transparency and does not improve reliability or safety; testing normal and edge conditions helps assess dependable and safe behaviour.",
+      "D": "Removing human ownership weakens accountability and leaves no clear owner for safety incidents; it does not improve reliability."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-009",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Privacy and security",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which design choice best supports privacy?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Store every prompt indefinitely"
+      },
+      {
+        "id": "B",
+        "text": "Expose credentials in client code"
+      },
+      {
+        "id": "C",
+        "text": "Share private inputs by default"
+      },
+      {
+        "id": "D",
+        "text": "Collect only data required for the AI task"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Data minimisation supports privacy by limiting collection to what is needed.",
+    "learningObjective": "Describe considerations for privacy and security in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "privacy-and-security"
+    ],
+    "optionExplanations": {
+      "A": "This retains data without a task-based need or retention control; data minimisation supports privacy by limiting collection to what is needed.",
+      "B": "Exposing credentials lets unauthorized parties access protected resources and data; it undermines privacy and security.",
+      "C": "This exposes confidential information rather than protecting it; data minimisation supports privacy by limiting collection to what is needed.",
+      "D": "Data minimisation supports privacy by limiting collection to what is needed."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/well-architected/ai/responsible-ai"
+    ]
+  },
+  {
+    "id": "AI901-010",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Inclusiveness",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which scenario best illustrates inclusiveness?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Keeping model limitations secret"
+      },
+      {
+        "id": "B",
+        "text": "Removing monitoring"
+      },
+      {
+        "id": "C",
+        "text": "Designing an interface usable with assistive technologies"
+      },
+      {
+        "id": "D",
+        "text": "Evaluate whether similarly qualified demographic groups receive comparable outcomes"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Inclusive design supports use by people with varied abilities; evaluating outcomes for similarly qualified demographic groups is a fairness assessment.",
+    "learningObjective": "Describe considerations for inclusiveness in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "inclusiveness"
+    ],
+    "optionExplanations": {
+      "A": "Keeping limitations secret undermines transparency; it does not make the interface accessible to people with varied abilities.",
+      "B": "Removing monitoring makes operational problems harder to detect; it does not improve accessibility or inclusive design.",
+      "C": "Inclusive design supports use by people with varied abilities; evaluating outcomes for similarly qualified demographic groups is a fairness assessment.",
+      "D": "This concerns whether outcomes or errors differ unfairly across groups; inclusive design supports use by people with varied abilities; evaluating outcomes for similarly qualified demographic groups is a fairness assessment."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-011",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Transparency",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which action best supports transparency?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Remove audit information"
+      },
+      {
+        "id": "B",
+        "text": "Explain that an answer was AI-generated and communicate relevant limitations"
+      },
+      {
+        "id": "C",
+        "text": "Hide model use from users"
+      },
+      {
+        "id": "D",
+        "text": "Collect more personal data"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Clear disclosure and understandable limitations support transparency.",
+    "learningObjective": "Describe considerations for transparency in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "transparency"
+    ],
+    "optionExplanations": {
+      "A": "This weakens traceability instead of helping users understand AI behavior; clear disclosure and understandable limitations support transparency.",
+      "B": "Clear disclosure and understandable limitations support transparency.",
+      "C": "This reduces transparency and does not improve reliability or safety; clear disclosure and understandable limitations support transparency.",
+      "D": "This increases personal-data collection and does not improve transparency about AI use or limitations; clear disclosure and understandable limitations support transparency."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-012",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Accountability",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which practice best supports accountability?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Define human owners and escalation paths for the AI solution"
+      },
+      {
+        "id": "B",
+        "text": "Let the model be solely responsible for decisions"
+      },
+      {
+        "id": "C",
+        "text": "Avoid documenting decisions"
+      },
+      {
+        "id": "D",
+        "text": "Remove review processes"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Accountability requires people or organisations to retain responsibility.",
+    "learningObjective": "Describe considerations for accountability in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "accountability"
+    ],
+    "optionExplanations": {
+      "A": "Accountability requires people or organisations to retain responsibility.",
+      "B": "This removes meaningful human ownership and review; accountability requires people or organisations to retain responsibility.",
+      "C": "This prevents people from tracing and reviewing decisions; accountability requires people or organisations to retain responsibility.",
+      "D": "This removes human oversight rather than defining accountable owners; accountability requires people or organisations to retain responsibility."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-013",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Principles",
+    "questionType": "multiple_choice",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Which TWO practices directly support responsible oversight of an AI solution?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Document relevant limitations for users"
+      },
+      {
+        "id": "B",
+        "text": "Hide known limitations"
+      },
+      {
+        "id": "C",
+        "text": "Remove escalation procedures"
+      },
+      {
+        "id": "D",
+        "text": "Assign human ownership for outcomes"
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "D"
+    ],
+    "explanation": "Human ownership supports accountability, and communicating limitations supports transparency.",
+    "learningObjective": "Describe principles of responsible AI",
+    "tags": [
+      "responsible-ai",
+      "principles"
+    ],
+    "optionExplanations": {
+      "A": "Human ownership supports accountability, and communicating limitations supports transparency.",
+      "B": "Hiding known limitations prevents users from understanding when outputs may be unsuitable; it undermines transparency.",
+      "C": "Removing escalation procedures makes it harder for people to challenge or resolve problematic outcomes; it weakens accountable oversight.",
+      "D": "Human ownership supports accountability, and communicating limitations supports transparency."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-014",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Principles",
+    "questionType": "matching",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Match each situation to the responsible AI principle.",
+    "items": [
+      {
+        "id": "1",
+        "text": "Comparable groups receive systematically different outcomes"
+      },
+      {
+        "id": "2",
+        "text": "Users are told an AI system is being used"
+      },
+      {
+        "id": "3",
+        "text": "A named team owns escalation decisions"
+      }
+    ],
+    "targets": [
+      {
+        "id": "A",
+        "text": "Fairness"
+      },
+      {
+        "id": "B",
+        "text": "Transparency"
+      },
+      {
+        "id": "C",
+        "text": "Accountability"
+      }
+    ],
+    "correctAnswer": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explanation": "The situations map to fairness, transparency and accountability respectively.",
+    "learningObjective": "Describe principles of responsible AI",
+    "tags": [
+      "responsible-ai"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-015",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Principles",
+    "questionType": "matching",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Match each design goal to the responsible AI principle.",
+    "items": [
+      {
+        "id": "1",
+        "text": "Protect confidential user data"
+      },
+      {
+        "id": "2",
+        "text": "Ensure dependable behaviour under unusual input"
+      },
+      {
+        "id": "3",
+        "text": "Support people with varied abilities"
+      }
+    ],
+    "targets": [
+      {
+        "id": "A",
+        "text": "Inclusiveness"
+      },
+      {
+        "id": "B",
+        "text": "Privacy and security"
+      },
+      {
+        "id": "C",
+        "text": "Reliability and safety"
+      }
+    ],
+    "correctAnswer": {
+      "1": "B",
+      "2": "C",
+      "3": "A"
+    },
+    "explanation": "Protecting data relates to privacy and security; dependable behaviour to reliability and safety; broad accessibility to inclusiveness.",
+    "learningObjective": "Describe principles of responsible AI",
+    "tags": [
+      "responsible-ai"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2"
+    ]
+  },
+  {
+    "id": "AI901-107",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Reliability and safety",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A high-impact AI recommendation could cause harm if it is wrong. Which design choice best supports reliability and safety?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Remove monitoring after deployment"
+      },
+      {
+        "id": "B",
+        "text": "Add human review and a safe fallback for uncertain cases"
+      },
+      {
+        "id": "C",
+        "text": "Hide confidence information"
+      },
+      {
+        "id": "D",
+        "text": "Automatically accept every result"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Human oversight, monitoring, and safe fallback behaviour reduce the risk of harmful outcomes in high-impact scenarios.",
+    "learningObjective": "Describe considerations for reliability and safety in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "reliability-and-safety",
+      "human-oversight"
+    ],
+    "optionExplanations": {
+      "A": "Removing monitoring prevents the team from detecting failures and changing risks after deployment; high-impact systems still need oversight.",
+      "B": "Human oversight, monitoring, and safe fallback behaviour reduce the risk of harmful outcomes in high-impact scenarios.",
+      "C": "This withholds uncertainty information that can support safe review; human oversight, monitoring, and safe fallback behaviour reduce the risk of harmful outcomes in high-impact scenarios.",
+      "D": "This skips validation and may act on an incorrect or uncertain output; human oversight, monitoring, and safe fallback behaviour reduce the risk of harmful outcomes in high-impact scenarios."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2",
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/document/analyzer-improvement"
+    ]
+  },
+  {
+    "id": "AI901-108",
+    "domain": "concepts",
+    "topic": "Responsible AI",
+    "subtopic": "Transparency",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which artefact most directly helps users understand a model’s intended use and known limitations?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Clear model or system documentation"
+      },
+      {
+        "id": "B",
+        "text": "An undisclosed training dataset"
+      },
+      {
+        "id": "C",
+        "text": "A longer endpoint name"
+      },
+      {
+        "id": "D",
+        "text": "A higher token limit"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Clear documentation of intended use, limitations, and relevant performance characteristics supports transparency.",
+    "learningObjective": "Describe considerations for transparency in an AI solution",
+    "tags": [
+      "responsible-ai",
+      "transparency",
+      "documentation"
+    ],
+    "optionExplanations": {
+      "A": "Clear documentation of intended use, limitations, and relevant performance characteristics supports transparency.",
+      "B": "An undisclosed dataset does not communicate intended use or limitations to users; accessible model or system documentation does.",
+      "C": "This locates the service interface; it does not configure the requested model capability; clear documentation of intended use, limitations, and relevant performance characteristics supports transparency.",
+      "D": "This caps the amount of generated output rather than changing sampling randomness; clear documentation of intended use, limitations, and relevant performance characteristics supports transparency."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai?view=azureml-api-2#transparency"
+    ]
+  }
+]

@@ -1,0 +1,630 @@
+[
+  {
+    "id": "AI901-091",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Documents and forms",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Before writing code for invoice extraction, an analyst wants to inspect an analyzer’s structured output in Foundry. What should they do?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Use the Speech text-to-speech playground to create an audio file"
+      },
+      {
+        "id": "B",
+        "text": "Test a representative invoice with a Content Understanding document analyzer and inspect its structured fields"
+      },
+      {
+        "id": "C",
+        "text": "Use a model catalog description as the invoice result"
+      },
+      {
+        "id": "D",
+        "text": "Create an image-generation deployment for the invoice"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "The Foundry portal lets you test document analyzers on sample invoices and inspect structured field results before implementing a client.",
+    "learningObjective": "Extract information from documents and forms by using Azure Content Understanding in Foundry Tools",
+    "tags": [
+      "information-extraction",
+      "documents-and-forms"
+    ],
+    "optionExplanations": {
+      "A": "This converts text into spoken audio; the Foundry portal lets you test document analyzers on sample invoices and inspect structured field results before implementing a client.",
+      "B": "The Foundry portal lets you test document analyzers on sample invoices and inspect structured field results before implementing a client.",
+      "C": "A model catalog description contains model metadata, not values extracted from the submitted invoice.",
+      "D": "This creates new visual content from a prompt; the Foundry portal lets you test document analyzers on sample invoices and inspect structured field results before implementing a client."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents"
+    ]
+  },
+  {
+    "id": "AI901-092",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Images",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A shipping team uploads a photo of a parcel label and needs the recipient and tracking identifier returned as structured fields. Which capability fits?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Content Understanding with an image analyzer and a field schema"
+      },
+      {
+        "id": "B",
+        "text": "Speech synthesis with a selected voice"
+      },
+      {
+        "id": "C",
+        "text": "Image generation from a text prompt"
+      },
+      {
+        "id": "D",
+        "text": "Sentiment analysis of a written review"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Content Understanding can analyze image inputs and use a schema to return named values; speech synthesis, image generation, and sentiment analysis perform different tasks.",
+    "learningObjective": "Extract information from images by using Content Understanding",
+    "tags": [
+      "information-extraction",
+      "images"
+    ],
+    "optionExplanations": {
+      "A": "Content Understanding can analyze image inputs and use a schema to return named values; speech synthesis, image generation, and sentiment analysis perform different tasks.",
+      "B": "This converts text into spoken audio; content Understanding can analyze image inputs and use a schema to return named values; speech synthesis, image generation, and sentiment analysis perform different tasks.",
+      "C": "This creates new visual content from a prompt; content Understanding can analyze image inputs and use a schema to return named values; speech synthesis, image generation, and sentiment analysis perform different tasks.",
+      "D": "This classifies the opinion expressed in text; content Understanding can analyze image inputs and use a schema to return named values; speech synthesis, image generation, and sentiment analysis perform different tasks."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents",
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-093",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Audio and video",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You must extract information from recorded audio and video. Which capability is explicitly in scope?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Image generation"
+      },
+      {
+        "id": "B",
+        "text": "Optical character recognition"
+      },
+      {
+        "id": "C",
+        "text": "Azure Speech text-to-speech"
+      },
+      {
+        "id": "D",
+        "text": "Content Understanding"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Content Understanding can extract structured information from audio and video. Text-to-speech generates spoken audio rather than extracting information.",
+    "learningObjective": "Extract information from audio and video by using Content Understanding",
+    "tags": [
+      "information-extraction",
+      "audio-and-video"
+    ],
+    "optionExplanations": {
+      "A": "This creates new visual content from a prompt; content Understanding can extract structured information from audio and video.",
+      "B": "This reads text characters from an image but does not by itself map them to named business fields; content Understanding can extract structured information from audio and video.",
+      "C": "This converts text into spoken audio; content Understanding can extract structured information from audio and video.",
+      "D": "Content Understanding can extract structured information from audio and video."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/3-audio-video"
+    ]
+  },
+  {
+    "id": "AI901-094",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Application",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An application must extract named business fields from documents and structured insights from audio or video. Which service is designed for these schema-based extraction tasks?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Azure Speech text-to-speech"
+      },
+      {
+        "id": "B",
+        "text": "Azure Language sentiment analysis"
+      },
+      {
+        "id": "C",
+        "text": "Azure Content Understanding"
+      },
+      {
+        "id": "D",
+        "text": "An image-generation model"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Content Understanding uses analyzers and schemas to turn supported unstructured content into structured results.",
+    "learningObjective": "Build a lightweight application with information extraction capabilities by using Content Understanding",
+    "tags": [
+      "information-extraction",
+      "application"
+    ],
+    "optionExplanations": {
+      "A": "This converts text into spoken audio; content Understanding uses analyzers and schemas to turn supported unstructured content into structured results.",
+      "B": "This classifies the opinion expressed in text; content Understanding uses analyzers and schemas to turn supported unstructured content into structured results.",
+      "C": "Content Understanding uses analyzers and schemas to turn supported unstructured content into structured results.",
+      "D": "This creates new visual content from a prompt; content Understanding uses analyzers and schemas to turn supported unstructured content into structured results."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/3-audio-video"
+    ]
+  },
+  {
+    "id": "AI901-095",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Documents and forms",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A Python client has completed analysis of a purchase order with Content Understanding. Which result property contains the extracted field values?",
+    "options": [
+      {
+        "id": "A",
+        "text": "result.contents[0].fields"
+      },
+      {
+        "id": "B",
+        "text": "response.output_text"
+      },
+      {
+        "id": "C",
+        "text": "speech_recognizer.recognized"
+      },
+      {
+        "id": "D",
+        "text": "poller.operation_id"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "After analysis completes, Content Understanding returns content items whose fields property contains the extracted structured values.",
+    "learningObjective": "Extract information from documents and forms by using Azure Content Understanding in Foundry Tools",
+    "tags": [
+      "information-extraction",
+      "documents-and-forms"
+    ],
+    "optionExplanations": {
+      "A": "After analysis completes, Content Understanding returns content items whose fields property contains the extracted structured values.",
+      "B": "This contains the generated answer text returned by the Responses API; after analysis completes, Content Understanding returns content items whose fields property contains the extracted structured values.",
+      "C": "SpeechRecognizer.recognized is a speech-recognition event, not the Content Understanding result containing extracted fields.",
+      "D": "This identifies the analysis operation for status tracking; it is not the completed result's extracted fields; after analysis completes, Content Understanding returns content items whose fields property contains the extracted structured values."
+    },
+    "code": "poller = client.begin_analyze(analyzer_id=analyzer_id, inputs=inputs)\nresult = poller.result()",
+    "sourceUrls": [
+      "https://learn.microsoft.com/python/api/overview/azure/ai-contentunderstanding-readme?view=azure-python#extract-structured-fields-from-invoices"
+    ]
+  },
+  {
+    "id": "AI901-096",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Images",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A technician analyzes a control-panel photo with a Content Understanding document analyzer configured to estimate field sources. To verify an extracted serial number, the reviewer must locate its printed label in the original image. Which returned information should the client use?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The field's grounding source reference with page number and spatial coordinates"
+      },
+      {
+        "id": "B",
+        "text": "Only the field's confidence score"
+      },
+      {
+        "id": "C",
+        "text": "Only the extracted serial-number string without source information"
+      },
+      {
+        "id": "D",
+        "text": "Only the original image filename and dimensions"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Field grounding links an extracted value to its source page and spatial coordinates so a reviewer can locate the supporting label. Confidence estimates certainty; it does not identify the label's position or guarantee correctness.",
+    "learningObjective": "Extract information from images by using Content Understanding",
+    "tags": [
+      "information-extraction",
+      "images",
+      "field-grounding"
+    ],
+    "optionExplanations": {
+      "A": "Grounding source information identifies the page and coordinates of the content supporting the extracted value.",
+      "B": "A confidence score estimates certainty but does not tell the reviewer where the printed label is located.",
+      "C": "The extracted string gives the value but not the source location needed to verify it against the image.",
+      "D": "Filename and dimensions identify the image and its size, not the position of the serial-number label."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/document/analyzer-improvement#grounding-trace-every-result-to-its-source",
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference#estimatefieldsourceandconfidence"
+    ]
+  },
+  {
+    "id": "AI901-097",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Source types",
+    "questionType": "multiple_choice",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Which TWO operations extract structured information from existing audio or video?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Extract attendance and actions from a recorded meeting"
+      },
+      {
+        "id": "B",
+        "text": "Generate an illustration from a description"
+      },
+      {
+        "id": "C",
+        "text": "Read written text aloud"
+      },
+      {
+        "id": "D",
+        "text": "Extract caller details and requested actions from a voicemail"
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "D"
+    ],
+    "explanation": "Content Understanding can apply schemas to meeting video and voicemail audio to return structured insights. Image generation and text-to-speech create new media.",
+    "learningObjective": "Extract information from audio and video by using Content Understanding",
+    "tags": [
+      "information-extraction",
+      "source-types"
+    ],
+    "optionExplanations": {
+      "A": "Content Understanding can apply schemas to meeting video and voicemail audio to return structured insights.",
+      "B": "This creates new visual content rather than extracting information from existing media; content Understanding can apply schemas to meeting video and voicemail audio to return structured insights.",
+      "C": "This converts text into audio rather than extracting information from existing media; content Understanding can apply schemas to meeting video and voicemail audio to return structured insights.",
+      "D": "Content Understanding can apply schemas to meeting video and voicemail audio to return structured insights."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/3-audio-video"
+    ]
+  },
+  {
+    "id": "AI901-098",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Content Understanding",
+    "questionType": "matching",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Match each application scenario to the Content Understanding input category it uses.",
+    "items": [
+      {
+        "id": "1",
+        "text": "Extract vendor and total from a supplier invoice."
+      },
+      {
+        "id": "2",
+        "text": "Read recipient and tracking ID from a parcel-label photo."
+      },
+      {
+        "id": "3",
+        "text": "Extract action items and owners from a recorded meeting."
+      }
+    ],
+    "targets": [
+      {
+        "id": "A",
+        "text": "Documents and forms"
+      },
+      {
+        "id": "B",
+        "text": "Images"
+      },
+      {
+        "id": "C",
+        "text": "Audio and video"
+      }
+    ],
+    "correctAnswer": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explanation": "Invoices are documents, parcel-label photos are images, and recorded meetings are video or audio sources.",
+    "learningObjective": "Implement AI solutions for information extraction by using Foundry",
+    "tags": [
+      "information-extraction"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/3-audio-video",
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-099",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Application",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A client already uses Azure Content Understanding. It needs to extract named invoice fields such as supplier and total. Which configuration most directly defines those fields and their types?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The speech synthesis voice"
+      },
+      {
+        "id": "B",
+        "text": "The analyzer’s field schema"
+      },
+      {
+        "id": "C",
+        "text": "The image-generation size setting"
+      },
+      {
+        "id": "D",
+        "text": "The model deployment’s display name"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "An analyzer’s field schema specifies the structured fields and types to extract. This is separate from authentication, deployment naming, or output media settings.",
+    "learningObjective": "Build a lightweight application with information extraction capabilities by using Content Understanding",
+    "tags": [
+      "information-extraction",
+      "application"
+    ],
+    "optionExplanations": {
+      "A": "The speech voice selects characteristics of synthesized audio; it does not define invoice field names or types.",
+      "B": "An analyzer’s field schema specifies the structured fields and types to extract.",
+      "C": "An image-generation size setting controls output dimensions, not the fields extracted from an invoice.",
+      "D": "This identifies or labels a deployment but does not provide the required model capability by itself; an analyzer’s field schema specifies the structured fields and types to extract."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents"
+    ]
+  },
+  {
+    "id": "AI901-100",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Audio and video",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A solution must derive structured information from a video rather than merely generate a transcript. Which exam capability is most directly relevant?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Content Understanding information extraction"
+      },
+      {
+        "id": "B",
+        "text": "Image generation"
+      },
+      {
+        "id": "C",
+        "text": "Optical character recognition"
+      },
+      {
+        "id": "D",
+        "text": "Speech synthesis"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "The information-extraction objective explicitly includes audio and video by using Content Understanding.",
+    "learningObjective": "Extract information from audio and video by using Content Understanding",
+    "tags": [
+      "information-extraction",
+      "audio-and-video"
+    ],
+    "optionExplanations": {
+      "A": "The information-extraction objective explicitly includes audio and video by using Content Understanding.",
+      "B": "This creates new visual content from a prompt; the information-extraction objective explicitly includes audio and video by using Content Understanding.",
+      "C": "This reads text characters from an image but does not by itself map them to named business fields; the information-extraction objective explicitly includes audio and video by using Content Understanding.",
+      "D": "This converts text into spoken audio; the information-extraction objective explicitly includes audio and video by using Content Understanding."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/3-audio-video"
+    ]
+  },
+  {
+    "id": "AI901-109",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Content Understanding",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You need Content Understanding to return predictable structured fields from invoices. What should you define?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A speech synthesis voice"
+      },
+      {
+        "id": "B",
+        "text": "An image-generation aspect ratio"
+      },
+      {
+        "id": "C",
+        "text": "Optical character recognition"
+      },
+      {
+        "id": "D",
+        "text": "An output schema for the fields to extract"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "A schema defines the fields and structure that an analyzer should return from unstructured content.",
+    "learningObjective": "Extract information from documents and forms by using Azure Content Understanding in Foundry Tools",
+    "tags": [
+      "information-extraction",
+      "content-understanding",
+      "schema"
+    ],
+    "optionExplanations": {
+      "A": "A voice selects synthesized speech characteristics, not the invoice fields to extract.",
+      "B": "Image aspect ratio controls visual proportions; it does not define an extraction schema.",
+      "C": "This reads text characters from an image but does not by itself map them to named business fields; a schema defines the fields and structure that an analyzer should return from unstructured content.",
+      "D": "A schema defines the fields and structure that an analyzer should return from unstructured content."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents"
+    ]
+  },
+  {
+    "id": "AI901-110",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Content Understanding",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An extracted invoice total has a low confidence score. Which response is most appropriate when operational risk is taken into account?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Accept the value automatically if it has a valid numeric format"
+      },
+      {
+        "id": "B",
+        "text": "Rerun OCR and skip review whenever it returns any text"
+      },
+      {
+        "id": "C",
+        "text": "Route the result for review or additional validation"
+      },
+      {
+        "id": "D",
+        "text": "Treat it as guaranteed correct"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Confidence information can be used to trigger validation or human review for uncertain extracted values.",
+    "learningObjective": "Build a lightweight application with information extraction capabilities by using Content Understanding",
+    "tags": [
+      "information-extraction",
+      "content-understanding",
+      "confidence"
+    ],
+    "optionExplanations": {
+      "A": "A valid numeric format does not prove that the correct invoice total was extracted; the uncertain value still needs validation.",
+      "B": "Returning text from OCR does not establish that the extracted total is correct; review must address the uncertain field value.",
+      "C": "Confidence information can be used to trigger validation or human review for uncertain extracted values.",
+      "D": "This assumes confidence guarantees correctness; uncertain results need review; confidence information can be used to trigger validation or human review for uncertain extracted values."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents",
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/document/analyzer-improvement"
+    ]
+  },
+  {
+    "id": "AI901-111",
+    "domain": "foundry",
+    "topic": "Information Extraction",
+    "subtopic": "Content Understanding",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You need to process a common document type without first defining a custom extraction schema. What should you look for?",
+    "options": [
+      {
+        "id": "A",
+        "text": "A sentiment-analysis label"
+      },
+      {
+        "id": "B",
+        "text": "A suitable prebuilt analyzer"
+      },
+      {
+        "id": "C",
+        "text": "A system prompt that synthesises speech"
+      },
+      {
+        "id": "D",
+        "text": "An image-generation model"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Prebuilt analyzers support common scenarios and can reduce the work required to define a custom analyzer.",
+    "learningObjective": "Extract information from documents and forms by using Azure Content Understanding in Foundry Tools",
+    "tags": [
+      "information-extraction",
+      "content-understanding",
+      "analyzers"
+    ],
+    "optionExplanations": {
+      "A": "This classifies the opinion expressed in text; prebuilt analyzers support common scenarios and can reduce the work required to define a custom analyzer.",
+      "B": "Prebuilt analyzers support common scenarios and can reduce the work required to define a custom analyzer.",
+      "C": "A system prompt alone does not synthesize speech or supply a prebuilt document-extraction schema.",
+      "D": "This creates new visual content from a prompt; prebuilt analyzers support common scenarios and can reduce the work required to define a custom analyzer."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents",
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/document/analyzer-improvement"
+    ]
+  }
+]

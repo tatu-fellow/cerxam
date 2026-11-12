@@ -1,0 +1,583 @@
+[
+  {
+    "id": "AI901-081",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Multimodal vision",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A user submits an image and asks open-ended natural-language questions about its scene and relationships. Which approach directly supports this interaction?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Use speech synthesis"
+      },
+      {
+        "id": "B",
+        "text": "Image classification"
+      },
+      {
+        "id": "C",
+        "text": "Object detection"
+      },
+      {
+        "id": "D",
+        "text": "Send the image and question to a deployed vision-capable multimodal model"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Classification predicts image-level labels, and object detection locates objects. A vision-capable multimodal model supports contextual visual questions.",
+    "learningObjective": "Interpret visual input in prompts by using a deployed multimodal model",
+    "tags": [
+      "vision-&-image-generation",
+      "multimodal-vision"
+    ],
+    "optionExplanations": {
+      "A": "Speech synthesis produces spoken audio from text; it does not inspect the submitted image.",
+      "B": "Classification predicts image-level labels rather than answering open-ended questions about scene relationships.",
+      "C": "Object detection locates objects but does not by itself provide contextual natural-language question answering.",
+      "D": "A vision-capable multimodal model combines the image with the user's question to produce a contextual answer."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-082",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Image generation",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A design app must produce a revised image based on an uploaded reference and text instructions. Which capability is needed?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Image classification of the reference photo"
+      },
+      {
+        "id": "B",
+        "text": "Object detection on the reference photo"
+      },
+      {
+        "id": "C",
+        "text": "An image-generation model that supports image input and editing instructions"
+      },
+      {
+        "id": "D",
+        "text": "Text summarization of a description"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Image-generation models can create or edit visual outputs from text and, where supported, reference-image input.",
+    "learningObjective": "Create new visual outputs by using generative models",
+    "tags": [
+      "vision-&-image-generation",
+      "image-generation"
+    ],
+    "optionExplanations": {
+      "A": "This assigns an image-level category rather than locating individual objects; image-generation models can create or edit visual outputs from text and, where supported, reference-image input.",
+      "B": "This locates individual objects and can return their bounding boxes; image-generation models can create or edit visual outputs from text and, where supported, reference-image input.",
+      "C": "Image-generation models can create or edit visual outputs from text and, where supported, reference-image input.",
+      "D": "This condenses source text to its main points; image-generation models can create or edit visual outputs from text and, where supported, reference-image input."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/3-image-generation",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/dall-e",
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-083",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Vision application",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A developer wants to validate visual question answering before building a lightweight application. Which test is most useful in Foundry?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Run an image classifier and review only its label"
+      },
+      {
+        "id": "B",
+        "text": "Upload representative images to a deployed vision-capable model in the playground and test task-specific questions"
+      },
+      {
+        "id": "C",
+        "text": "Test speech synthesis without supplying an image"
+      },
+      {
+        "id": "D",
+        "text": "Inspect the model deployment name without sending a request"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "The Foundry playground lets you test a deployed vision-capable model with representative images and text questions before implementing the same request in a client.",
+    "learningObjective": "Build a lightweight application that includes vision capabilities",
+    "tags": [
+      "vision-&-image-generation",
+      "vision-application"
+    ],
+    "optionExplanations": {
+      "A": "This returns an image-level label rather than testing whether a multimodal model answers visual questions; the Foundry playground lets you test a deployed vision-capable model with representative images and text questions before implementing the same request in a client.",
+      "B": "The Foundry playground lets you test a deployed vision-capable model with representative images and text questions before implementing the same request in a client.",
+      "C": "This converts text into spoken audio; the Foundry playground lets you test a deployed vision-capable model with representative images and text questions before implementing the same request in a client.",
+      "D": "This identifies or labels a deployment but does not provide the required model capability by itself; the Foundry playground lets you test a deployed vision-capable model with representative images and text questions before implementing the same request in a client."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-084",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Multimodal vision",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which input is most directly associated with the visual-prompt objective?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Visual input included with a prompt"
+      },
+      {
+        "id": "B",
+        "text": "Only a deployment display name"
+      },
+      {
+        "id": "C",
+        "text": "Only an output-token limit"
+      },
+      {
+        "id": "D",
+        "text": "Only a speech-synthesis voice name"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "A visual-prompt request must provide the visual content together with the text instruction; deployment and output settings do not supply the image.",
+    "learningObjective": "Interpret visual input in prompts by using a deployed multimodal model",
+    "tags": [
+      "vision-&-image-generation",
+      "multimodal-vision"
+    ],
+    "optionExplanations": {
+      "A": "A visual-prompt request must provide the visual content together with the text instruction; deployment and output settings do not supply the image.",
+      "B": "This identifies or labels a deployment but does not provide the required model capability by itself; a visual-prompt request must provide the visual content together with the text instruction; deployment and output settings do not supply the image.",
+      "C": "This caps the amount of generated output rather than changing sampling randomness; a visual-prompt request must provide the visual content together with the text instruction; deployment and output settings do not supply the image.",
+      "D": "A synthesis voice name selects audio-output characteristics; it does not supply an image to a vision model."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-085",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Image generation",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Which capability creates rather than merely interprets visual content?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Visual interpretation"
+      },
+      {
+        "id": "B",
+        "text": "Speech recognition"
+      },
+      {
+        "id": "C",
+        "text": "Entity extraction"
+      },
+      {
+        "id": "D",
+        "text": "Generative image model"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Generative models can create new visual outputs.",
+    "learningObjective": "Create new visual outputs by using generative models",
+    "tags": [
+      "vision-&-image-generation",
+      "image-generation"
+    ],
+    "optionExplanations": {
+      "A": "This analyzes existing images rather than creating new visual content; generative models can create new visual outputs.",
+      "B": "This converts spoken audio into text; generative models can create new visual outputs.",
+      "C": "This identifies entities in text rather than interpreting visual input; generative models can create new visual outputs.",
+      "D": "Generative models can create new visual outputs."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/3-image-generation",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/dall-e"
+    ]
+  },
+  {
+    "id": "AI901-086",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Vision capabilities",
+    "questionType": "multiple_choice",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Which TWO requirements respectively call for visual understanding and image generation?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Transcribe a recording into text"
+      },
+      {
+        "id": "B",
+        "text": "Identify organizations mentioned in written feedback"
+      },
+      {
+        "id": "C",
+        "text": "Answer a text question about an image using a deployed multimodal model"
+      },
+      {
+        "id": "D",
+        "text": "Create a new illustration from a text prompt using an image-generation model"
+      }
+    ],
+    "correctAnswer": [
+      "C",
+      "D"
+    ],
+    "explanation": "C interprets existing visual content; D creates new visual content. Image classification and object detection are also computer-vision tasks.",
+    "learningObjective": "Implement AI solutions with computer vision and image-generation capabilities by using Foundry",
+    "tags": [
+      "vision-&-image-generation",
+      "vision-capabilities"
+    ],
+    "optionExplanations": {
+      "A": "Transcription converts speech into text; it neither interprets the supplied image nor creates a new illustration.",
+      "B": "Entity recognition identifies named references in text, not visual scenes or new illustrations.",
+      "C": "C interprets existing visual content; D creates new visual content.",
+      "D": "C interprets existing visual content; D creates new visual content."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/3-image-generation",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/dall-e",
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-087",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Capabilities",
+    "questionType": "matching",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Match each application requirement to the visual capability that best fits it.",
+    "items": [
+      {
+        "id": "1",
+        "text": "A camera assigns one label, such as “damaged,” to each whole package image."
+      },
+      {
+        "id": "2",
+        "text": "An app returns a rectangle around every item on a store shelf."
+      },
+      {
+        "id": "3",
+        "text": "A customer asks a natural-language question about a submitted photo and its scene."
+      },
+      {
+        "id": "4",
+        "text": "A marketing tool creates a new banner from a text description."
+      }
+    ],
+    "targets": [
+      {
+        "id": "A",
+        "text": "Image classification"
+      },
+      {
+        "id": "B",
+        "text": "Object detection"
+      },
+      {
+        "id": "C",
+        "text": "Multimodal visual question answering"
+      },
+      {
+        "id": "D",
+        "text": "Image generation"
+      }
+    ],
+    "correctAnswer": {
+      "1": "A",
+      "2": "B",
+      "3": "C",
+      "4": "D"
+    },
+    "explanation": "Classification assigns image-level labels, detection returns object locations, multimodal models answer contextual questions about images, and generative models create new visuals.",
+    "learningObjective": "Implement AI solutions with computer vision and image-generation capabilities by using Foundry",
+    "tags": [
+      "vision-&-image-generation"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/3-image-generation",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/dall-e",
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models",
+      "https://learn.microsoft.com/training/modules/introduction-computer-vision/2-overview"
+    ]
+  },
+  {
+    "id": "AI901-088",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Multimodal vision",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A multimodal model must answer a question about a chart supplied as an image. What should the request include?",
+    "options": [
+      {
+        "id": "A",
+        "text": "The chart image and a clear text question"
+      },
+      {
+        "id": "B",
+        "text": "Only the filename of an image stored on the user’s inaccessible local drive"
+      },
+      {
+        "id": "C",
+        "text": "Only a model deployment name"
+      },
+      {
+        "id": "D",
+        "text": "Only an output-token limit"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "The model request must include the chart through a supported image reference or encoding and a text question explaining the desired analysis.",
+    "learningObjective": "Interpret visual input in prompts by using a deployed multimodal model",
+    "tags": [
+      "vision-&-image-generation",
+      "multimodal-vision"
+    ],
+    "optionExplanations": {
+      "A": "The model request must include the chart through a supported image reference or encoding and a text question explaining the desired analysis.",
+      "B": "This names a file the service cannot access and does not transmit the image data; the model request must include the chart through a supported image reference or encoding and a text question explaining the desired analysis.",
+      "C": "This identifies or labels a deployment but does not provide the required model capability by itself; the model request must include the chart through a supported image reference or encoding and a text question explaining the desired analysis.",
+      "D": "This caps the amount of generated output rather than changing sampling randomness; the model request must include the chart through a supported image reference or encoding and a text question explaining the desired analysis."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-089",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Image generation",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You need an image-generation model to create a wide banner without lettering. Which combination of prompt content and request settings is most appropriate?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Image classification"
+      },
+      {
+        "id": "B",
+        "text": "Object detection"
+      },
+      {
+        "id": "C",
+        "text": "An entity-detection confidence threshold"
+      },
+      {
+        "id": "D",
+        "text": "Describe the subject and composition, request no text, and select a supported wide image size in the request settings"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Prompting guides visual content; supported size settings control output dimensions. Review the generated result because prompt constraints are not a guarantee.",
+    "learningObjective": "Create new visual outputs by using generative models",
+    "tags": [
+      "vision-&-image-generation",
+      "image-generation",
+      "prompting"
+    ],
+    "optionExplanations": {
+      "A": "This assigns an image-level category rather than locating individual objects; prompting guides visual content; supported size settings control output dimensions.",
+      "B": "This locates individual objects and can return their bounding boxes; prompting guides visual content; supported size settings control output dimensions.",
+      "C": "This configures text extraction and does not set an image-generation size or prompt; prompting guides visual content; supported size settings control output dimensions.",
+      "D": "Prompting guides visual content; supported size settings control output dimensions."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/3-image-generation",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/dall-e"
+    ]
+  },
+  {
+    "id": "AI901-090",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Vision application",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A vision-enabled application sends an image to a deployed model. What application requirement is essential?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Create a Content Understanding audio analyzer"
+      },
+      {
+        "id": "B",
+        "text": "Image classification"
+      },
+      {
+        "id": "C",
+        "text": "Encode or reference the image in a supported request format"
+      },
+      {
+        "id": "D",
+        "text": "Convert the image to speech first"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "The client must provide visual content in a request format supported by the deployed multimodal model.",
+    "learningObjective": "Build a lightweight application that includes vision capabilities",
+    "tags": [
+      "vision-&-image-generation",
+      "vision-application"
+    ],
+    "optionExplanations": {
+      "A": "This uses an analyzer and schema to turn supported unstructured content into structured fields; the client must provide visual content in a request format supported by the deployed multimodal model.",
+      "B": "This assigns an image-level category rather than locating individual objects; the client must provide visual content in a request format supported by the deployed multimodal model.",
+      "C": "The client must provide visual content in a request format supported by the deployed multimodal model.",
+      "D": "This adds an unnecessary speech-synthesis step instead of sending the image in a supported model request; the client must provide visual content in a request format supported by the deployed multimodal model."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-116",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Multimodal vision",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A vision model gives a vague answer about an uploaded image. Which change is most likely to improve the response?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ask a specific question about the visual details you need"
+      },
+      {
+        "id": "B",
+        "text": "Remove the image from the request"
+      },
+      {
+        "id": "C",
+        "text": "Replace the prompt with a deployment name"
+      },
+      {
+        "id": "D",
+        "text": "Increase speech synthesis speed"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "A specific visual question directs the multimodal model towards the relevant details in the image.",
+    "learningObjective": "Interpret visual input in prompts by using a deployed multimodal model",
+    "tags": [
+      "vision-&-image-generation",
+      "multimodal-vision",
+      "prompting"
+    ],
+    "optionExplanations": {
+      "A": "A specific visual question directs the multimodal model towards the relevant details in the image.",
+      "B": "This removes the visual evidence needed to answer a question about the image; a specific visual question directs the multimodal model towards the relevant details in the image.",
+      "C": "This identifies or labels a deployment but does not provide the required model capability by itself; a specific visual question directs the multimodal model towards the relevant details in the image.",
+      "D": "Speech synthesis speed changes audio playback timing, not how the model interprets the uploaded image."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/2-vision-enabled-models"
+    ]
+  },
+  {
+    "id": "AI901-117",
+    "domain": "foundry",
+    "topic": "Vision & Image Generation",
+    "subtopic": "Image generation",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An image-generation result includes unwanted elements. What is the best first adjustment?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Switch to speech recognition"
+      },
+      {
+        "id": "B",
+        "text": "Remove all task instructions"
+      },
+      {
+        "id": "C",
+        "text": "Image classification"
+      },
+      {
+        "id": "D",
+        "text": "Refine the prompt with explicit constraints and desired composition"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "More explicit constraints and composition guidance usually improve alignment between the prompt and generated image.",
+    "learningObjective": "Create new visual outputs by using generative models",
+    "tags": [
+      "vision-&-image-generation",
+      "image-generation",
+      "prompting"
+    ],
+    "optionExplanations": {
+      "A": "This converts spoken audio into text; more explicit constraints and composition guidance usually improve alignment between the prompt and generated image.",
+      "B": "This removes constraints that guide the requested visual composition; more explicit constraints and composition guidance usually improve alignment between the prompt and generated image.",
+      "C": "This assigns an image-level category rather than locating individual objects; more explicit constraints and composition guidance usually improve alignment between the prompt and generated image.",
+      "D": "More explicit constraints and composition guidance usually improve alignment between the prompt and generated image."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/3-image-generation",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/dall-e",
+      "https://learn.microsoft.com/azure/foundry/openai/concepts/prompt-engineering"
+    ]
+  }
+]

@@ -1,0 +1,852 @@
+[
+  {
+    "id": "AI901-026",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A company wants to determine whether product reviews are positive or negative. Which technique most directly satisfies this requirement without introducing an unrelated workload?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Image generation"
+      },
+      {
+        "id": "B",
+        "text": "Object detection"
+      },
+      {
+        "id": "C",
+        "text": "Sentiment analysis"
+      },
+      {
+        "id": "D",
+        "text": "Speech synthesis"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Sentiment analysis identifies sentiment expressed in text.",
+    "learningObjective": "Describe common text analysis techniques, including keyword extraction, entity detection, sentiment analysis, and summarization",
+    "tags": [
+      "ai-workloads",
+      "text-analysis"
+    ],
+    "optionExplanations": {
+      "A": "This creates new visual content from a prompt; sentiment analysis identifies sentiment expressed in text.",
+      "B": "This locates individual objects and can return their bounding boxes; sentiment analysis identifies sentiment expressed in text.",
+      "C": "Sentiment analysis identifies sentiment expressed in text.",
+      "D": "This converts text into spoken audio; sentiment analysis identifies sentiment expressed in text."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-027",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A company wants a short version of a long support conversation. Which technique fits best?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Image classification"
+      },
+      {
+        "id": "B",
+        "text": "Summarisation"
+      },
+      {
+        "id": "C",
+        "text": "Entity detection"
+      },
+      {
+        "id": "D",
+        "text": "Speech synthesis"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Summarisation produces a shorter representation of longer content.",
+    "learningObjective": "Describe common text analysis techniques, including keyword extraction, entity detection, sentiment analysis, and summarization",
+    "tags": [
+      "ai-workloads",
+      "text-analysis"
+    ],
+    "optionExplanations": {
+      "A": "This assigns an image-level category rather than locating individual objects; summarisation produces a shorter representation of longer content.",
+      "B": "Summarisation produces a shorter representation of longer content.",
+      "C": "This identifies named people, organizations, locations, and other entities in text; summarisation produces a shorter representation of longer content.",
+      "D": "This converts text into spoken audio; summarisation produces a shorter representation of longer content."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/responses"
+    ]
+  },
+  {
+    "id": "AI901-028",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You need to identify people, organisations and locations mentioned in text. Which technique should you use?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Entity detection"
+      },
+      {
+        "id": "B",
+        "text": "Image generation"
+      },
+      {
+        "id": "C",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "D",
+        "text": "Object detection"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Entity detection identifies named or meaningful entities in text.",
+    "learningObjective": "Describe common text analysis techniques, including keyword extraction, entity detection, sentiment analysis, and summarization",
+    "tags": [
+      "ai-workloads",
+      "text-analysis"
+    ],
+    "optionExplanations": {
+      "A": "Entity detection identifies named or meaningful entities in text.",
+      "B": "This creates new visual content from a prompt; entity detection identifies named or meaningful entities in text.",
+      "C": "This converts text into spoken audio; entity detection identifies named or meaningful entities in text.",
+      "D": "This locates individual objects and can return their bounding boxes; entity detection identifies named or meaningful entities in text."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-029",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Text analysis",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "You need to identify important terms in a document. Which technique should you use?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Speech recognition"
+      },
+      {
+        "id": "B",
+        "text": "Image generation"
+      },
+      {
+        "id": "C",
+        "text": "Vision classification"
+      },
+      {
+        "id": "D",
+        "text": "Keyword extraction"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Keyword extraction identifies important words or phrases in text.",
+    "learningObjective": "Describe common text analysis techniques, including keyword extraction, entity detection, sentiment analysis, and summarization",
+    "tags": [
+      "ai-workloads",
+      "text-analysis"
+    ],
+    "optionExplanations": {
+      "A": "This converts spoken audio into text; keyword extraction identifies important words or phrases in text.",
+      "B": "This creates new visual content from a prompt; keyword extraction identifies important words or phrases in text.",
+      "C": "This assigns an input to one or more predefined categories; keyword extraction identifies important words or phrases in text.",
+      "D": "Keyword extraction identifies important words or phrases in text."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-030",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A meeting app creates a text transcript from microphone audio. Which capability is principally responsible for this transformation?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Image generation"
+      },
+      {
+        "id": "B",
+        "text": "Sentiment analysis"
+      },
+      {
+        "id": "C",
+        "text": "Speech recognition"
+      },
+      {
+        "id": "D",
+        "text": "Speech synthesis"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Speech recognition converts spoken audio into text.",
+    "learningObjective": "Identify features and capabilities of speech recognition and speech synthesis",
+    "tags": [
+      "ai-workloads",
+      "speech"
+    ],
+    "optionExplanations": {
+      "A": "This creates new visual content from a prompt; speech recognition converts spoken audio into text.",
+      "B": "This classifies the opinion expressed in text; speech recognition converts spoken audio into text.",
+      "C": "Speech recognition converts spoken audio into text.",
+      "D": "This converts text into spoken audio; speech recognition converts spoken audio into text."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition"
+    ]
+  },
+  {
+    "id": "AI901-031",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Speech",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An accessibility app reads written text aloud. Which capability is principally responsible for this transformation?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Entity detection"
+      },
+      {
+        "id": "B",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "C",
+        "text": "Speech recognition"
+      },
+      {
+        "id": "D",
+        "text": "OCR"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Speech synthesis converts text into spoken audio.",
+    "learningObjective": "Identify features and capabilities of speech recognition and speech synthesis",
+    "tags": [
+      "ai-workloads",
+      "speech"
+    ],
+    "optionExplanations": {
+      "A": "This identifies named people, organizations, locations, and other entities in text; speech synthesis converts text into spoken audio.",
+      "B": "Speech synthesis converts text into spoken audio.",
+      "C": "This converts spoken audio into text; speech synthesis converts text into spoken audio.",
+      "D": "This reads text characters from an image but does not by itself map them to named business fields; speech synthesis converts text into spoken audio."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition",
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/3-speech-synthesis"
+    ]
+  },
+  {
+    "id": "AI901-032",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Computer vision",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A system needs to interpret objects visible in a photograph. Which workload is the most appropriate primary classification?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Computer vision"
+      },
+      {
+        "id": "B",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "C",
+        "text": "Text summarisation"
+      },
+      {
+        "id": "D",
+        "text": "Keyword extraction"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Computer vision is used to analyse visual information.",
+    "learningObjective": "Identify features and capabilities of computer vision and image-generation models",
+    "tags": [
+      "ai-workloads",
+      "computer-vision"
+    ],
+    "optionExplanations": {
+      "A": "Computer vision is used to analyse visual information.",
+      "B": "This converts text into spoken audio; computer vision is used to analyse visual information.",
+      "C": "This condenses source text to its main points; computer vision is used to analyse visual information.",
+      "D": "This extracts important terms or phrases from text; computer vision is used to analyse visual information."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/introduction-computer-vision/2-overview"
+    ]
+  },
+  {
+    "id": "AI901-033",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Image generation",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A designer wants new artwork created from a written prompt. Which capability is the most defensible choice for this requirement?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Speech recognition"
+      },
+      {
+        "id": "B",
+        "text": "Keyword extraction"
+      },
+      {
+        "id": "C",
+        "text": "Entity detection"
+      },
+      {
+        "id": "D",
+        "text": "Image-generation model"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Image-generation models create visual outputs from prompts.",
+    "learningObjective": "Identify features and capabilities of computer vision and image-generation models",
+    "tags": [
+      "ai-workloads",
+      "image-generation"
+    ],
+    "optionExplanations": {
+      "A": "This converts spoken audio into text; image-generation models create visual outputs from prompts.",
+      "B": "This extracts important terms or phrases from text; image-generation models create visual outputs from prompts.",
+      "C": "This identifies named people, organizations, locations, and other entities in text; image-generation models create visual outputs from prompts.",
+      "D": "Image-generation models create visual outputs from prompts."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/3-image-generation",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/dall-e"
+    ]
+  },
+  {
+    "id": "AI901-034",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Information extraction",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A system must extract totals and supplier names from invoices. Which workload is most appropriate?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Image generation"
+      },
+      {
+        "id": "B",
+        "text": "Sentiment analysis"
+      },
+      {
+        "id": "C",
+        "text": "Information extraction"
+      },
+      {
+        "id": "D",
+        "text": "Speech synthesis"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Information extraction turns relevant content from documents into structured information.",
+    "learningObjective": "Identify techniques to extract information from text, images, audio, and videos",
+    "tags": [
+      "ai-workloads",
+      "information-extraction"
+    ],
+    "optionExplanations": {
+      "A": "This creates new visual content from a prompt; information extraction turns relevant content from documents into structured information.",
+      "B": "This classifies the opinion expressed in text; information extraction turns relevant content from documents into structured information.",
+      "C": "Information extraction turns relevant content from documents into structured information.",
+      "D": "This converts text into spoken audio; information extraction turns relevant content from documents into structured information."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents"
+    ]
+  },
+  {
+    "id": "AI901-035",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Agentic AI",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An AI solution must use instructions and available capabilities to carry out a task rather than only return generated text. Which workload best fits?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sentiment analysis"
+      },
+      {
+        "id": "B",
+        "text": "Agentic AI"
+      },
+      {
+        "id": "C",
+        "text": "Entity recognition"
+      },
+      {
+        "id": "D",
+        "text": "Key phrase extraction"
+      }
+    ],
+    "correctAnswer": [
+      "B"
+    ],
+    "explanation": "Agentic AI is the relevant workload when an agent is used to perform tasks.",
+    "learningObjective": "Identify scenarios for common AI workloads, including generative and agentic AI, text analysis, speech, computer vision, and information extraction",
+    "tags": [
+      "ai-workloads",
+      "agentic-ai"
+    ],
+    "optionExplanations": {
+      "A": "This classifies the opinion expressed in text; agentic AI is the relevant workload when an agent is used to perform tasks.",
+      "B": "Agentic AI is the relevant workload when an agent is used to perform tasks.",
+      "C": "This identifies named people, organizations, locations, and other entities in text; agentic AI is the relevant workload when an agent is used to perform tasks.",
+      "D": "This extracts important terms or phrases from text; agentic AI is the relevant workload when an agent is used to perform tasks."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-with-generative-ai-and-agents/4-creating-an-agent"
+    ]
+  },
+  {
+    "id": "AI901-036",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Text analysis",
+    "questionType": "multiple_choice",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Which TWO are common text-analysis techniques?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Entity detection"
+      },
+      {
+        "id": "B",
+        "text": "Sentiment analysis"
+      },
+      {
+        "id": "C",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "D",
+        "text": "Image generation"
+      }
+    ],
+    "correctAnswer": [
+      "A",
+      "B"
+    ],
+    "explanation": "Entity detection and sentiment analysis are text-analysis techniques.",
+    "learningObjective": "Describe common text analysis techniques, including keyword extraction, entity detection, sentiment analysis, and summarization",
+    "tags": [
+      "ai-workloads",
+      "text-analysis"
+    ],
+    "optionExplanations": {
+      "A": "Entity detection and sentiment analysis are text-analysis techniques.",
+      "B": "Entity detection and sentiment analysis are text-analysis techniques.",
+      "C": "This converts text into spoken audio; entity detection and sentiment analysis are text-analysis techniques.",
+      "D": "This creates new visual content from a prompt; entity detection and sentiment analysis are text-analysis techniques."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-037",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Workload identification",
+    "questionType": "matching",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Match each scenario to the workload.",
+    "items": [
+      {
+        "id": "1",
+        "text": "Generate a product illustration from text"
+      },
+      {
+        "id": "2",
+        "text": "Convert a call recording into text"
+      },
+      {
+        "id": "3",
+        "text": "Extract fields from an invoice"
+      }
+    ],
+    "targets": [
+      {
+        "id": "A",
+        "text": "Image generation"
+      },
+      {
+        "id": "B",
+        "text": "Speech recognition"
+      },
+      {
+        "id": "C",
+        "text": "Information extraction"
+      }
+    ],
+    "correctAnswer": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explanation": "Each scenario uses the corresponding image, speech or extraction workload.",
+    "learningObjective": "Identify scenarios for common AI workloads, including generative and agentic AI, text analysis, speech, computer vision, and information extraction",
+    "tags": [
+      "ai-workloads"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/analyzer-reference",
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/2-documents",
+      "https://learn.microsoft.com/training/modules/get-started-speech-azure/2-speech-recognition",
+      "https://learn.microsoft.com/training/modules/get-started-vision-azure/3-image-generation",
+      "https://learn.microsoft.com/azure/foundry/openai/how-to/dall-e"
+    ]
+  },
+  {
+    "id": "AI901-038",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Text analysis",
+    "questionType": "matching",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Match the text requirement to the technique.",
+    "items": [
+      {
+        "id": "1",
+        "text": "Find names of organisations"
+      },
+      {
+        "id": "2",
+        "text": "Determine positive or negative opinion"
+      },
+      {
+        "id": "3",
+        "text": "Produce a shorter version of a report"
+      }
+    ],
+    "targets": [
+      {
+        "id": "A",
+        "text": "Entity detection"
+      },
+      {
+        "id": "B",
+        "text": "Sentiment analysis"
+      },
+      {
+        "id": "C",
+        "text": "Summarisation"
+      }
+    ],
+    "correctAnswer": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    },
+    "explanation": "The requirements map to entity detection, sentiment analysis and summarisation.",
+    "learningObjective": "Describe common text analysis techniques, including keyword extraction, entity detection, sentiment analysis, and summarization",
+    "tags": [
+      "ai-workloads"
+    ],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-text-analysis-azure/2-azure-language"
+    ]
+  },
+  {
+    "id": "AI901-039",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Information extraction",
+    "questionType": "multiple_choice",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "Which TWO requirements involve extracting information from existing media?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Generate a new image from text"
+      },
+      {
+        "id": "B",
+        "text": "Extract requested actions from a call recording"
+      },
+      {
+        "id": "C",
+        "text": "Extract events from a recorded video"
+      },
+      {
+        "id": "D",
+        "text": "Synthesize narration from text"
+      }
+    ],
+    "correctAnswer": [
+      "B",
+      "C"
+    ],
+    "explanation": "A call recording and a recorded video are existing media sources from which information can be extracted. The other options generate new visual or audio content.",
+    "learningObjective": "Identify techniques to extract information from text, images, audio, and videos",
+    "tags": [
+      "ai-workloads",
+      "information-extraction"
+    ],
+    "optionExplanations": {
+      "A": "This creates new visual content rather than extracting information from existing media; a call recording and a recorded video are existing media sources from which information can be extracted.",
+      "B": "A call recording and a recorded video are existing media sources from which information can be extracted.",
+      "C": "A call recording and a recorded video are existing media sources from which information can be extracted.",
+      "D": "This converts text into audio rather than extracting information from existing media; a call recording and a recorded video are existing media sources from which information can be extracted."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/3-audio-video"
+    ]
+  },
+  {
+    "id": "AI901-040",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Information extraction",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A solution identifies structured facts from a video recording. Which exam workload does this fall under?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Information extraction"
+      },
+      {
+        "id": "B",
+        "text": "Image generation"
+      },
+      {
+        "id": "C",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "D",
+        "text": "Keyword generation"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "The objective includes techniques to extract information from video.",
+    "learningObjective": "Identify techniques to extract information from text, images, audio, and videos",
+    "tags": [
+      "ai-workloads",
+      "information-extraction"
+    ],
+    "optionExplanations": {
+      "A": "The objective includes techniques to extract information from video.",
+      "B": "This creates new visual content from a prompt; the objective includes techniques to extract information from video.",
+      "C": "This converts text into spoken audio; the objective includes techniques to extract information from video.",
+      "D": "This is not the text-analysis task here; key phrase extraction identifies important terms in existing text; the objective includes techniques to extract information from video."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/get-started-information-extraction/3-audio-video"
+    ]
+  },
+  {
+    "id": "AI901-104",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Computer vision",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A factory needs to locate each damaged component within an image. Which computer-vision technique is most appropriate?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Object detection"
+      },
+      {
+        "id": "B",
+        "text": "Image classification"
+      },
+      {
+        "id": "C",
+        "text": "Speech recognition"
+      },
+      {
+        "id": "D",
+        "text": "Text summarisation"
+      }
+    ],
+    "correctAnswer": [
+      "A"
+    ],
+    "explanation": "Object detection identifies and locates one or more objects, typically with bounding regions. Image classification assigns a label to an image as a whole.",
+    "learningObjective": "Identify features and capabilities of computer vision and image-generation models",
+    "tags": [
+      "ai-workloads",
+      "computer-vision",
+      "object-detection"
+    ],
+    "optionExplanations": {
+      "A": "Object detection identifies and locates one or more objects, typically with bounding regions. Image classification assigns a label to an image as a whole.",
+      "B": "This assigns an image-level category rather than locating individual objects; object detection identifies and locates one or more objects, typically with bounding regions.",
+      "C": "This converts spoken audio into text; object detection identifies and locates one or more objects, typically with bounding regions.",
+      "D": "This condenses source text to its main points; object detection identifies and locates one or more objects, typically with bounding regions."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/introduction-computer-vision/2-overview"
+    ]
+  },
+  {
+    "id": "AI901-105",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Computer vision",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A system must decide whether a photograph contains a cat or a dog, without locating the animal. Which technique fits best?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Object detection"
+      },
+      {
+        "id": "B",
+        "text": "Optical character recognition"
+      },
+      {
+        "id": "C",
+        "text": "Speech synthesis"
+      },
+      {
+        "id": "D",
+        "text": "Image classification"
+      }
+    ],
+    "correctAnswer": [
+      "D"
+    ],
+    "explanation": "Image classification predicts a category for an image; object detection is used when location is also required.",
+    "learningObjective": "Identify features and capabilities of computer vision and image-generation models",
+    "tags": [
+      "ai-workloads",
+      "computer-vision",
+      "classification"
+    ],
+    "optionExplanations": {
+      "A": "This locates individual objects and can return their bounding boxes; image classification predicts a category for an image; object detection is used when location is also required.",
+      "B": "This reads text characters from an image but does not by itself map them to named business fields; image classification predicts a category for an image; object detection is used when location is also required.",
+      "C": "This converts text into spoken audio; image classification predicts a category for an image; object detection is used when location is also required.",
+      "D": "Image classification predicts a category for an image; object detection is used when location is also required."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/introduction-computer-vision/2-overview"
+    ]
+  },
+  {
+    "id": "AI901-106",
+    "domain": "concepts",
+    "topic": "AI Workloads",
+    "subtopic": "Information extraction",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A solution must read printed text from a scanned receipt before extracting fields. Which foundational technique is relevant?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Image generation"
+      },
+      {
+        "id": "B",
+        "text": "Sentiment analysis"
+      },
+      {
+        "id": "C",
+        "text": "Optical character recognition"
+      },
+      {
+        "id": "D",
+        "text": "Speech synthesis"
+      }
+    ],
+    "correctAnswer": [
+      "C"
+    ],
+    "explanation": "Optical character recognition converts text in images or scanned documents into machine-readable text.",
+    "learningObjective": "Identify techniques to extract information from text, images, audio, and videos",
+    "tags": [
+      "ai-workloads",
+      "information-extraction",
+      "ocr"
+    ],
+    "optionExplanations": {
+      "A": "This creates new visual content from a prompt; optical character recognition converts text in images or scanned documents into machine-readable text.",
+      "B": "This classifies the opinion expressed in text; optical character recognition converts text in images or scanned documents into machine-readable text.",
+      "C": "Optical character recognition converts text in images or scanned documents into machine-readable text.",
+      "D": "This converts text into spoken audio; optical character recognition converts text in images or scanned documents into machine-readable text."
+    },
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ai-services/computer-vision/overview-ocr"
+    ]
+  }
+]
