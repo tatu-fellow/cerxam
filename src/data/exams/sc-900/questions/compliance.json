@@ -9,18 +9,18 @@
     "difficulty": "easy",
     "question": "A customer wants to review Microsoft's audit reports and compliance documentation for Microsoft cloud services. Which portal is intended to provide access to this service assurance material?",
     "options": [
-      { "id": "A", "text": "Microsoft Service Trust Portal" },
+      { "id": "A", "text": "Microsoft Defender for Endpoint" },
       { "id": "B", "text": "Azure Bastion" },
       { "id": "C", "text": "Microsoft Entra Password Protection" },
-      { "id": "D", "text": "Microsoft Defender for Endpoint" }
+      { "id": "D", "text": "Microsoft Service Trust Portal" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["D"],
     "explanation": "The Service Trust Portal provides access to Microsoft's service assurance and compliance materials, including audit reports and related documentation. Some content requires authentication.",
     "optionExplanations": {
-      "A": "The Service Trust Portal provides Microsoft service assurance and compliance documentation.",
+      "A": "Defender for Endpoint protects and investigates endpoint devices.",
       "B": "Azure Bastion is used to connect securely to virtual machines.",
       "C": "Password Protection helps prevent weak passwords; it is not a service assurance document portal.",
-      "D": "Defender for Endpoint protects and investigates endpoint devices."
+      "D": "The Service Trust Portal provides Microsoft service assurance and compliance documentation."
     },
     "learningObjective": "Describe the Service Trust Portal offerings",
     "tags": ["service-trust-portal", "compliance"],
@@ -67,18 +67,18 @@
     "difficulty": "medium",
     "question": "A customer asks whether Microsoft uses customer data from its cloud services for user profiling and advertising. Which response best reflects Microsoft's published privacy commitments?",
     "options": [
-      { "id": "A", "text": "Microsoft processes data to provide and operate services under documented instructions and does not use it for user profiling or advertising" },
+      { "id": "A", "text": "Microsoft transfers customer data to every third party by default" },
       { "id": "B", "text": "Microsoft may use any customer data for advertising if it is encrypted at rest" },
       { "id": "C", "text": "Customer data is never processed by Microsoft under any circumstances" },
-      { "id": "D", "text": "Microsoft transfers customer data to every third party by default" }
+      { "id": "D", "text": "Microsoft processes data to provide and operate services under documented instructions and does not use it for user profiling or advertising" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["D"],
     "explanation": "Microsoft's privacy documentation states that it processes customer data to provide and operate services, including under documented instructions, and does not use the data for user profiling or advertising.",
     "optionExplanations": {
-      "A": "This reflects the published purpose and limits for processing customer data in Microsoft's privacy documentation.",
+      "A": "The privacy documentation describes limited sharing, such as when authorized by the customer or required by law, not default transfer to every third party.",
       "B": "Encryption does not authorize advertising use; the published commitment excludes user profiling and advertising.",
       "C": "Microsoft does process data to provide, troubleshoot, maintain, and improve services, subject to its commitments.",
-      "D": "The privacy documentation describes limited sharing, such as when authorized by the customer or required by law, not default transfer to every third party."
+      "D": "This reflects the published purpose and limits for processing customer data in Microsoft's privacy documentation."
     },
     "learningObjective": "Describe the privacy principles of Microsoft",
     "tags": ["privacy", "customer-data", "data-processing"],
@@ -96,18 +96,18 @@
     "difficulty": "easy",
     "question": "A compliance administrator needs a central place to access Microsoft Purview solutions for information protection, data lifecycle management, risk, and compliance. Which entry point should the administrator use?",
     "options": [
-      { "id": "A", "text": "Microsoft Purview portal" },
+      { "id": "A", "text": "Microsoft Entra admin center's access reviews page only" },
       { "id": "B", "text": "Azure Firewall Manager" },
       { "id": "C", "text": "Microsoft Defender threat analytics" },
-      { "id": "D", "text": "Microsoft Entra admin center's access reviews page only" }
+      { "id": "D", "text": "Microsoft Purview portal" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["D"],
     "explanation": "The Microsoft Purview portal is the central portal for accessing Microsoft Purview solutions and compliance experiences.",
     "optionExplanations": {
-      "A": "The Purview portal provides a central entry point to Purview solutions and compliance experiences.",
+      "A": "Access reviews is a specific identity governance capability and does not provide the broader Purview solution entry point.",
       "B": "Azure Firewall Manager manages network firewall resources, not Purview compliance solutions.",
       "C": "Threat analytics provides security threat intelligence in Defender, not a central compliance portal.",
-      "D": "Access reviews is a specific identity governance capability and does not provide the broader Purview solution entry point."
+      "D": "The Purview portal provides a central entry point to Purview solutions and compliance experiences."
     },
     "learningObjective": "Describe the Microsoft Purview portal",
     "tags": ["purview-portal", "compliance"],
@@ -125,18 +125,18 @@
     "difficulty": "medium",
     "question": "A compliance team wants to assess its environment against selected regulations and standards, review control status, and track recommended improvement actions. Which Microsoft Purview solution is designed for this work?",
     "options": [
-      { "id": "A", "text": "Microsoft Purview Compliance Manager" },
+      { "id": "A", "text": "Microsoft Entra Password Protection" },
       { "id": "B", "text": "Microsoft Defender for Endpoint" },
       { "id": "C", "text": "Azure Bastion" },
-      { "id": "D", "text": "Microsoft Entra Password Protection" }
+      { "id": "D", "text": "Microsoft Purview Compliance Manager" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["D"],
     "explanation": "Compliance Manager supports compliance assessments, control management, and tracking improvement actions for applicable standards and regulations.",
     "optionExplanations": {
-      "A": "Compliance Manager provides assessments and improvement actions to help manage compliance posture.",
+      "A": "Password Protection blocks weak passwords and does not assess regulatory controls.",
       "B": "Defender for Endpoint provides endpoint protection and detection capabilities.",
       "C": "Bastion provides secure remote connections to Azure virtual machines.",
-      "D": "Password Protection blocks weak passwords and does not assess regulatory controls."
+      "D": "Compliance Manager provides assessments and improvement actions to help manage compliance posture."
     },
     "learningObjective": "Describe Compliance Manager",
     "tags": ["compliance-manager", "assessments", "improvement-actions"],
@@ -198,7 +198,7 @@
     "sourceUrls": [
       "https://learn.microsoft.com/purview/sensitivity-labels",
       "https://learn.microsoft.com/purview/dlp-learn-about-dlp",
-      "https://learn.microsoft.com/purview/data-classification-content-explorer",
+      "https://learn.microsoft.com/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-purview-service-description",
       "https://learn.microsoft.com/purview/data-classification-activity-explorer"
     ]
   },
@@ -212,18 +212,18 @@
     "difficulty": "medium",
     "question": "A records manager needs to apply a retention requirement to content and designate certain content as a record that must be managed according to organizational policy. Which Microsoft Purview capabilities are most relevant?",
     "options": [
-      { "id": "A", "text": "Retention policies or labels and Records Management" },
+      { "id": "A", "text": "Microsoft Sentinel data connectors and analytics rules" },
       { "id": "B", "text": "Azure DDoS Protection and Azure Bastion" },
       { "id": "C", "text": "Microsoft Entra Password Protection and Access Reviews" },
-      { "id": "D", "text": "Microsoft Sentinel data connectors and analytics rules" }
+      { "id": "D", "text": "Retention policies or labels and Records Management" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["D"],
     "explanation": "Purview retention policies and labels manage retention and disposition settings, while Records Management supports record declaration and related records processes.",
     "optionExplanations": {
-      "A": "Retention and Records Management capabilities govern content lifecycle and records.",
+      "A": "Sentinel connectors and analytics rules support security monitoring, not records management.",
       "B": "DDoS Protection and Bastion address network availability and VM access, not content lifecycle.",
       "C": "Password Protection and Access Reviews govern identity controls, not records retention.",
-      "D": "Sentinel connectors and analytics rules support security monitoring, not records management."
+      "D": "Retention and Records Management capabilities govern content lifecycle and records."
     },
     "learningObjective": "Describe records management; describe retention policies, retention labels, and retention label policies",
     "tags": ["retention", "records-management", "data-lifecycle"],
@@ -242,18 +242,18 @@
     "difficulty": "medium",
     "question": "A risk team needs to identify and investigate potentially risky user activities, such as unusual sharing or exfiltration of sensitive information, using configurable policies and investigation workflows. Which Microsoft Purview solution is designed for this purpose?",
     "options": [
-      { "id": "A", "text": "Insider Risk Management" },
+      { "id": "A", "text": "Microsoft Defender for Endpoint only" },
       { "id": "B", "text": "Azure Firewall" },
       { "id": "C", "text": "Microsoft Entra Password Protection" },
-      { "id": "D", "text": "Microsoft Defender for Endpoint only" }
+      { "id": "D", "text": "Insider Risk Management" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["D"],
     "explanation": "Microsoft Purview Insider Risk Management helps identify, investigate, and act on potentially risky user activities using policies and cases.",
     "optionExplanations": {
-      "A": "Insider Risk Management is designed to help identify and investigate potentially risky user activity.",
+      "A": "Defender for Endpoint protects devices; it is not the Purview insider-risk policy and case-management solution.",
       "B": "Azure Firewall filters network traffic and does not provide insider-risk investigation workflows.",
       "C": "Password Protection blocks weak passwords and does not analyze user activity for insider risk.",
-      "D": "Defender for Endpoint protects devices; it is not the Purview insider-risk policy and case-management solution."
+      "D": "Insider Risk Management is designed to help identify and investigate potentially risky user activity."
     },
     "learningObjective": "Describe insider risk management",
     "tags": ["insider-risk", "purview", "investigation"],

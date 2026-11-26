@@ -238,16 +238,16 @@
     "difficulty": "medium",
     "question": "An administrator must grant a user permission to manage Microsoft Entra users and groups, but not grant broad Azure resource-management permissions. Which role system should the administrator use?",
     "options": [
-      { "id": "A", "text": "Microsoft Entra roles" },
-      { "id": "B", "text": "Azure network security group rules" },
+      { "id": "A", "text": "Azure network security group rules" },
+      { "id": "B", "text": "Microsoft Entra roles" },
       { "id": "C", "text": "Microsoft Purview retention labels" },
       { "id": "D", "text": "Microsoft Defender threat analytics" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["B"],
     "explanation": "Microsoft Entra roles authorize administrative tasks in the identity directory. Azure roles control access to Azure resources, so the role system should match the resource being administered.",
     "optionExplanations": {
-      "A": "Microsoft Entra roles grant directory permissions such as managing users and groups.",
-      "B": "Network security group rules filter network traffic and do not grant directory administration.",
+      "A": "Network security group rules filter network traffic and do not grant directory administration.",
+      "B": "Microsoft Entra roles grant directory permissions such as managing users and groups.",
       "C": "Retention labels govern data lifecycle and records; they do not grant identity permissions.",
       "D": "Threat analytics provides threat intelligence and exposure insights, not administrative role assignments."
     },
@@ -260,29 +260,30 @@
   {
     "id": "SC900-016",
     "domain": "entra",
-    "topic": "Access Management",
-    "subtopic": "Access reviews",
+    "topic": "Identity Protection & Governance",
+    "subtopic": "Identity governance",
     "questionType": "single_choice",
     "presentation": "scenario",
-    "difficulty": "easy",
-    "question": "A company wants managers to periodically confirm whether external guests still need access to a group. Which Microsoft Entra governance capability is designed for this review?",
+    "difficulty": "medium",
+    "question": "An organization needs a coordinated way to ensure employees and guests receive appropriate access throughout their identity lifecycle, periodically review whether access is still needed, and remove access when it is no longer required. Which Microsoft Entra capability provides this broad identity-governance approach?",
     "options": [
-      { "id": "A", "text": "Access reviews" },
-      { "id": "B", "text": "Password Protection" },
-      { "id": "C", "text": "Identity Protection risk detection" },
-      { "id": "D", "text": "Azure Firewall policy" }
+      { "id": "A", "text": "Microsoft Entra Conditional Access" },
+      { "id": "B", "text": "Microsoft Entra ID Governance" },
+      { "id": "C", "text": "Microsoft Entra ID Protection" },
+      { "id": "D", "text": "Microsoft Entra Privileged Identity Management (PIM)" }
     ],
-    "correctAnswer": ["A"],
-    "explanation": "Access reviews let designated reviewers periodically attest whether users should keep access to groups, applications, or roles.",
+    "correctAnswer": ["B"],
+    "explanation": "Microsoft Entra ID Governance helps organizations manage identity and access lifecycles, including entitlement management, access reviews, and lifecycle workflows that can grant, review, and remove access for employees and guests.",
     "optionExplanations": {
-      "A": "Access reviews support periodic decisions about whether users, including guests, should retain access.",
-      "B": "Password Protection blocks weak passwords and does not review group membership.",
-      "C": "Identity Protection detects identity risks; periodic access recertification is performed with access reviews.",
-      "D": "Azure Firewall controls network traffic and does not review directory group membership."
+      "A": "Conditional Access evaluates sign-in signals and enforces access controls; it does not govern identity and access lifecycles.",
+      "B": "ID Governance coordinates identity and access lifecycle processes, including access reviews and the removal of access that is no longer needed.",
+      "C": "ID Protection detects and helps remediate identity risks, but it does not provide broad identity lifecycle governance.",
+      "D": "PIM governs privileged access, including just-in-time role activation; it is narrower than governance of employee and guest identity lifecycles."
     },
-    "learningObjective": "Describe access reviews",
-    "tags": ["access-reviews", "identity-governance"],
+    "learningObjective": "Describe Microsoft Entra ID Governance; describe access reviews",
+    "tags": ["identity-governance", "access-reviews", "identity-lifecycle"],
     "sourceUrls": [
+      "https://learn.microsoft.com/entra/id-governance/identity-governance-overview",
       "https://learn.microsoft.com/entra/id-governance/access-reviews-overview"
     ]
   },
