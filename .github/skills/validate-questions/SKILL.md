@@ -1,11 +1,11 @@
 ---
 name: validate-questions
-description: Review Cerxam question JSON for current AI-901 exam alignment, answer correctness, explanation consistency, source evidence, and semantic duplicates. Use when validating new, changed, or existing questions and producing a documentation-grounded review report without changing the bank.
-argument-hint: "[all | changed | question IDs]"
+description: Review Cerxam question JSON for current Microsoft certification exam alignment, answer correctness, explanation consistency, source evidence, and semantic duplicates. Supports AI-901 and SC-900. Use when validating new, changed, or existing questions and producing a documentation-grounded report without changing the bank.
+argument-hint: "[exam-id] [all | changed | question IDs]"
 user-invocable: true
 ---
 
-# Validate AI-901 questions
+# Validate certification exam questions
 
 Review the question bank using deterministic checks, current official Microsoft
 documentation, and explicit human-review judgments. A successful script run or AI
@@ -13,8 +13,17 @@ review is not a guarantee of accuracy, exam coverage, or Microsoft endorsement.
 
 ## Scope and safeguards
 
-- With no scope, review **all** current records in `src/data/questions/*.json`.
-  Accept specific question IDs or files as a targeted scope.
+- With no arguments, review **all** current records across every exam in
+  `src/data/exams/*/questions/*.json`.
+- An optional exam ID scopes `all` or `changed` to
+  `src/data/exams/<exam-id>/questions/*.json`. If omitted, `all` and `changed`
+  cover every exam.
+- Resolve question IDs by matching their prefix to `questionIdPrefix` in the
+  exam manifests. IDs from multiple exams produce one report section per exam.
+  If a prefix cannot be resolved, ask for clarification rather than guessing.
+- If an exam ID is supplied without a selector, treat the scope as `all` for
+  that exam. Specific question IDs may be supplied directly and are grouped by
+  their inferred exam.
 - For **changed**, use Git to identify staged, unstaged, and untracked question
   files. Compare records by stable ID, not line numbers. Include committed changes
   against a user-specified base ref when supplied, and record that ref/commit.
@@ -34,7 +43,9 @@ review is not a guarantee of accuracy, exam coverage, or Microsoft endorsement.
 
 ## 1. Establish the baseline
 
-1. Read the [question types](../../../src/types/questions.ts),
+1. Discover the manifests under `src/data/exams/*/exam.json`. Read each
+   selected exam's manifest and question files, along with the
+   [question types](../../../src/types/questions.ts),
    [validator](../../../scripts/validate-question-bank.mjs),
    [package scripts](../../../package.json), and relevant question consumers if
    the schema or presentation is unclear.
@@ -47,23 +58,29 @@ review is not a guarantee of accuracy, exam coverage, or Microsoft endorsement.
    npm run validate:questions
    ```
 
-   Record the exit status and relevant errors. Do not install dependencies or
-   change code just to make the check pass. Continue reviewing parseable records
-   when possible, but mark inaccessible or invalid records as unreviewed.
+   When reviewing a single exam, use
+   `npm run validate:questions -- <exam-id>`. Record the exit status and
+   relevant errors. Do not install dependencies or change code just to make the
+   check pass. Continue reviewing parseable records when possible, but mark
+   inaccessible or invalid records as unreviewed.
 4. Inspect the validator's actual coverage. It does not prove complete schema
    conformance or factual correctness. Check omitted constraints against the
-   types and consumers. Its fixed file/count/ID expectations can reject a newly
-   added question even if its content is valid; report this as a separate
-   bank/validator compatibility issue, not permission to change those rules.
+   types and consumers. If `expectedQuestionCount` is set in the manifest, the
+   validator enforces that count and sequential IDs; report a mismatch as a
+   bank/manifest compatibility issue, not permission to change the manifest.
 
 ## 2. Establish authoritative exam scope
 
-1. Discover the connected **Microsoft Learn Docs MCP** search and fetch tools.
-   Search for and fetch the current official **AI-901 study guide**. Record its
-   URL, applicable skills-measured date, and retrieval date.
+1. For each selected exam, read `studyGuideUrl` and `skillsMeasuredDate` from
+   its `exam.json`. Discover the connected **Microsoft Learn Docs MCP** search
+   and fetch tools. Fetch the official study guide at the manifest URL, confirm
+   the current skills-measured date against the manifest, and report a mismatch
+   as an alignment finding. Record the URL, manifest date, date shown by the
+   guide, and retrieval date. If either manifest field or the required source
+   evidence is unavailable, report the limitation as unverified.
 2. Follow relevant official learning paths, training units, and product/SDK
    references. Map every selected question to a specific current objective,
-   explaining indirect mappings. Do not infer alignment from an `AI901-` ID,
+   explaining indirect mappings. Do not infer alignment from an exam ID prefix,
    filename, keyword match, or the record's `learningObjective` alone.
 3. Distinguish current APIs from classic/preview/version-specific workflows.
    Product documentation can change independently of the exam blueprint.
@@ -168,11 +185,15 @@ Separate schema/factual defects from editorial suggestions.
 
 ## 5. Produce the report
 
-Use the [report template](./report-template.md).
+Use the [report template](./report-template.md). Include a separate exam review
+section for each exam in scope, including when a run contains IDs from multiple
+exams.
 
 - Save a Markdown report at the user-requested path, or default to
-  `QUESTION_VALIDATION_REPORT.md` in the project root. If that path exists,
-  create a new timestamp-suffixed report; do not overwrite an existing report.
+  `QUESTION_VALIDATION_REPORT-<EXAM-CODE>.md` in the project root for a
+  single-exam review. For a multi-exam review, use
+  `QUESTION_VALIDATION_REPORT-MULTI-EXAM.md`. If the chosen path exists, create
+  a new timestamp-suffixed report; do not overwrite an existing report.
 - Include a coverage row for every selected ID, even when no issue was found.
   Account for invalid records and any work left unfinished. Never present
   sampling or partial work as a complete review.
@@ -194,9 +215,13 @@ Use the [report template](./report-template.md).
 
 ## Invocation examples
 
-- `/validate-questions` or `/validate-questions all`: full bank.
-- `/validate-questions changed`: local question changes relative to HEAD.
+- `/validate-questions` or `/validate-questions all`: all exams.
+- `/validate-questions sc-900`: all questions in SC-900.
+- `/validate-questions ai-901 changed`: local AI-901 question changes relative
+  to HEAD.
 - `/validate-questions changed since origin/master`: include committed changes
   against the supplied ref as well as local changes.
-- `/validate-questions AI901-063 AI901-096`: those IDs, plus bank-wide duplicate
-  comparison without claiming full factual review of the other records.
+- `/validate-questions SC900-001`: infer the exam from the ID prefix.
+- `/validate-questions AI901-063 SC900-001`: review both IDs and produce one
+  report section per exam, plus bank-wide duplicate comparison without claiming
+  full factual review of the other records.
