@@ -1,0 +1,229 @@
+{
+  "id": "sc-900",
+  "code": "SC-900",
+  "title": "Microsoft Security, Compliance, and Identity Fundamentals",
+  "tagline": "Security, compliance, and identity, practised deliberately.",
+  "description": "An unofficial beta practice bank aligned to the current SC-900 study guide. Questions are designed to reinforce Microsoft Learn objectives.",
+  "questionIdPrefix": "SC900",
+  "questionFileOrder": [
+    "concepts.json",
+    "entra.json",
+    "security.json",
+    "compliance.json"
+  ],
+  "expectedQuestionCount": 45,
+  "status": "beta",
+  "studyGuideUrl": "https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-900",
+  "skillsMeasuredDate": "2026-10-21",
+  "allowedSourceHosts": [
+    "learn.microsoft.com"
+  ],
+  "format": {
+    "durationMinutes": 45,
+    "questionCount": 45,
+    "readinessTarget": 85,
+    "minimumObjectiveTarget": 75
+  },
+  "domains": [
+    {
+      "id": "concepts",
+      "title": "Security, Compliance & Identity Concepts",
+      "officialTitle": "Describe the concepts of security, compliance, and identity",
+      "weight": {
+        "min": 10,
+        "max": 15
+      },
+      "sections": [
+        {
+          "id": "security-compliance-concepts",
+          "title": "Security & Compliance Concepts",
+          "officialTitle": "Describe security and compliance concepts",
+          "topics": [
+            "Shared responsibility model",
+            "Defense-in-depth",
+            "Zero Trust",
+            "Encryption and hashing",
+            "Governance, risk, and compliance"
+          ]
+        },
+        {
+          "id": "identity-concepts",
+          "title": "Identity Concepts",
+          "officialTitle": "Define identity concepts",
+          "topics": [
+            "Define identity as the primary security perimeter",
+            "Define authentication",
+            "Define authorization",
+            "Describe identity providers",
+            "Describe the concept of directory services and Active Directory",
+            "Describe the concept of federation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "entra",
+      "title": "Microsoft Entra Capabilities",
+      "officialTitle": "Describe the capabilities of Microsoft Entra",
+      "weight": {
+        "min": 25,
+        "max": 30
+      },
+      "sections": [
+        {
+          "id": "entra-id-identity-types",
+          "title": "Entra ID & Identity Types",
+          "officialTitle": "Describe function and identity types of Microsoft Entra ID",
+          "topics": [
+            "Describe Microsoft Entra ID",
+            "Describe types of identities, including workload identities",
+            "Describe hybrid identity"
+          ]
+        },
+        {
+          "id": "entra-authentication",
+          "title": "Authentication",
+          "officialTitle": "Describe authentication capabilities of Microsoft Entra ID",
+          "topics": [
+            "Describe the authentication methods",
+            "Describe multifactor authentication (MFA)",
+            "Describe password protection and management capabilities"
+          ]
+        },
+        {
+          "id": "entra-access-management",
+          "title": "Access Management",
+          "officialTitle": "Describe access management capabilities of Microsoft Entra ID",
+          "topics": [
+            "Describe Microsoft Entra Conditional Access",
+            "Describe Microsoft Entra roles and role-based access control (RBAC)"
+          ]
+        },
+        {
+          "id": "entra-protection-governance",
+          "title": "Identity Protection & Governance",
+          "officialTitle": "Describe identity protection and governance capabilities of Microsoft Entra",
+          "topics": [
+            "Describe Microsoft Entra ID Governance",
+            "Describe access reviews",
+            "Describe the capabilities of Microsoft Entra Privileged Identity Management",
+            "Describe Microsoft Entra ID Protection"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Microsoft Security Solutions",
+      "officialTitle": "Describe the capabilities of Microsoft security solutions",
+      "weight": {
+        "min": 35,
+        "max": 40
+      },
+      "sections": [
+        {
+          "id": "azure-infrastructure-security",
+          "title": "Azure Infrastructure Security",
+          "officialTitle": "Describe core infrastructure security services in Azure",
+          "topics": [
+            "Describe Azure DDoS Protection",
+            "Describe Azure Firewall",
+            "Describe Azure Web Application Firewall (WAF)",
+            "Describe network segmentation with Azure virtual networks",
+            "Describe network security groups (NSGs)",
+            "Describe Azure Bastion",
+            "Describe Azure Key Vault"
+          ]
+        },
+        {
+          "id": "azure-security-management",
+          "title": "Defender for Cloud & Security Management",
+          "officialTitle": "Describe security management capabilities of Azure",
+          "topics": [
+            "Describe Microsoft Defender for Cloud",
+            "Describe Cloud Security Posture Management (CSPM)",
+            "Describe how security policies, standards, and recommendations improve the cloud security posture",
+            "Describe enhanced security features provided by cloud workload protection"
+          ]
+        },
+        {
+          "id": "sentinel",
+          "title": "Microsoft Sentinel",
+          "officialTitle": "Describe capabilities of Microsoft Sentinel",
+          "topics": [
+            "Define the concepts of security information and event management (SIEM) and security orchestration automated response (SOAR)",
+            "Describe threat detection and mitigation capabilities in Microsoft Sentinel"
+          ]
+        },
+        {
+          "id": "defender-xdr",
+          "title": "Microsoft Defender XDR",
+          "officialTitle": "Describe threat protection with Microsoft Defender XDR",
+          "topics": [
+            "Describe Microsoft Defender XDR services",
+            "Describe Microsoft Defender for Office 365",
+            "Describe Microsoft Defender for Endpoint",
+            "Describe Microsoft Defender for Cloud Apps",
+            "Describe Microsoft Defender for Identity",
+            "Describe Microsoft Defender Vulnerability Management",
+            "Describe Microsoft Threat Intelligence",
+            "Describe the Microsoft Defender portal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compliance",
+      "title": "Microsoft Compliance Solutions",
+      "officialTitle": "Describe the capabilities of Microsoft compliance solutions",
+      "weight": {
+        "min": 20,
+        "max": 25
+      },
+      "sections": [
+        {
+          "id": "service-trust-privacy",
+          "title": "Service Trust Portal & Privacy",
+          "officialTitle": "Describe Microsoft Service Trust Portal and privacy principles",
+          "topics": [
+            "Describe the Service Trust Portal offerings",
+            "Describe the privacy principles of Microsoft"
+          ]
+        },
+        {
+          "id": "purview-compliance-management",
+          "title": "Purview Compliance Management",
+          "officialTitle": "Describe compliance management capabilities of Microsoft Purview",
+          "topics": [
+            "Describe the Microsoft Purview portal",
+            "Describe Compliance Manager",
+            "Describe the uses and benefits of compliance score"
+          ]
+        },
+        {
+          "id": "purview-information-protection",
+          "title": "Information Protection & Data Lifecycle",
+          "officialTitle": "Describe information protection, data lifecycle management, and data governance capabilities of Microsoft Purview",
+          "topics": [
+            "Describe the data classification capabilities",
+            "Describe the benefits of Content explorer and Activity explorer",
+            "Describe sensitivity labels and sensitivity label policies",
+            "Describe data loss prevention (DLP)",
+            "Describe records management",
+            "Describe retention policies, retention labels, and retention label policies"
+          ]
+        },
+        {
+          "id": "purview-insider-risk-ediscovery-audit",
+          "title": "Insider Risk, eDiscovery & Audit",
+          "officialTitle": "Describe insider risk, eDiscovery, and audit capabilities in Microsoft Purview",
+          "topics": [
+            "Describe insider risk management",
+            "Describe eDiscovery solutions in Microsoft Purview",
+            "Describe audit solutions in Microsoft Purview"
+          ]
+        }
+      ]
+    }
+  ]
+}

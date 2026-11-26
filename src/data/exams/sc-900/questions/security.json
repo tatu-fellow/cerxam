@@ -1,0 +1,492 @@
+[
+  {
+    "id": "SC900-019",
+    "domain": "security",
+    "topic": "Azure Infrastructure Security",
+    "subtopic": "DDoS Protection and WAF",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A public web application needs protection both from network-layer DDoS attacks and from common application-layer attacks such as SQL injection. Which pairing best matches those needs?",
+    "options": [
+      { "id": "A", "text": "Azure DDoS Protection for layers 3 and 4, and a web application firewall for layer 7" },
+      { "id": "B", "text": "Azure Bastion for layers 3 and 4, and a network security group for layer 7" },
+      { "id": "C", "text": "Azure Key Vault for layers 3 and 4, and Microsoft Sentinel for layer 7" },
+      { "id": "D", "text": "Microsoft Entra ID Protection for layers 3 and 4, and Azure Firewall for layer 7" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Azure DDoS Protection mitigates network-layer attacks at layers 3 and 4. A web application firewall protects web applications at layer 7 against common exploits.",
+    "optionExplanations": {
+      "A": "DDoS Protection addresses layers 3 and 4, while a WAF addresses layer 7 web exploits.",
+      "B": "Bastion provides secure VM access and NSGs filter network traffic; neither provides the stated WAF protection.",
+      "C": "Key Vault stores secrets, keys, and certificates; Sentinel analyzes security events. Neither provides both requested protections.",
+      "D": "Identity Protection detects identity risk, and Azure Firewall is a network firewall rather than a web application firewall."
+    },
+    "learningObjective": "Describe Azure DDoS Protection; describe Azure Web Application Firewall (WAF)",
+    "tags": ["ddos", "waf", "network-layers"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/ddos-protection/ddos-protection-overview",
+      "https://learn.microsoft.com/azure/web-application-firewall/overview"
+    ]
+  },
+  {
+    "id": "SC900-020",
+    "domain": "security",
+    "topic": "Azure Infrastructure Security",
+    "subtopic": "Azure Firewall",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "easy",
+    "question": "An organization needs a managed, stateful network firewall to apply centralized traffic filtering for Azure virtual networks. Which service is the best fit?",
+    "options": [
+      { "id": "A", "text": "Azure Firewall" },
+      { "id": "B", "text": "Azure Bastion" },
+      { "id": "C", "text": "Microsoft Purview Data Loss Prevention" },
+      { "id": "D", "text": "Microsoft Entra Access Reviews" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Azure Firewall is a managed, stateful network security service for filtering and controlling network traffic.",
+    "optionExplanations": {
+      "A": "Azure Firewall provides managed network traffic filtering for Azure environments.",
+      "B": "Bastion enables secure RDP and SSH access to virtual machines; it is not the network firewall service.",
+      "C": "Purview DLP helps protect sensitive information and does not filter virtual-network traffic.",
+      "D": "Access Reviews govern whether identities should retain access; they do not filter network flows."
+    },
+    "learningObjective": "Describe Azure Firewall",
+    "tags": ["azure-firewall", "network-security"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/firewall/overview"
+    ]
+  },
+  {
+    "id": "SC900-021",
+    "domain": "security",
+    "topic": "Azure Infrastructure Security",
+    "subtopic": "Network security groups",
+    "questionType": "yes_no_matrix",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "For each statement about network security groups, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "Rules can filter traffic using source and destination addresses, ports, and protocols." },
+      { "id": "2", "text": "An NSG is an identity provider that authenticates application users." },
+      { "id": "3", "text": "NSG rules can be applied to filter traffic associated with subnets or network interfaces." }
+    ],
+    "targets": [
+      { "id": "yes", "text": "Yes" },
+      { "id": "no", "text": "No" }
+    ],
+    "correctAnswer": { "1": "yes", "2": "no", "3": "yes" },
+    "explanation": "Network security group rules filter network traffic by address, port, and protocol. NSGs are not identity services.",
+    "learningObjective": "Describe network security groups (NSGs)",
+    "tags": ["nsg", "network-filtering", "matrix"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview"
+    ]
+  },
+  {
+    "id": "SC900-022",
+    "domain": "security",
+    "topic": "Azure Infrastructure Security",
+    "subtopic": "Virtual network segmentation",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A team wants to separate application tiers inside Azure and restrict which network flows can move between them. Which design best supports this goal?",
+    "options": [
+      { "id": "A", "text": "Place resources in appropriate virtual networks or subnets and apply network security rules" },
+      { "id": "B", "text": "Put every resource on one unrestricted subnet and rely on password complexity" },
+      { "id": "C", "text": "Use a retention label to isolate network traffic between application tiers" },
+      { "id": "D", "text": "Enable a Sentinel workbook without defining network boundaries or rules" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Virtual networks and subnets provide network boundaries, while network security groups can filter traffic between resources and subnets.",
+    "optionExplanations": {
+      "A": "Network boundaries and filtering rules can segment tiers and restrict allowed traffic.",
+      "B": "An unrestricted shared subnet does not provide the requested segmentation; password complexity is an identity control.",
+      "C": "Retention labels govern data lifecycle and have no effect on network traffic.",
+      "D": "A workbook visualizes data but does not create virtual-network boundaries or enforce traffic rules."
+    },
+    "learningObjective": "Describe network segmentation with Azure virtual networks",
+    "tags": ["virtual-network", "segmentation", "nsg"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/virtual-network/virtual-networks-overview",
+      "https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview"
+    ]
+  },
+  {
+    "id": "SC900-023",
+    "domain": "security",
+    "topic": "Azure Infrastructure Security",
+    "subtopic": "Azure Bastion",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "easy",
+    "question": "Administrators need to connect to Azure virtual machines over RDP or SSH from the Azure portal without assigning public IP addresses to those virtual machines. Which service is designed for this access?",
+    "options": [
+      { "id": "A", "text": "Azure Bastion" },
+      { "id": "B", "text": "Microsoft Sentinel" },
+      { "id": "C", "text": "Azure DDoS Protection" },
+      { "id": "D", "text": "Microsoft Purview Compliance Manager" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Azure Bastion provides browser-based RDP and SSH connectivity to virtual machines using their private IP addresses, without exposing those VMs through public IP addresses.",
+    "optionExplanations": {
+      "A": "Bastion provides secure RDP/SSH access to virtual machines over their private IP addresses.",
+      "B": "Sentinel analyzes security data and supports incident response; it does not provide VM remote access.",
+      "C": "DDoS Protection mitigates network-layer availability attacks; it is not a remote-access gateway.",
+      "D": "Compliance Manager helps assess compliance posture and manage improvement actions; it does not connect to VMs."
+    },
+    "learningObjective": "Describe Azure Bastion",
+    "tags": ["azure-bastion", "private-ip", "rdp", "ssh"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/bastion/bastion-overview"
+    ]
+  },
+  {
+    "id": "SC900-024",
+    "domain": "security",
+    "topic": "Azure Infrastructure Security",
+    "subtopic": "Azure Key Vault",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "easy",
+    "question": "An application needs a protected service for storing and controlling access to secrets, cryptographic keys, and certificates. Which Azure service should the team use?",
+    "options": [
+      { "id": "A", "text": "Azure Key Vault" },
+      { "id": "B", "text": "Azure Virtual Network" },
+      { "id": "C", "text": "Microsoft Defender for Cloud Apps" },
+      { "id": "D", "text": "Microsoft Purview Activity Explorer" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Azure Key Vault securely stores and controls access to secrets, keys, and certificates.",
+    "optionExplanations": {
+      "A": "Key Vault is designed to store secrets, cryptographic keys, and certificates with access controls.",
+      "B": "A virtual network provides private network connectivity and isolation, not a secrets store.",
+      "C": "Defender for Cloud Apps provides cloud application security capabilities, not key and secret storage.",
+      "D": "Activity Explorer helps investigate data-related activities in Purview; it is not a secrets store."
+    },
+    "learningObjective": "Describe Azure Key Vault",
+    "tags": ["key-vault", "secrets", "keys", "certificates"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/key-vault/general/overview"
+    ]
+  },
+  {
+    "id": "SC900-025",
+    "domain": "security",
+    "topic": "Defender for Cloud & Security Management",
+    "subtopic": "Microsoft Defender for Cloud",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A security team wants a cloud security platform that helps improve security posture and provides threat protection for cloud workloads. Which service is designed for this purpose?",
+    "options": [
+      { "id": "A", "text": "Microsoft Defender for Cloud" },
+      { "id": "B", "text": "Microsoft Purview eDiscovery" },
+      { "id": "C", "text": "Microsoft Entra Password Protection" },
+      { "id": "D", "text": "Azure Bastion" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Microsoft Defender for Cloud provides cloud security posture management and cloud workload protection capabilities.",
+    "optionExplanations": {
+      "A": "Defender for Cloud combines posture-management capabilities with protections for cloud workloads.",
+      "B": "eDiscovery supports investigations of electronically stored information; it is not a cloud security posture platform.",
+      "C": "Password Protection helps block weak passwords in Microsoft Entra; it does not assess cloud workloads.",
+      "D": "Bastion provides secure remote access to virtual machines, not broad cloud posture management."
+    },
+    "learningObjective": "Describe Microsoft Defender for Cloud",
+    "tags": ["defender-for-cloud", "cspm", "workload-protection"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction"
+    ]
+  },
+  {
+    "id": "SC900-026",
+    "domain": "security",
+    "topic": "Defender for Cloud & Security Management",
+    "subtopic": "Security posture",
+    "questionType": "yes_no_matrix",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "For each statement about Microsoft Defender for Cloud security posture, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "Security recommendations can help identify actions to improve the configuration of protected resources." },
+      { "id": "2", "text": "A higher secure score is a legal certification that an organization complies with every applicable law." },
+      { "id": "3", "text": "Secure score can summarize progress against recommended security controls." }
+    ],
+    "targets": [
+      { "id": "yes", "text": "Yes" },
+      { "id": "no", "text": "No" }
+    ],
+    "correctAnswer": { "1": "yes", "2": "no", "3": "yes" },
+    "explanation": "Defender for Cloud provides recommendations and a secure score to help assess and improve security posture. A score is not a legal compliance certification.",
+    "learningObjective": "Describe how security policies, standards, and recommendations improve the cloud security posture",
+    "tags": ["secure-score", "recommendations", "matrix"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/defender-for-cloud/secure-score-security-controls",
+      "https://learn.microsoft.com/azure/defender-for-cloud/review-security-recommendations"
+    ]
+  },
+  {
+    "id": "SC900-027",
+    "domain": "security",
+    "topic": "Defender for Cloud & Security Management",
+    "subtopic": "Multicloud security",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A company uses Azure and workloads in another public cloud. It wants a consolidated view of security posture and recommendations across supported cloud environments. Which service should the team evaluate?",
+    "options": [
+      { "id": "A", "text": "Microsoft Defender for Cloud" },
+      { "id": "B", "text": "Azure DDoS Protection" },
+      { "id": "C", "text": "Microsoft Purview Records Management" },
+      { "id": "D", "text": "Microsoft Entra Access Reviews" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Defender for Cloud includes multicloud security capabilities that help assess and manage supported cloud environments from a unified security posture view.",
+    "optionExplanations": {
+      "A": "Defender for Cloud supports multicloud security posture management for connected environments.",
+      "B": "DDoS Protection focuses on mitigating network-layer denial-of-service attacks, not multicloud posture management.",
+      "C": "Records Management governs retention and records; it does not assess cloud infrastructure security.",
+      "D": "Access Reviews govern identity access and do not assess cloud workload posture."
+    },
+    "learningObjective": "Describe Cloud Security Posture Management (CSPM)",
+    "tags": ["defender-for-cloud", "multicloud"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/defender-for-cloud/multicloud-support-matrix"
+    ]
+  },
+  {
+    "id": "SC900-028",
+    "domain": "security",
+    "topic": "Defender for Cloud & Security Management",
+    "subtopic": "Cloud workload protection",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "An organization already uses cloud security posture management and now wants enhanced threat protection for its cloud workloads. Which approach is intended to provide these workload protections?",
+    "options": [
+      { "id": "A", "text": "Enable the relevant Defender for Cloud workload protection plans" },
+      { "id": "B", "text": "Review Azure Bastion connection history" },
+      { "id": "C", "text": "Require Microsoft Entra password reset" },
+      { "id": "D", "text": "Apply a Purview retention label" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Cloud workload protection provides enhanced security features for supported workloads through the relevant Defender for Cloud plans, complementing posture-management capabilities.",
+    "optionExplanations": {
+      "A": "Defender for Cloud workload protection plans provide enhanced protections for supported cloud workloads.",
+      "B": "Bastion connection history does not provide threat protection for cloud workloads.",
+      "C": "Password reset is an identity remediation action, not a cloud workload protection plan.",
+      "D": "A retention label governs data lifecycle and does not protect cloud workloads from threats."
+    },
+    "learningObjective": "Describe enhanced security features provided by cloud workload protection",
+    "tags": ["defender-for-cloud", "cloud-workload-protection"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction"
+    ]
+  },
+  {
+    "id": "SC900-029",
+    "domain": "security",
+    "topic": "Microsoft Sentinel",
+    "subtopic": "SIEM and SOAR",
+    "questionType": "matching",
+    "presentation": "case_study",
+    "difficulty": "medium",
+    "question": "A security operations team is planning its Microsoft Sentinel solution. Match each capability to the function it most directly provides.",
+    "items": [
+      { "id": "1", "text": "Collect and analyze security events to identify threats" },
+      { "id": "2", "text": "Automate and orchestrate responses to security incidents" },
+      { "id": "3", "text": "Connect a data source so its events can be ingested" }
+    ],
+    "targets": [
+      { "id": "A", "text": "SIEM" },
+      { "id": "B", "text": "SOAR" },
+      { "id": "C", "text": "Data connector" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "SIEM capabilities collect and analyze security events, SOAR capabilities orchestrate and automate response, and data connectors bring source data into Sentinel.",
+    "learningObjective": "Define the concepts of security information and event management (SIEM) and security orchestration automated response (SOAR)",
+    "tags": ["sentinel", "siem", "soar", "matching", "case-study"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/sentinel/overview",
+      "https://learn.microsoft.com/azure/sentinel/connect-data-sources"
+    ]
+  },
+  {
+    "id": "SC900-030",
+    "domain": "security",
+    "topic": "Microsoft Sentinel",
+    "subtopic": "Analytics rules and incidents",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A security analyst wants Microsoft Sentinel to evaluate ingested events for suspicious patterns and create incidents for investigation when a detection rule matches. Which capability should the analyst configure?",
+    "options": [
+      { "id": "A", "text": "An analytics rule" },
+      { "id": "B", "text": "A retention label" },
+      { "id": "C", "text": "An access review" },
+      { "id": "D", "text": "A sensitivity label" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Sentinel analytics rules evaluate data for defined conditions and can generate alerts or incidents for investigation.",
+    "optionExplanations": {
+      "A": "Analytics rules detect conditions in ingested data and can create alerts or incidents.",
+      "B": "A retention label governs data lifecycle, not Sentinel event detection.",
+      "C": "An access review periodically recertifies identity access; it does not detect event patterns.",
+      "D": "A sensitivity label classifies and protects content, not security event data."
+    },
+    "learningObjective": "Describe threat detection and mitigation capabilities in Microsoft Sentinel",
+    "tags": ["sentinel", "analytics-rules", "incidents"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/sentinel/detect-threats-built-in"
+    ]
+  },
+  {
+    "id": "SC900-031",
+    "domain": "security",
+    "topic": "Microsoft Sentinel",
+    "subtopic": "Incident response workflow",
+    "questionType": "ordering",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "Put these simplified security operations steps in the order that describes how an event can become a resolved security incident.",
+    "items": [
+      { "id": "ingest", "text": "Ingest relevant security data from connected sources" },
+      { "id": "detect", "text": "Evaluate the data for suspicious activity" },
+      { "id": "investigate", "text": "Investigate the resulting alert or incident" },
+      { "id": "respond", "text": "Take and document an appropriate response" }
+    ],
+    "correctAnswer": ["ingest", "detect", "investigate", "respond"],
+    "explanation": "Security operations typically collect relevant data, detect suspicious activity, investigate the resulting incident, and then respond. This is a simplified conceptual workflow; specific playbooks and processes vary.",
+    "learningObjective": "Describe threat detection and mitigation capabilities in Microsoft Sentinel",
+    "tags": ["sentinel", "incident-response", "ordering"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/sentinel/overview",
+      "https://learn.microsoft.com/azure/sentinel/investigate-cases"
+    ]
+  },
+  {
+    "id": "SC900-032",
+    "domain": "security",
+    "topic": "Microsoft Defender XDR",
+    "subtopic": "Extended detection and response",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A security team wants to correlate alerts from endpoint, identity, email, and cloud-app protection into incidents that provide cross-domain context. Which solution is designed for this extended detection and response?",
+    "options": [
+      { "id": "A", "text": "Microsoft Defender XDR" },
+      { "id": "B", "text": "Azure Key Vault" },
+      { "id": "C", "text": "Microsoft Purview Compliance Manager" },
+      { "id": "D", "text": "Azure Virtual Network" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Microsoft Defender XDR correlates signals across supported Microsoft security products to provide unified incidents and investigation context.",
+    "optionExplanations": {
+      "A": "Defender XDR correlates cross-domain security signals and provides unified incident investigation.",
+      "B": "Key Vault stores and controls access to secrets, keys, and certificates.",
+      "C": "Compliance Manager helps assess compliance posture and track improvement actions.",
+      "D": "A virtual network provides network connectivity and isolation, not cross-product incident correlation."
+    },
+    "learningObjective": "Describe Microsoft Defender XDR services",
+    "tags": ["defender-xdr", "incidents", "correlation"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/defender-xdr/microsoft-365-defender"
+    ]
+  },
+  {
+    "id": "SC900-033",
+    "domain": "security",
+    "topic": "Microsoft Defender XDR",
+    "subtopic": "Defender for Office 365",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "easy",
+    "question": "An organization needs protection and investigation capabilities for malicious links and attachments delivered through Microsoft 365 email and collaboration services. Which product is most directly associated with this workload?",
+    "options": [
+      { "id": "A", "text": "Microsoft Defender for Office 365" },
+      { "id": "B", "text": "Microsoft Defender for Cloud Apps" },
+      { "id": "C", "text": "Microsoft Defender for Identity" },
+      { "id": "D", "text": "Microsoft Defender Vulnerability Management" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Defender for Office 365 helps protect Microsoft 365 email and collaboration services against threats such as malicious links and attachments.",
+    "optionExplanations": {
+      "A": "Defender for Office 365 provides threat protection for email and collaboration workloads.",
+      "B": "Defender for Cloud Apps provides cloud application security and visibility rather than the primary email protection workload.",
+      "C": "Defender for Identity detects identity-related threats in an organization's identity environment.",
+      "D": "Defender Vulnerability Management helps identify and prioritize vulnerabilities and exposure."
+    },
+    "learningObjective": "Describe Microsoft Defender for Office 365",
+    "tags": ["defender-office-365", "email-security"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/defender-office-365/mdo-about"
+    ]
+  },
+  {
+    "id": "SC900-034",
+    "domain": "security",
+    "topic": "Microsoft Defender XDR",
+    "subtopic": "Defender for Endpoint",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "easy",
+    "question": "A security analyst needs endpoint threat detection, investigation, and response capabilities for an organization's devices. Which product is the best fit?",
+    "options": [
+      { "id": "A", "text": "Microsoft Defender for Endpoint" },
+      { "id": "B", "text": "Microsoft Defender for Office 365" },
+      { "id": "C", "text": "Microsoft Purview eDiscovery" },
+      { "id": "D", "text": "Microsoft Entra ID Protection" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Microsoft Defender for Endpoint provides endpoint protection, detection, investigation, and response capabilities.",
+    "optionExplanations": {
+      "A": "Defender for Endpoint focuses on protecting and investigating endpoint devices.",
+      "B": "Defender for Office 365 focuses on threats to email and collaboration services.",
+      "C": "eDiscovery identifies and manages content for investigations and legal cases.",
+      "D": "Identity Protection detects user and sign-in risk; it is not the endpoint protection product."
+    },
+    "learningObjective": "Describe Microsoft Defender for Endpoint",
+    "tags": ["defender-endpoint", "endpoint-detection-response"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/defender-endpoint/microsoft-defender-endpoint"
+    ]
+  },
+  {
+    "id": "SC900-035",
+    "domain": "security",
+    "topic": "Microsoft Defender XDR",
+    "subtopic": "Microsoft Defender products",
+    "questionType": "matching",
+    "presentation": "case_study",
+    "difficulty": "medium",
+    "question": "A security team is reviewing Microsoft Defender capabilities. Match each security need to the product that most directly addresses it.",
+    "items": [
+      { "id": "1", "text": "Investigate suspicious activity involving on-premises identity signals" },
+      { "id": "2", "text": "Discover and control risk from cloud applications" },
+      { "id": "3", "text": "Identify and prioritize software vulnerabilities on devices" },
+      { "id": "4", "text": "Review expert analysis of emerging threats and organizational exposure" },
+      { "id": "5", "text": "Investigate and manage unified security incidents in a central workspace" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Microsoft Defender for Identity" },
+      { "id": "B", "text": "Microsoft Defender for Cloud Apps" },
+      { "id": "C", "text": "Microsoft Defender Vulnerability Management" },
+      { "id": "D", "text": "Microsoft Threat Intelligence, surfaced through threat analytics" },
+      { "id": "E", "text": "Microsoft Defender portal" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C", "4": "D", "5": "E" },
+    "explanation": "Defender for Identity focuses on identity signals, Defender for Cloud Apps on cloud application security, Vulnerability Management on exposure and vulnerabilities, threat analytics surfaces Microsoft threat intelligence, and the Defender portal provides the unified security workspace.",
+    "learningObjective": "Describe Microsoft Defender for Cloud Apps; describe Microsoft Defender for Identity; describe Microsoft Defender Vulnerability Management; describe Microsoft Threat Intelligence; describe the Microsoft Defender portal",
+    "tags": ["defender-products", "threat-analytics", "matching", "case-study"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/defender-for-identity/what-is",
+      "https://learn.microsoft.com/defender-cloud-apps/what-is-defender-for-cloud-apps",
+      "https://learn.microsoft.com/defender-vulnerability-management/defender-vulnerability-management",
+      "https://learn.microsoft.com/defender-xdr/threat-analytics",
+      "https://learn.microsoft.com/defender-xdr/microsoft-365-defender-portal"
+    ]
+  }
+]

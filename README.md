@@ -9,9 +9,12 @@ weak-area review. Exam details and practice formats are defined per exam.
 | Exam | Certification | Status | Questions |
 | --- | --- | --- | ---: |
 | AI-901 | Azure AI Fundamentals | Active | 160 |
+| SC-900 | Microsoft Security, Compliance, and Identity Fundamentals | Beta | 45 |
 
-AI-901 is currently the only available exam bank. The status and question count
-for each exam are recorded in its manifest at `src/data/exams/<exam-id>/exam.json`.
+SC-900 is a beta pilot and remains subject to content review. Its 45-question
+mock is a practice format; the number of questions on the live exam can vary.
+The status and question count for each exam are recorded in its manifest at
+`src/data/exams/<exam-id>/exam.json`.
 
 ## Requirements
 

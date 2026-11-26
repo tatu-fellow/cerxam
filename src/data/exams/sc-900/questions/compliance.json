@@ -1,0 +1,290 @@
+[
+  {
+    "id": "SC900-036",
+    "domain": "compliance",
+    "topic": "Service Trust Portal & Privacy",
+    "subtopic": "Service Trust Portal",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "easy",
+    "question": "A customer wants to review Microsoft's audit reports and compliance documentation for Microsoft cloud services. Which portal is intended to provide access to this service assurance material?",
+    "options": [
+      { "id": "A", "text": "Microsoft Service Trust Portal" },
+      { "id": "B", "text": "Azure Bastion" },
+      { "id": "C", "text": "Microsoft Entra Password Protection" },
+      { "id": "D", "text": "Microsoft Defender for Endpoint" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "The Service Trust Portal provides access to Microsoft's service assurance and compliance materials, including audit reports and related documentation. Some content requires authentication.",
+    "optionExplanations": {
+      "A": "The Service Trust Portal provides Microsoft service assurance and compliance documentation.",
+      "B": "Azure Bastion is used to connect securely to virtual machines.",
+      "C": "Password Protection helps prevent weak passwords; it is not a service assurance document portal.",
+      "D": "Defender for Endpoint protects and investigates endpoint devices."
+    },
+    "learningObjective": "Describe the Service Trust Portal offerings",
+    "tags": ["service-trust-portal", "compliance"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/microsoft-365/compliance/get-started-with-service-trust-portal?view=o365-worldwide"
+    ]
+  },
+  {
+    "id": "SC900-037",
+    "domain": "compliance",
+    "topic": "Service Trust Portal & Privacy",
+    "subtopic": "Privacy principles",
+    "questionType": "matching",
+    "presentation": "case_study",
+    "difficulty": "medium",
+    "question": "A customer is reviewing Microsoft's stated privacy principles. Match each commitment to the principle it most directly expresses.",
+    "items": [
+      { "id": "1", "text": "The customer decides how its data is used within the service relationship" },
+      { "id": "2", "text": "The customer can learn where data is located and how it is used" },
+      { "id": "3", "text": "Data is protected while stored and while being transmitted" },
+      { "id": "4", "text": "Customer data is defended against unauthorized third-party access" }
+    ],
+    "targets": [
+      { "id": "A", "text": "You control your data" },
+      { "id": "B", "text": "Know where your data is and how it's used" },
+      { "id": "C", "text": "Your data is secure at rest and in transit" },
+      { "id": "D", "text": "Defend your data from third-party access" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C", "4": "D" },
+    "explanation": "The commitments align with Microsoft's stated customer privacy principles: customer control, transparency about location and use, protection at rest and in transit, and safeguards against unauthorized third-party access.",
+    "learningObjective": "Describe the privacy principles of Microsoft",
+    "tags": ["privacy", "privacy-principles", "matching", "case-study"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/compliance/assurance/assurance-privacy"
+    ]
+  },
+  {
+    "id": "SC900-038",
+    "domain": "compliance",
+    "topic": "Service Trust Portal & Privacy",
+    "subtopic": "Customer data processing",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A customer asks whether Microsoft uses customer data from its cloud services for user profiling and advertising. Which response best reflects Microsoft's published privacy commitments?",
+    "options": [
+      { "id": "A", "text": "Microsoft processes data to provide and operate services under documented instructions and does not use it for user profiling or advertising" },
+      { "id": "B", "text": "Microsoft may use any customer data for advertising if it is encrypted at rest" },
+      { "id": "C", "text": "Customer data is never processed by Microsoft under any circumstances" },
+      { "id": "D", "text": "Microsoft transfers customer data to every third party by default" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Microsoft's privacy documentation states that it processes customer data to provide and operate services, including under documented instructions, and does not use the data for user profiling or advertising.",
+    "optionExplanations": {
+      "A": "This reflects the published purpose and limits for processing customer data in Microsoft's privacy documentation.",
+      "B": "Encryption does not authorize advertising use; the published commitment excludes user profiling and advertising.",
+      "C": "Microsoft does process data to provide, troubleshoot, maintain, and improve services, subject to its commitments.",
+      "D": "The privacy documentation describes limited sharing, such as when authorized by the customer or required by law, not default transfer to every third party."
+    },
+    "learningObjective": "Describe the privacy principles of Microsoft",
+    "tags": ["privacy", "customer-data", "data-processing"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/compliance/assurance/assurance-privacy"
+    ]
+  },
+  {
+    "id": "SC900-039",
+    "domain": "compliance",
+    "topic": "Purview Compliance Management",
+    "subtopic": "Microsoft Purview portal",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "easy",
+    "question": "A compliance administrator needs a central place to access Microsoft Purview solutions for information protection, data lifecycle management, risk, and compliance. Which entry point should the administrator use?",
+    "options": [
+      { "id": "A", "text": "Microsoft Purview portal" },
+      { "id": "B", "text": "Azure Firewall Manager" },
+      { "id": "C", "text": "Microsoft Defender threat analytics" },
+      { "id": "D", "text": "Microsoft Entra admin center's access reviews page only" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "The Microsoft Purview portal is the central portal for accessing Microsoft Purview solutions and compliance experiences.",
+    "optionExplanations": {
+      "A": "The Purview portal provides a central entry point to Purview solutions and compliance experiences.",
+      "B": "Azure Firewall Manager manages network firewall resources, not Purview compliance solutions.",
+      "C": "Threat analytics provides security threat intelligence in Defender, not a central compliance portal.",
+      "D": "Access reviews is a specific identity governance capability and does not provide the broader Purview solution entry point."
+    },
+    "learningObjective": "Describe the Microsoft Purview portal",
+    "tags": ["purview-portal", "compliance"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/purview/purview-portal"
+    ]
+  },
+  {
+    "id": "SC900-040",
+    "domain": "compliance",
+    "topic": "Purview Compliance Management",
+    "subtopic": "Compliance Manager assessments",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A compliance team wants to assess its environment against selected regulations and standards, review control status, and track recommended improvement actions. Which Microsoft Purview solution is designed for this work?",
+    "options": [
+      { "id": "A", "text": "Microsoft Purview Compliance Manager" },
+      { "id": "B", "text": "Microsoft Defender for Endpoint" },
+      { "id": "C", "text": "Azure Bastion" },
+      { "id": "D", "text": "Microsoft Entra Password Protection" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Compliance Manager supports compliance assessments, control management, and tracking improvement actions for applicable standards and regulations.",
+    "optionExplanations": {
+      "A": "Compliance Manager provides assessments and improvement actions to help manage compliance posture.",
+      "B": "Defender for Endpoint provides endpoint protection and detection capabilities.",
+      "C": "Bastion provides secure remote connections to Azure virtual machines.",
+      "D": "Password Protection blocks weak passwords and does not assess regulatory controls."
+    },
+    "learningObjective": "Describe Compliance Manager",
+    "tags": ["compliance-manager", "assessments", "improvement-actions"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/purview/compliance-manager"
+    ]
+  },
+  {
+    "id": "SC900-041",
+    "domain": "compliance",
+    "topic": "Purview Compliance Management",
+    "subtopic": "Compliance score",
+    "questionType": "yes_no_matrix",
+    "presentation": "standard",
+    "difficulty": "medium",
+    "question": "For each statement about Microsoft Purview Compliance Manager, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "Improvement actions can help an organization address gaps in its compliance posture." },
+      { "id": "2", "text": "A compliance score is a legal guarantee that the organization meets every regulatory obligation." },
+      { "id": "3", "text": "Assessments can help organize evidence and control requirements for selected standards." }
+    ],
+    "targets": [
+      { "id": "yes", "text": "Yes" },
+      { "id": "no", "text": "No" }
+    ],
+    "correctAnswer": { "1": "yes", "2": "no", "3": "yes" },
+    "explanation": "Compliance Manager helps organizations assess and manage compliance activities, but its score is not a legal certification or guarantee of compliance.",
+    "learningObjective": "Describe the uses and benefits of compliance score",
+    "tags": ["compliance-manager", "compliance-score", "matrix"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/purview/compliance-manager"
+    ]
+  },
+  {
+    "id": "SC900-042",
+    "domain": "compliance",
+    "topic": "Information Protection & Data Lifecycle",
+    "subtopic": "Information protection tools",
+    "questionType": "matching",
+    "presentation": "case_study",
+    "difficulty": "medium",
+    "question": "A compliance team is investigating and protecting Microsoft 365 data. Match each need to the Microsoft Purview capability that most directly addresses it.",
+    "items": [
+      { "id": "1", "text": "Apply persistent classification and protection settings to sensitive content" },
+      { "id": "2", "text": "Detect and help prevent sensitive information from being shared inappropriately" },
+      { "id": "3", "text": "Review content locations that contain classified sensitive information" },
+      { "id": "4", "text": "Inspect data-related activities and trends across the organization" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Sensitivity labels" },
+      { "id": "B", "text": "Data loss prevention (DLP)" },
+      { "id": "C", "text": "Content Explorer" },
+      { "id": "D", "text": "Activity Explorer" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C", "4": "D" },
+    "explanation": "Sensitivity labels classify and protect content, DLP helps protect sensitive information from inappropriate sharing, Content Explorer helps inspect classified content, and Activity Explorer helps review related activities.",
+    "learningObjective": "Describe the data classification capabilities; describe the benefits of Content explorer and Activity explorer; describe sensitivity labels and sensitivity label policies; describe data loss prevention (DLP)",
+    "tags": ["sensitivity-labels", "dlp", "content-explorer", "activity-explorer", "matching", "case-study"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/purview/sensitivity-labels",
+      "https://learn.microsoft.com/purview/dlp-learn-about-dlp",
+      "https://learn.microsoft.com/purview/data-classification-content-explorer",
+      "https://learn.microsoft.com/purview/data-classification-activity-explorer"
+    ]
+  },
+  {
+    "id": "SC900-043",
+    "domain": "compliance",
+    "topic": "Information Protection & Data Lifecycle",
+    "subtopic": "Retention and records management",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A records manager needs to apply a retention requirement to content and designate certain content as a record that must be managed according to organizational policy. Which Microsoft Purview capabilities are most relevant?",
+    "options": [
+      { "id": "A", "text": "Retention policies or labels and Records Management" },
+      { "id": "B", "text": "Azure DDoS Protection and Azure Bastion" },
+      { "id": "C", "text": "Microsoft Entra Password Protection and Access Reviews" },
+      { "id": "D", "text": "Microsoft Sentinel data connectors and analytics rules" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Purview retention policies and labels manage retention and disposition settings, while Records Management supports record declaration and related records processes.",
+    "optionExplanations": {
+      "A": "Retention and Records Management capabilities govern content lifecycle and records.",
+      "B": "DDoS Protection and Bastion address network availability and VM access, not content lifecycle.",
+      "C": "Password Protection and Access Reviews govern identity controls, not records retention.",
+      "D": "Sentinel connectors and analytics rules support security monitoring, not records management."
+    },
+    "learningObjective": "Describe records management; describe retention policies, retention labels, and retention label policies",
+    "tags": ["retention", "records-management", "data-lifecycle"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/purview/retention",
+      "https://learn.microsoft.com/purview/records-management"
+    ]
+  },
+  {
+    "id": "SC900-044",
+    "domain": "compliance",
+    "topic": "Insider Risk, eDiscovery & Audit",
+    "subtopic": "Insider Risk Management",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A risk team needs to identify and investigate potentially risky user activities, such as unusual sharing or exfiltration of sensitive information, using configurable policies and investigation workflows. Which Microsoft Purview solution is designed for this purpose?",
+    "options": [
+      { "id": "A", "text": "Insider Risk Management" },
+      { "id": "B", "text": "Azure Firewall" },
+      { "id": "C", "text": "Microsoft Entra Password Protection" },
+      { "id": "D", "text": "Microsoft Defender for Endpoint only" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Microsoft Purview Insider Risk Management helps identify, investigate, and act on potentially risky user activities using policies and cases.",
+    "optionExplanations": {
+      "A": "Insider Risk Management is designed to help identify and investigate potentially risky user activity.",
+      "B": "Azure Firewall filters network traffic and does not provide insider-risk investigation workflows.",
+      "C": "Password Protection blocks weak passwords and does not analyze user activity for insider risk.",
+      "D": "Defender for Endpoint protects devices; it is not the Purview insider-risk policy and case-management solution."
+    },
+    "learningObjective": "Describe insider risk management",
+    "tags": ["insider-risk", "purview", "investigation"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/purview/insider-risk-management"
+    ]
+  },
+  {
+    "id": "SC900-045",
+    "domain": "compliance",
+    "topic": "Insider Risk, eDiscovery & Audit",
+    "subtopic": "eDiscovery and Audit",
+    "questionType": "matching",
+    "presentation": "case_study",
+    "difficulty": "medium",
+    "question": "A legal and compliance team is investigating activity and content in Microsoft 365. Match each investigation task to the most relevant Microsoft Purview capability.",
+    "items": [
+      { "id": "1", "text": "Search for content, place locations on hold, and export content for an investigation case" },
+      { "id": "2", "text": "Search records of user and administrator activities in Microsoft services" }
+    ],
+    "targets": [
+      { "id": "A", "text": "eDiscovery" },
+      { "id": "B", "text": "Audit" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B" },
+    "explanation": "Purview eDiscovery supports content identification and case workflows, including holds and exports. Purview Audit supports searching activity records for investigative review.",
+    "learningObjective": "Describe eDiscovery solutions in Microsoft Purview; describe audit solutions in Microsoft Purview",
+    "tags": ["ediscovery", "audit", "matching", "case-study"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/purview/edisc",
+      "https://learn.microsoft.com/purview/audit-solutions-overview"
+    ]
+  }
+]
