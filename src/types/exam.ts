@@ -27,7 +27,7 @@ export interface ExamFormat {
 }
 
 export interface ExamModesConfig {
-  scenario?: { questionCount: number };
+  scenario?: { questionCount: number; presentations?: string[] };
   weakFallback?: { questionCount: number };
 }
 

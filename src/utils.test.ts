@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { buildWeightedExam } from "./utils";
+import { resolveExamSettings } from "./config";
+import { buildWeightedExam, isCorrect, selectScenarioQuestions } from "./utils";
 import type { ExamDomain } from "./types/exam";
-import type { Question } from "./types/questions";
+import type { MultipleChoiceQuestion, OrderingQuestion, Question } from "./types/questions";
 
 const domains: ExamDomain[] = [
   { id: "concepts", title: "Concepts", weight: { min: 40, max: 45 }, sections: [] },
@@ -33,6 +34,49 @@ function makeQuestions(domain: string, count: number): Question[] {
     correctAnswer: ["A"],
   }));
 }
+
+describe("isCorrect", () => {
+  const ordering: OrderingQuestion = {
+    id: "ordering", domain: "security", topic: "topic", subtopic: "subtopic",
+    questionType: "ordering", presentation: "scenario", difficulty: "medium",
+    question: "Order the steps.", explanation: "Explanation.", learningObjective: "Objective",
+    tags: [], sourceUrls: [],
+    items: [{ id: "1", text: "First" }, { id: "2", text: "Second" }],
+    correctAnswer: ["1", "2"],
+  };
+
+  it("requires the complete answer in the specified order", () => {
+    expect(isCorrect(ordering, ["1", "2"])).toBe(true);
+    expect(isCorrect(ordering, ["2", "1"])).toBe(false);
+    expect(isCorrect(ordering, ["1"])).toBe(false);
+  });
+
+  it("continues to accept multiple-choice answers in any order", () => {
+    const choice: MultipleChoiceQuestion = {
+      ...ordering,
+      questionType: "multiple_choice",
+      options: [{ id: "1", text: "First" }, { id: "2", text: "Second" }],
+    };
+    expect(isCorrect(choice, ["2", "1"])).toBe(true);
+  });
+});
+
+describe("selectScenarioQuestions", () => {
+  it("includes opted-in scenario presentations without changing the default", () => {
+    const standard = makeQuestions("standard", 1)[0];
+    const scenario = { ...standard, id: "scenario", presentation: "scenario" };
+    const caseStudy = { ...standard, id: "case-study", presentation: "case_study" };
+    const questions = [standard, scenario, caseStudy];
+    const settings = resolveExamSettings({
+      modes: { scenario: { questionCount: 20, presentations: ["case_study", "scenario"] } },
+    });
+
+    expect(selectScenarioQuestions(questions, settings).map((question) => question.id).sort())
+      .toEqual(["case-study", "scenario"]);
+    expect(selectScenarioQuestions(questions, resolveExamSettings({})).map((question) => question.id))
+      .toEqual(["case-study"]);
+  });
+});
 
 describe("buildWeightedExam", () => {
   it("allocates 19 AI-901 questions to concepts and 26 to Foundry", () => {

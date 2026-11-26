@@ -9,9 +9,9 @@ weak-area review. Exam details and practice formats are defined per exam.
 | Exam | Certification | Status | Questions |
 | --- | --- | --- | ---: |
 | AI-901 | Azure AI Fundamentals | Active | 160 |
-| SC-900 | Microsoft Security, Compliance, and Identity Fundamentals | Beta | 45 |
+| SC-900 | Microsoft Security, Compliance, and Identity Fundamentals | Beta | 160 |
 
-SC-900 is a beta pilot and remains subject to content review. Its 45-question
+SC-900 remains beta pending final content review. Its 45-question
 mock is a practice format; the number of questions on the live exam can vary.
 The status and question count for each exam are recorded in its manifest at
 `src/data/exams/<exam-id>/exam.json`.
@@ -44,11 +44,7 @@ The app is a working practice simulator. Its question banks and exam alignment
 may change as the project is updated; it is not an official Microsoft product
 or exam simulator.
 
-Exam dashboards use browser-history URLs. Vite's development and preview
-servers provide the required SPA fallback. Production hosting must also serve
-`index.html` for unknown paths (for example, Azure Static Web Apps can use
-`navigationFallback` in `staticwebapp.config.json`). If hosting under a
-subpath, configure both Vite's `base` and the router's `basename`.
+See [CHANGELOG.md](CHANGELOG.md) for version history and beta release notes.
 
 ## Contributing
 
@@ -91,6 +87,21 @@ questions. Unavailable evidence is reported as unverified, and substantive
 changes still need human approval. If the command is missing, check **Chat:
 Open Customizations > Skills** and start a fresh chat.
 
+### Changelog and releases
+
+- Update [CHANGELOG.md](CHANGELOG.md) in every feature PR to `master` branch. Include the version, date in
+  `YYYY-MM-DD` format, and a short summary of changes.
+- Use semantic versioning `MAJOR.MINOR.PATCH` (`x.x.x`): increase the major
+  version for incompatible changes, minor for backward-compatible features,
+  and patch for backward-compatible fixes.
+- For prereleases, append a suffix such as `2.0.0-beta.1` and mention **BETA**
+  in the entry title. Keep entries newest first; use Added, Changed, and Fixed
+  sections where helpful. Confirm the date when publishing.
+- When publishing a version, create an annotated Git tag on its merged commit,
+  matching the changelog version with a `v` prefix, such as `v1.0.0` or
+  `v2.0.0-beta.1`. Push the tag explicitly so versions have stable reference
+  points. Do not move or reuse published tags.
+
 ## Adding a new exam
 
 1. Copy `src/data/exams/_template/` to a new folder named with the exam ID,
@@ -111,6 +122,10 @@ Open Customizations > Skills** and start a fresh chat.
 
 The `_template` manifest contains placeholders and no question files; replace
 all placeholders before publishing a new exam.
+An exam may set `modes.scenario.presentations` alongside its scenario question
+count to override which presentation labels qualify for Applied Scenarios.
+Without that setting, the default includes `case_study` presentations; eligible
+question types also remain included.
 
 Do not commit `node_modules`, credentials, or other secrets. Verify question
 wording, answers, and explanations against current official learning materials

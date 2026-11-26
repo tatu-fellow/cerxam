@@ -7,11 +7,19 @@
   "questionIdPrefix": "SC900",
   "questionFileOrder": [
     "concepts.json",
+    "concepts-expanded.json",
     "entra.json",
+    "entra-expanded.json",
+    "entra-advanced.json",
     "security.json",
-    "compliance.json"
+    "security-expanded.json",
+    "security-advanced.json",
+    "security-operations.json",
+    "compliance.json",
+    "compliance-expanded.json",
+    "compliance-advanced.json"
   ],
-  "expectedQuestionCount": 45,
+  "expectedQuestionCount": 160,
   "status": "beta",
   "studyGuideUrl": "https://learn.microsoft.com/credentials/certifications/resources/study-guides/sc-900",
   "skillsMeasuredDate": "2026-10-21",
@@ -23,6 +31,12 @@
     "questionCount": 45,
     "readinessTarget": 85,
     "minimumObjectiveTarget": 75
+  },
+  "modes": {
+    "scenario": {
+      "questionCount": 20,
+      "presentations": ["case_study", "scenario"]
+    }
   },
   "domains": [
     {

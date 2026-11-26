@@ -96,6 +96,11 @@ function validateManifest(context) {
           errors.push(`manifest.modes.${mode}.questionCount must be a positive integer when provided.`);
         }
       }
+      const presentations = exam.modes.scenario?.presentations;
+      if (presentations !== undefined &&
+          (!Array.isArray(presentations) || presentations.some((value) => !nonemptyString(value)))) {
+        errors.push("manifest.modes.scenario.presentations must be an array of nonempty strings when provided.");
+      }
     }
   }
 

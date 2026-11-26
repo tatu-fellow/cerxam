@@ -213,7 +213,7 @@
     "items": [
       { "id": "1", "text": "Security recommendations can help identify actions to improve the configuration of protected resources." },
       { "id": "2", "text": "A higher secure score is a legal certification that an organization complies with every applicable law." },
-      { "id": "3", "text": "Secure score can summarize progress against recommended security controls." }
+      { "id": "3", "text": "Secure score can summarize an organization's security posture using security findings." }
     ],
     "targets": [
       { "id": "yes", "text": "Yes" },
@@ -351,15 +351,15 @@
     "questionType": "ordering",
     "presentation": "scenario",
     "difficulty": "medium",
-    "question": "Put these simplified security operations steps in the order that describes how an event can become a resolved security incident.",
+    "question": "A team disables automatic responses and uses a manual workflow in which the analyst investigates an alert before deciding on and documenting a response. Order the steps from connected data to the completed response.",
     "items": [
       { "id": "ingest", "text": "Ingest relevant security data from connected sources" },
       { "id": "detect", "text": "Evaluate the data for suspicious activity" },
       { "id": "investigate", "text": "Investigate the resulting alert or incident" },
-      { "id": "respond", "text": "Take and document an appropriate response" }
+      { "id": "respond", "text": "Take and document the analyst's chosen manual response" }
     ],
     "correctAnswer": ["ingest", "detect", "investigate", "respond"],
-    "explanation": "Security operations typically collect relevant data, detect suspicious activity, investigate the resulting incident, and then respond. This is a simplified conceptual workflow; specific playbooks and processes vary.",
+    "explanation": "In this manual workflow, the team ingests data, detects suspicious activity, investigates the resulting alert, and then takes and documents a response. Other workflows can automate a response before an analyst investigates.",
     "learningObjective": "Describe threat detection and mitigation capabilities in Microsoft Sentinel",
     "tags": ["sentinel", "incident-response", "ordering"],
     "sourceUrls": [

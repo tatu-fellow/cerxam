@@ -1,0 +1,248 @@
+[
+  {
+    "id": "SC900-136", "domain": "security", "topic": "Microsoft Sentinel", "subtopic": "Data connectors",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A Sentinel team needs to stream Syslog events from a supported Linux-based source into its workspace. Which agent-based integration is designed for this?",
+    "options": [
+      { "id": "A", "text": "Azure Monitor Agent with a Syslog connector" },
+      { "id": "B", "text": "A Sentinel workbook" },
+      { "id": "C", "text": "A Sentinel analytics rule" },
+      { "id": "D", "text": "A Sentinel automation rule" }
+    ],
+    "correctAnswer": ["A"], "explanation": "Sentinel can use Azure Monitor Agent to stream Syslog events from supported sources into the workspace.",
+    "optionExplanations": {
+      "A": "Azure Monitor Agent supports the Syslog connector integration.",
+      "B": "A workbook visualizes data after it has been ingested.",
+      "C": "An analytics rule detects threats in data rather than collecting Syslog.",
+      "D": "An automation rule automates incident handling rather than collecting Syslog."
+    },
+    "learningObjective": "Describe threat detection and mitigation capabilities in Microsoft Sentinel", "tags": ["sentinel", "syslog", "azure-monitor-agent"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/sentinel/connect-data-sources", "https://learn.microsoft.com/azure/sentinel/monitor-your-data", "https://learn.microsoft.com/azure/sentinel/detect-threats-built-in", "https://learn.microsoft.com/azure/sentinel/automate-incident-handling-with-automation-rules"]
+  },
+  {
+    "id": "SC900-137", "domain": "security", "topic": "Microsoft Sentinel", "subtopic": "Analytics rules",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "hard",
+    "question": "For each statement about Microsoft Sentinel anomaly rules, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "They use machine learning to establish a baseline for certain behavior." },
+      { "id": "2", "text": "Their recorded anomalies can provide context for detections and investigations." },
+      { "id": "3", "text": "Every anomaly necessarily proves malicious behavior and generates its own alert." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "yes", "3": "no" },
+    "explanation": "Anomaly rules build behavioral baselines and record deviations for context. An anomaly is not necessarily malicious and anomaly rules do not generate their own alerts.",
+    "learningObjective": "Describe threat detection and mitigation capabilities in Microsoft Sentinel", "tags": ["sentinel", "anomaly-rules", "detection"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/sentinel/detect-threats-built-in"]
+  },
+  {
+    "id": "SC900-138", "domain": "security", "topic": "Microsoft Sentinel", "subtopic": "Workbooks",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "easy",
+    "question": "A Sentinel analyst wants charts and tables showing trends in ingested security data. Which capability is designed for this visualization?",
+    "options": [
+      { "id": "A", "text": "A Sentinel data connector" },
+      { "id": "B", "text": "A Sentinel analytics rule" },
+      { "id": "C", "text": "A Sentinel workbook" },
+      { "id": "D", "text": "A Sentinel automation rule" }
+    ],
+    "correctAnswer": ["C"], "explanation": "Sentinel workbooks provide customizable tables and charts for monitoring and visualizing security data.",
+    "optionExplanations": {
+      "A": "A data connector ingests security data rather than visualizing trends.",
+      "B": "An analytics rule detects threats rather than providing a visualization dashboard.",
+      "C": "A workbook displays visualizations of data and queries.",
+      "D": "An automation rule automates incident handling rather than displaying charts."
+    },
+    "learningObjective": "Describe threat detection and mitigation capabilities in Microsoft Sentinel", "tags": ["sentinel", "workbooks", "visualization"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/sentinel/monitor-your-data", "https://learn.microsoft.com/azure/sentinel/connect-data-sources", "https://learn.microsoft.com/azure/sentinel/detect-threats-built-in", "https://learn.microsoft.com/azure/sentinel/automate-incident-handling-with-automation-rules"]
+  },
+  {
+    "id": "SC900-139", "domain": "security", "topic": "Microsoft Sentinel", "subtopic": "Automation rules",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A Sentinel team wants to automatically assign matching newly created incidents to a particular analyst. Which capability can apply the assignment based on incident conditions?",
+    "options": [
+      { "id": "A", "text": "A network security group" },
+      { "id": "B", "text": "A sensitivity label policy" },
+      { "id": "C", "text": "A password protection custom banned list" },
+      { "id": "D", "text": "A Sentinel automation rule" }
+    ],
+    "correctAnswer": ["D"], "explanation": "Sentinel automation rules can apply incident-handling actions such as assignment when conditions match.",
+    "optionExplanations": {
+      "A": "An NSG filters network traffic.",
+      "B": "A label policy publishes sensitivity labels.",
+      "C": "A banned-password list helps prevent weak passwords.",
+      "D": "An automation rule can assign incidents that meet its conditions."
+    },
+    "learningObjective": "Define the concepts of security information and event management (SIEM) and security orchestration automated response (SOAR)", "tags": ["sentinel", "automation-rules", "incidents"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/sentinel/automate-incident-handling-with-automation-rules"]
+  },
+  {
+    "id": "SC900-140", "domain": "security", "topic": "Microsoft Sentinel", "subtopic": "Entity investigation",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "While investigating a user in Microsoft Sentinel in the Defender portal, an analyst wants to review the user's Sentinel timeline and behavioral insights. Where can the analyst find them?",
+    "options": [
+      { "id": "A", "text": "The Action center" },
+      { "id": "B", "text": "The Sentinel events tab on the user's entity page" },
+      { "id": "C", "text": "A Sentinel data connector" },
+      { "id": "D", "text": "A Sentinel automation rule" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "In the Defender portal, the Sentinel events tab on an entity page contains the Sentinel timeline and insights for that entity.",
+    "optionExplanations": {
+      "A": "The Action center tracks response actions rather than providing the entity's Sentinel timeline and insights.",
+      "B": "The Sentinel events tab provides the entity's timeline and insights.",
+      "C": "A data connector ingests data; it is not the entity investigation view.",
+      "D": "An automation rule handles incidents automatically; it is not the entity investigation view."
+    },
+    "learningObjective": "Describe threat detection and mitigation capabilities in Microsoft Sentinel", "tags": ["sentinel", "timeline", "entities"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/sentinel/entity-pages", "https://learn.microsoft.com/defender-endpoint/respond-machine-alerts", "https://learn.microsoft.com/azure/sentinel/connect-data-sources", "https://learn.microsoft.com/azure/sentinel/automate-incident-handling-with-automation-rules"]
+  },
+  {
+    "id": "SC900-141", "domain": "security", "topic": "Microsoft Defender XDR", "subtopic": "Device isolation",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An analyst needs to contain a potentially compromised onboarded device to reduce lateral movement while continuing investigation. Which Defender for Endpoint response action is designed for this?",
+    "options": [
+      { "id": "A", "text": "Isolate the device from the network" },
+      { "id": "B", "text": "Collect an investigation package" },
+      { "id": "C", "text": "Run an antivirus scan" },
+      { "id": "D", "text": "Restrict app execution" }
+    ],
+    "correctAnswer": ["A"], "explanation": "Device isolation restricts network connectivity to help contain a compromise while retaining connectivity to the Defender for Endpoint service when connectivity requirements are met.",
+    "optionExplanations": {
+      "A": "Isolation helps limit attacker control, exfiltration, and lateral movement.",
+      "B": "Collecting a package gathers investigation information without isolating the device.",
+      "C": "An antivirus scan looks for threats but does not isolate the device from the network.",
+      "D": "Restricting app execution limits which applications can run; it does not isolate the device."
+    },
+    "learningObjective": "Describe Microsoft Defender for Endpoint", "tags": ["defender-endpoint", "isolation", "response"],
+    "sourceUrls": ["https://learn.microsoft.com/defender-endpoint/respond-machine-alerts"]
+  },
+  {
+    "id": "SC900-142", "domain": "security", "topic": "Microsoft Defender XDR", "subtopic": "Attack surface reduction",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A team wants to evaluate the effect of Defender for Endpoint attack surface reduction rules before blocking risky behaviors. Which mode is designed for evaluation without blocking?",
+    "options": [
+      { "id": "A", "text": "Block mode" },
+      { "id": "B", "text": "Audit mode" },
+      { "id": "C", "text": "A permanent network isolation action" },
+      { "id": "D", "text": "A retention policy" }
+    ],
+    "correctAnswer": ["B"], "explanation": "Audit mode records events representing the effect of attack surface reduction features without blocking the evaluated activity.",
+    "optionExplanations": {
+      "A": "Block mode enforces applicable restrictions rather than only evaluating impact.",
+      "B": "Audit mode records potential effects without blocking.",
+      "C": "Isolation contains a device and is not ASR rules audit mode.",
+      "D": "A retention policy manages content lifecycle."
+    },
+    "learningObjective": "Describe Microsoft Defender for Endpoint", "tags": ["defender-endpoint", "asr", "audit-mode"],
+    "sourceUrls": ["https://learn.microsoft.com/defender-endpoint/overview-attack-surface-reduction"]
+  },
+  {
+    "id": "SC900-143", "domain": "security", "topic": "Microsoft Defender XDR", "subtopic": "Cloud app session policies",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "Users must be able to access a supported cloud app from unmanaged devices, but downloads of sensitive files during those sessions should be restricted. What should the organization evaluate?",
+    "options": [
+      { "id": "A", "text": "A Defender for Cloud Apps session policy with Conditional Access app control" },
+      { "id": "B", "text": "A retention label that deletes all files immediately" },
+      { "id": "C", "text": "An Azure Bastion session" },
+      { "id": "D", "text": "A Key Vault certificate renewal" }
+    ],
+    "correctAnswer": ["A"], "explanation": "Defender for Cloud Apps session policies can control activities such as downloads in applicable app sessions using Conditional Access app control.",
+    "optionExplanations": {
+      "A": "A session policy can allow app access while restricting matching downloads.",
+      "B": "Deleting all files is not a session-specific download control.",
+      "C": "Bastion connects to VMs rather than applying SaaS session controls.",
+      "D": "Certificate renewal is not a user-session download policy."
+    },
+    "learningObjective": "Describe Microsoft Defender for Cloud Apps", "tags": ["defender-cloud-apps", "session-control", "downloads"],
+    "sourceUrls": ["https://learn.microsoft.com/defender-cloud-apps/session-policy-aad"]
+  },
+  {
+    "id": "SC900-144", "domain": "security", "topic": "Microsoft Defender XDR", "subtopic": "Identity threat detection",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "In Microsoft Defender for Identity, what is the purpose of sensors deployed on identity infrastructure?",
+    "options": [
+      { "id": "A", "text": "Apply retention labels to every document" },
+      { "id": "B", "text": "Block all traffic on the public internet" },
+      { "id": "C", "text": "Capture and parse relevant network traffic and Windows events as identity signals" },
+      { "id": "D", "text": "Issue TLS certificates for every cloud application" }
+    ],
+    "correctAnswer": ["C"], "explanation": "Defender for Identity sensors capture and parse relevant network traffic and Windows events on identity infrastructure for cloud analysis.",
+    "optionExplanations": {
+      "A": "Sensors collect identity signals rather than applying retention labels.",
+      "B": "Sensors do not block all public internet traffic.",
+      "C": "Sensors collect relevant local signals for identity threat analysis.",
+      "D": "Sensors are not a certificate authority."
+    },
+    "learningObjective": "Describe Microsoft Defender for Identity", "tags": ["defender-identity", "sensors", "identity-threats"],
+    "sourceUrls": ["https://learn.microsoft.com/defender-for-identity/what-is"]
+  },
+  {
+    "id": "SC900-145", "domain": "security", "topic": "Microsoft Defender XDR", "subtopic": "Vulnerability remediation",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "hard",
+    "question": "For each statement about a Defender Vulnerability Management remediation request, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "A security administrator can request remediation from a security recommendation." },
+      { "id": "2", "text": "With the Intune connection enabled, a request can create an Intune security task." },
+      { "id": "3", "text": "Submitting the request alone immediately applies changes to every affected device." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "yes", "3": "no" },
+    "explanation": "A request tracks recommended remediation and can create an Intune task when integrated. Submitting it does not itself apply device changes.",
+    "learningObjective": "Describe Microsoft Defender Vulnerability Management", "tags": ["vulnerability-management", "remediation", "intune"],
+    "sourceUrls": ["https://learn.microsoft.com/defender-vulnerability-management/tvm-remediation"]
+  },
+  {
+    "id": "SC900-146", "domain": "security", "topic": "Microsoft Defender XDR", "subtopic": "Threat analytics",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "medium",
+    "question": "For each statement about threat analytics reports in Microsoft Defender, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "A report can provide expert analysis of a tracked threat." },
+      { "id": "2", "text": "Available organizational exposure data can help prioritize mitigations." },
+      { "id": "3", "text": "Completing recommended actions guarantees complete resilience against every attack." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "yes", "3": "no" },
+    "explanation": "Threat analytics provides research and available exposure context. Recommended actions improve resilience but do not guarantee complete protection.",
+    "learningObjective": "Describe Microsoft Threat Intelligence", "tags": ["threat-intelligence", "threat-analytics", "defender"],
+    "sourceUrls": ["https://learn.microsoft.com/defender-xdr/threat-analytics"]
+  },
+  {
+    "id": "SC900-147", "domain": "security", "topic": "Microsoft Defender XDR", "subtopic": "Safe Attachments delivery",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "A team wants the body of an email delivered to supported Exchange Online recipients while Safe Attachments scans its attachment, with a placeholder until the file is found safe. Which policy action fits?",
+    "options": [
+      { "id": "A", "text": "Dynamic Delivery" },
+      { "id": "B", "text": "Block" },
+      { "id": "C", "text": "Monitor" },
+      { "id": "D", "text": "Off" }
+    ],
+    "correctAnswer": ["A"], "explanation": "Safe Attachments Dynamic Delivery delivers the message body with a placeholder while scanning; a safe attachment becomes available after scanning.",
+    "optionExplanations": {
+      "A": "Dynamic Delivery uses placeholders during scanning for supported Exchange Online mailboxes.",
+      "B": "Block quarantines messages with detected attachments and can delay delivery of safe messages.",
+      "C": "Monitor delivers messages with attachments and tracks detected threats, rather than using placeholders.",
+      "D": "Off disables Safe Attachments scanning for the applicable recipients."
+    },
+    "learningObjective": "Describe Microsoft Defender for Office 365", "tags": ["defender-office-365", "safe-attachments", "dynamic-delivery"],
+    "sourceUrls": ["https://learn.microsoft.com/defender-office-365/safe-attachments-about"]
+  },
+  {
+    "id": "SC900-148", "domain": "security", "topic": "Microsoft Defender XDR", "subtopic": "Defender portal Action center",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An analyst has isolated a device and wants to check whether the response action succeeded. Which area of the Microsoft Defender portal provides the action's status?",
+    "options": [
+      { "id": "A", "text": "Secure score" },
+      { "id": "B", "text": "Action center" },
+      { "id": "C", "text": "Device inventory" },
+      { "id": "D", "text": "Advanced hunting" }
+    ],
+    "correctAnswer": ["B"],     "explanation": "The Action center shows details and status for device response actions, including device isolation and whether it succeeded.",
+    "optionExplanations": {
+      "A": "Secure score summarizes security posture rather than the status of an isolation action.",
+      "B": "The Action center shows the status of device response actions.",
+      "C": "Device inventory lists devices; the Action center provides response-action status.",
+      "D": "Advanced hunting queries security data rather than providing the dedicated action-status view."
+    },
+    "learningObjective": "Describe the Microsoft Defender portal", "tags": ["defender-portal", "action-center", "response"],
+    "sourceUrls": ["https://learn.microsoft.com/defender-endpoint/respond-machine-alerts"]
+  }
+]

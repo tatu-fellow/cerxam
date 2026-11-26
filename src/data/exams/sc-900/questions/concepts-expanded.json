@@ -1,0 +1,289 @@
+[
+  {
+    "id": "SC900-046", "domain": "concepts", "topic": "Security & Compliance Concepts", "subtopic": "Shared responsibility",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A company runs its own application on an Azure virtual machine. Who is generally responsible for applying security updates to the virtual machine's guest operating system?",
+    "options": [
+      { "id": "A", "text": "The cloud provider, because the virtual machine is hosted in Azure" },
+      { "id": "B", "text": "The customer, because it manages the guest operating system in IaaS" },
+      { "id": "C", "text": "The application users, because they access the service" },
+      { "id": "D", "text": "Neither party, because the hypervisor replaces the guest operating system" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "In IaaS the customer manages the virtual machine's guest operating system, while the provider manages the physical hosts and underlying infrastructure.",
+    "optionExplanations": {
+      "A": "Hosting the VM does not transfer guest operating-system management to the provider.",
+      "B": "The customer manages and patches its IaaS guest operating system.",
+      "C": "End users are not responsible for operating-system updates merely because they use the application.",
+      "D": "The hypervisor hosts virtual machines; it does not replace the guest operating system."
+    },
+    "learningObjective": "Describe the shared responsibility model", "tags": ["shared-responsibility", "iaas", "patching"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/security/fundamentals/shared-responsibility"]
+  },
+  {
+    "id": "SC900-047", "domain": "concepts", "topic": "Security & Compliance Concepts", "subtopic": "Shared responsibility",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "medium",
+    "question": "A team uses an Azure infrastructure-as-a-service virtual machine. Match each responsibility to the party that generally owns it.",
+    "items": [
+      { "id": "1", "text": "Secure the cloud provider's physical datacenter" },
+      { "id": "2", "text": "Protect the customer data stored by the workload" },
+      { "id": "3", "text": "Maintain the physical server hosting the virtual machine" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Cloud provider" },
+      { "id": "B", "text": "Customer" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "A" },
+    "explanation": "The provider secures its physical datacenters and hosts; the customer remains responsible for protecting its data.",
+    "learningObjective": "Describe the shared responsibility model", "tags": ["shared-responsibility", "iaas", "matching"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/security/fundamentals/shared-responsibility"]
+  },
+  {
+    "id": "SC900-048", "domain": "concepts", "topic": "Security & Compliance Concepts", "subtopic": "Defense in depth",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An attacker obtains a user's password. Which additional control is an example of a separate identity layer that can still help prevent unauthorized sign-in?",
+    "options": [
+      { "id": "A", "text": "Require an additional authentication factor" },
+      { "id": "B", "text": "Remove authorization checks from the application" },
+      { "id": "C", "text": "Allow the password alone from any device" },
+      { "id": "D", "text": "Publish the password to all employees" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Multifactor authentication adds another identity control, so possession of a password alone need not be sufficient for sign-in.",
+    "optionExplanations": {
+      "A": "An additional factor can prevent a password-only sign-in.",
+      "B": "Removing authorization checks weakens application protection.",
+      "C": "Accepting the compromised password alone provides no additional identity barrier.",
+      "D": "Disclosing the password increases exposure instead of adding protection."
+    },
+    "learningObjective": "Describe defense-in-depth", "tags": ["defense-in-depth", "identity", "mfa"],
+    "sourceUrls": ["https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/3-describe-defense-depth"]
+  },
+  {
+    "id": "SC900-049", "domain": "concepts", "topic": "Security & Compliance Concepts", "subtopic": "Defense in depth",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "medium",
+    "question": "Match each safeguard to the defense-in-depth layer it most directly protects.",
+    "items": [
+      { "id": "1", "text": "Restrict traffic between application subnets" },
+      { "id": "2", "text": "Validate input to reduce application injection attacks" },
+      { "id": "3", "text": "Classify and encrypt sensitive records" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Network" },
+      { "id": "B", "text": "Application" },
+      { "id": "C", "text": "Data" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "Segmentation protects network communications, input validation protects the application, and classification and encryption protect data.",
+    "learningObjective": "Describe defense-in-depth", "tags": ["defense-in-depth", "layers", "matching"],
+    "sourceUrls": ["https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/3-describe-defense-depth"]
+  },
+  {
+    "id": "SC900-050", "domain": "concepts", "topic": "Security & Compliance Concepts", "subtopic": "Zero Trust",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A team assumes an attacker may compromise one server and limits connections from that server to other systems. Which Zero Trust principle does this most directly illustrate?",
+    "options": [
+      { "id": "A", "text": "Trust the internal network by default" },
+      { "id": "B", "text": "Eliminate all monitoring once segmentation is configured" },
+      { "id": "C", "text": "Assume compromise and limit its potential impact" },
+      { "id": "D", "text": "Grant permanent administrator rights to all users" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "Assuming compromise includes designing controls that constrain lateral movement and limit the impact of a compromised component.",
+    "optionExplanations": {
+      "A": "Implicit trust of internal locations conflicts with Zero Trust.",
+      "B": "Monitoring remains important even when segmentation is in place.",
+      "C": "Segmentation can reduce the blast radius if a component is compromised.",
+      "D": "Broad permanent privilege increases exposure and conflicts with least privilege."
+    },
+    "learningObjective": "Describe the Zero Trust model", "tags": ["zero-trust", "segmentation", "assume-compromise"],
+    "sourceUrls": ["https://learn.microsoft.com/security/zero-trust/zero-trust-overview"]
+  },
+  {
+    "id": "SC900-051", "domain": "concepts", "topic": "Security & Compliance Concepts", "subtopic": "Encryption and hashing",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A team needs to keep a stored file unreadable to someone who obtains the storage media without the required secret. What should the team use?",
+    "options": [
+      { "id": "A", "text": "A public file name" },
+      { "id": "B", "text": "A digest stored next to the file" },
+      { "id": "C", "text": "An unencrypted duplicate of the file" },
+      { "id": "D", "text": "Encryption at rest with protected key material" }
+    ],
+    "correctAnswer": ["D"],
+    "explanation": "Encryption at rest protects the confidentiality of stored data when the decryption key is protected separately.",
+    "optionExplanations": {
+      "A": "A file name does not make the file contents unreadable.",
+      "B": "A digest can help check integrity but does not encrypt the file.",
+      "C": "An unencrypted copy would expose the contents to someone who obtains it.",
+      "D": "Encryption at rest protects stored data from readers without the appropriate key."
+    },
+    "learningObjective": "Describe encryption and hashing", "tags": ["encryption", "data-at-rest"],
+    "sourceUrls": ["https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/5-describe-encryption-hashing"]
+  },
+  {
+    "id": "SC900-052", "domain": "concepts", "topic": "Security & Compliance Concepts", "subtopic": "Encryption and hashing",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "hard",
+    "question": "Match each cryptographic use to the concept it most directly describes.",
+    "items": [
+      { "id": "1", "text": "Use the same secret key to encrypt and decrypt a large file" },
+      { "id": "2", "text": "Encrypt data using a recipient's public key so the recipient can decrypt it with the corresponding private key" },
+      { "id": "3", "text": "Compare a calculated digest with a trusted digest to detect a changed download" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Symmetric encryption" },
+      { "id": "B", "text": "Asymmetric encryption" },
+      { "id": "C", "text": "Hashing for integrity" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "Symmetric encryption uses one shared key, asymmetric encryption uses a related key pair, and a digest comparison can detect changes to data.",
+    "learningObjective": "Describe encryption and hashing", "tags": ["encryption", "hashing", "matching"],
+    "sourceUrls": ["https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/5-describe-encryption-hashing"]
+  },
+  {
+    "id": "SC900-053", "domain": "concepts", "topic": "Security & Compliance Concepts", "subtopic": "Governance, risk, and compliance",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "medium",
+    "question": "Match each organizational activity to the governance, risk, and compliance concept it most directly represents.",
+    "items": [
+      { "id": "1", "text": "Assign ownership and define policy for handling sensitive information" },
+      { "id": "2", "text": "Assess the likelihood and impact of a possible security incident" },
+      { "id": "3", "text": "Check practices against applicable regulatory obligations" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Governance" },
+      { "id": "B", "text": "Risk management" },
+      { "id": "C", "text": "Compliance" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "Governance establishes direction and accountability, risk management assesses and responds to risks, and compliance concerns applicable obligations.",
+    "learningObjective": "Describe Governance, Risk, and Compliance (GRC) concepts", "tags": ["grc", "matching"],
+    "sourceUrls": ["https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/6-describe-compliance-concepts"]
+  },
+  {
+    "id": "SC900-054", "domain": "concepts", "topic": "Security & Compliance Concepts", "subtopic": "Governance, risk, and compliance",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "An organization passes an audit against a specific standard. Which conclusion is most appropriate?",
+    "options": [
+      { "id": "A", "text": "The organization has eliminated all security risk" },
+      { "id": "B", "text": "The audit provides evidence about the assessed scope, but other security risks can still exist" },
+      { "id": "C", "text": "The organization no longer needs to monitor its controls" },
+      { "id": "D", "text": "All future regulatory obligations are automatically satisfied" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Compliance with an assessed standard is not the same as eliminating all security risk. Organizations should continue managing and monitoring risks and controls.",
+    "optionExplanations": {
+      "A": "A successful audit does not eliminate every vulnerability or risk.",
+      "B": "An assessment has a defined scope and does not guarantee complete security.",
+      "C": "Controls and risks still require ongoing monitoring.",
+      "D": "An audit against one scope cannot automatically satisfy all future obligations."
+    },
+    "learningObjective": "Describe Governance, Risk, and Compliance (GRC) concepts", "tags": ["compliance", "risk", "audit"],
+    "sourceUrls": ["https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/6-describe-compliance-concepts"]
+  },
+  {
+    "id": "SC900-055", "domain": "concepts", "topic": "Identity Concepts", "subtopic": "Directory services",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An administrator needs to manage domain users, computers, and Group Policy for an on-premises Windows network. Which directory service is designed for this environment?",
+    "options": [
+      { "id": "A", "text": "Microsoft Purview Audit" },
+      { "id": "B", "text": "Azure DDoS Protection" },
+      { "id": "C", "text": "Active Directory Domain Services" },
+      { "id": "D", "text": "Microsoft Sentinel" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "Active Directory Domain Services stores domain objects and supports on-premises administration, including Group Policy.",
+    "optionExplanations": {
+      "A": "Purview Audit searches activity records; it is not an on-premises directory service.",
+      "B": "DDoS Protection helps defend public endpoints from denial-of-service attacks.",
+      "C": "AD DS manages domain users and computers and supports Group Policy.",
+      "D": "Sentinel provides security monitoring and response, not an on-premises directory."
+    },
+    "learningObjective": "Describe the concept of directory services and Active Directory", "tags": ["active-directory", "directory-services"],
+    "sourceUrls": ["https://learn.microsoft.com/training/modules/describe-identity-principles-concepts/5-describe-concept-of-directory-services-active-directory"]
+  },
+  {
+    "id": "SC900-056", "domain": "concepts", "topic": "Identity Concepts", "subtopic": "Authentication and authorization",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "medium",
+    "question": "For each statement about authentication and authorization, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "Authentication verifies evidence of an identity." },
+      { "id": "2", "text": "A successful sign-in automatically grants every permission in an application." },
+      { "id": "3", "text": "Authorization can restrict a signed-in user to reading rather than editing a resource." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "no", "3": "yes" },
+    "explanation": "Authentication verifies identity; authorization separately determines which actions the identity may perform.",
+    "learningObjective": "Define authentication; define authorization", "tags": ["authentication", "authorization", "matrix"],
+    "sourceUrls": ["https://learn.microsoft.com/training/modules/describe-identity-principles-concepts/2-define-authentication-authorization"]
+  },
+  {
+    "id": "SC900-057", "domain": "concepts", "topic": "Identity Concepts", "subtopic": "Identity provider",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A confidential web application uses OpenID Connect to sign in a user through a trusted identity provider. Which token conveys the user's authentication information to the application?",
+    "options": [
+      { "id": "A", "text": "An access token intended for a separate protected API" },
+      { "id": "B", "text": "An authorization code before it is exchanged for tokens" },
+      { "id": "C", "text": "A refresh token used to obtain new tokens" },
+      { "id": "D", "text": "An ID token issued for the application" }
+    ],
+    "correctAnswer": ["D"],
+    "explanation": "An OpenID Connect ID token contains claims about the user's authentication. A confidential client should validate the ID token; an access token is intended for a protected resource.",
+    "optionExplanations": {
+      "A": "An access token conveys authorization to the API, rather than user authentication information to this client.",
+      "B": "An authorization code is exchanged for tokens; it is not the ID token containing authentication claims.",
+      "C": "A refresh token obtains new tokens; it is not the ID token describing the user's authentication.",
+      "D": "The ID token conveys authentication information to the client application."
+    },
+    "learningObjective": "Describe identity providers", "tags": ["identity-provider", "tokens"],
+    "sourceUrls": ["https://learn.microsoft.com/training/modules/describe-identity-principles-concepts/4-describe-role-identity-provider", "https://learn.microsoft.com/entra/identity-platform/id-tokens", "https://learn.microsoft.com/entra/identity-platform/v2-oauth2-auth-code-flow", "https://learn.microsoft.com/entra/identity-platform/refresh-tokens"]
+  },
+  {
+    "id": "SC900-058", "domain": "concepts", "topic": "Identity Concepts", "subtopic": "Single sign-on",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "Several applications trust the same identity provider. A user signs in to the provider and can then access those applications without entering credentials again, subject to their access policies. Which identity capability does this illustrate?",
+    "options": [
+      { "id": "A", "text": "Single sign-on" },
+      { "id": "B", "text": "Encrypting a local hard disk" },
+      { "id": "C", "text": "A network security group rule alone" },
+      { "id": "D", "text": "Replacing authorization with a shared password" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Single sign-on allows a user to sign in through an identity provider and access multiple applications that trust it, subject to application authorization and policy.",
+    "optionExplanations": {
+      "A": "Single sign-on lets applications reuse authentication through a trusted identity provider.",
+      "B": "Disk encryption protects stored data but does not establish identity-provider trust.",
+      "C": "A network rule controls traffic; it does not provide application sign-in.",
+      "D": "A shared password is not single sign-on and does not replace authorization."
+    },
+    "learningObjective": "Describe identity providers", "tags": ["single-sign-on", "identity-provider"],
+    "sourceUrls": ["https://learn.microsoft.com/training/modules/describe-identity-principles-concepts/4-describe-role-identity-provider"]
+  },
+  {
+    "id": "SC900-059", "domain": "concepts", "topic": "Identity Concepts", "subtopic": "Identity provider",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "hard",
+    "question": "Match each token to the purpose it most directly serves in a modern identity flow.",
+    "items": [
+      { "id": "1", "text": "Give an application information about the authenticated user" },
+      { "id": "2", "text": "Represent permission for an application to call a protected resource" }
+    ],
+    "targets": [{ "id": "A", "text": "ID token" }, { "id": "B", "text": "Access token" }],
+    "correctAnswer": { "1": "A", "2": "B" },
+    "explanation": "An ID token conveys information about authentication to the application, while an access token is presented to an appropriate protected resource for authorization.",
+    "learningObjective": "Describe identity providers", "tags": ["identity-provider", "tokens", "matching"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity-platform/id-tokens", "https://learn.microsoft.com/entra/identity-platform/access-tokens"]
+  },
+  {
+    "id": "SC900-060", "domain": "concepts", "topic": "Identity Concepts", "subtopic": "Federation",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "hard",
+    "question": "For each statement about federated identity trust, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "Federation can allow a resource organization to accept authentication performed by another identity provider." },
+      { "id": "2", "text": "If organization A trusts organization B, organization B automatically trusts organization A." },
+      { "id": "3", "text": "Federation relies on a trust relationship between identity systems." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "no", "3": "yes" },
+    "explanation": "Federation establishes trust across identity systems. Trust in one direction does not automatically establish trust in the other direction.",
+    "learningObjective": "Describe the concept of federation", "tags": ["federation", "trust", "matrix"],
+    "sourceUrls": ["https://learn.microsoft.com/training/modules/describe-identity-principles-concepts/6-describe-concept-federation"]
+  }
+]

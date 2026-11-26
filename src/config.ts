@@ -12,6 +12,7 @@ export function resolveExamSettings(exam: Pick<ExamDefinition, "modes">) {
   return {
     ...appConfig,
     scenarioQuestionCount: exam.modes?.scenario?.questionCount ?? appConfig.scenarioQuestionCount,
+    scenarioPresentations: exam.modes?.scenario?.presentations ?? appConfig.scenarioPresentations,
     weakFallbackQuestionCount: exam.modes?.weakFallback?.questionCount ?? appConfig.weakFallbackQuestionCount,
   };
 }

@@ -1,0 +1,269 @@
+[
+  {
+    "id": "SC900-085", "domain": "compliance", "topic": "Service Trust Portal & Privacy", "subtopic": "Data residency and access",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "medium",
+    "question": "For each statement about Microsoft's published commercial cloud privacy documentation, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "Microsoft's data residency commitments depend on the applicable products and terms." },
+      { "id": "2", "text": "Microsoft limits every region from which customers and their end users can access or move customer data." },
+      { "id": "3", "text": "Microsoft's privacy documentation directs customers to applicable product terms for data location commitments." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "no", "3": "yes" },
+    "explanation": "Microsoft directs customers to the applicable Product Terms and Data Protection Addendum for data location commitments. It does not control or limit the regions from which customers or end users access or move customer data.",
+    "learningObjective": "Describe the privacy principles of Microsoft", "tags": ["privacy", "data-residency", "matrix"],
+    "sourceUrls": ["https://learn.microsoft.com/compliance/assurance/assurance-privacy"]
+  },
+  {
+    "id": "SC900-086", "domain": "compliance", "topic": "Purview Compliance Management", "subtopic": "Compliance Manager controls",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "medium",
+    "question": "Match each Compliance Manager control category to the party responsible for implementation.",
+    "items": [
+      { "id": "1", "text": "A control implemented by Microsoft for its cloud service" },
+      { "id": "2", "text": "A control implemented and managed by the customer organization" },
+      { "id": "3", "text": "A control with implementation responsibilities shared by Microsoft and the customer" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Microsoft managed control" },
+      { "id": "B", "text": "Customer managed control" },
+      { "id": "C", "text": "Shared control" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "Compliance Manager distinguishes Microsoft managed, customer managed, and shared controls according to implementation responsibility.",
+    "learningObjective": "Describe Compliance Manager", "tags": ["compliance-manager", "controls", "shared-responsibility"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/compliance-manager"]
+  },
+  {
+    "id": "SC900-087", "domain": "compliance", "topic": "Purview Compliance Management", "subtopic": "Improvement actions",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A compliance team wants to assign remediation work, record status, and attach evidence for a recommended compliance action. Which Compliance Manager element is intended to support that workflow?",
+    "options": [
+      { "id": "A", "text": "A network security group" },
+      { "id": "B", "text": "An improvement action" },
+      { "id": "C", "text": "An Azure Bastion session" },
+      { "id": "D", "text": "A Sentinel data connector" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Compliance Manager improvement actions can be assigned for implementation and testing, and can store evidence, notes, and status updates.",
+    "optionExplanations": {
+      "A": "An NSG filters network traffic, not compliance evidence and work assignments.",
+      "B": "Improvement actions support assignment, evidence, and progress tracking.",
+      "C": "Bastion provides VM connectivity rather than compliance work tracking.",
+      "D": "A Sentinel connector ingests security data rather than managing improvement-action evidence."
+    },
+    "learningObjective": "Describe Compliance Manager", "tags": ["compliance-manager", "improvement-actions", "evidence"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/compliance-manager"]
+  },
+  {
+    "id": "SC900-088", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Sensitivity labels",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "hard",
+    "question": "For each statement about Microsoft Purview sensitivity labels, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "A label can be configured to apply encryption and content markings." },
+      { "id": "2", "text": "Every sensitivity label must apply encryption." },
+      { "id": "3", "text": "A label can identify sensitivity without applying protection settings." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "no", "3": "yes" },
+    "explanation": "Sensitivity labels can apply configured protections such as encryption and markings, but they can also classify content without protection settings.",
+    "learningObjective": "Describe sensitivity labels and sensitivity label policies", "tags": ["sensitivity-labels", "classification", "matrix"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/sensitivity-labels"]
+  },
+  {
+    "id": "SC900-089", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Sensitivity label publishing",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A compliance administrator has created sensitivity labels and wants specified people and services to be able to use them. What is the next general step?",
+    "options": [
+      { "id": "A", "text": "Publish the labels using a sensitivity label policy" },
+      { "id": "B", "text": "Create a network security group for each label" },
+      { "id": "C", "text": "Delete the labels after creation" },
+      { "id": "D", "text": "Replace all labels with audit searches" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "After creating sensitivity labels, administrators publish them so people and services in the organization can use them.",
+    "optionExplanations": {
+      "A": "A label policy publishes sensitivity labels to users and services.",
+      "B": "Network security groups do not publish Purview sensitivity labels.",
+      "C": "Deleting labels is not how they are made available.",
+      "D": "Audit searches investigate activity; they do not publish labels."
+    },
+    "learningObjective": "Describe sensitivity labels and sensitivity label policies", "tags": ["sensitivity-labels", "label-policies"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/sensitivity-labels"]
+  },
+  {
+    "id": "SC900-090", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Data loss prevention",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "Before enforcing a new data loss prevention policy, a team wants to evaluate its impact without applying the policy's configured actions. What should the team use?",
+    "options": [
+      { "id": "A", "text": "A permanent administrative role assignment" },
+      { "id": "B", "text": "A production policy that immediately blocks every action" },
+      { "id": "C", "text": "A retention label configured to declare a record" },
+      { "id": "D", "text": "DLP simulation mode" }
+    ],
+    "correctAnswer": ["D"],
+    "explanation": "DLP simulation mode lets administrators evaluate policy matches and impact without applying the actions defined in the policy.",
+    "optionExplanations": {
+      "A": "A role assignment does not test DLP policy impact.",
+      "B": "Immediate blocking applies restrictions instead of testing without enforcement.",
+      "C": "A record retention label manages content lifecycle, not DLP policy simulation.",
+      "D": "Simulation mode evaluates a DLP policy without enforcing its configured actions."
+    },
+    "learningObjective": "Describe data loss prevention (DLP)", "tags": ["dlp", "simulation", "policy"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/dlp-learn-about-dlp"]
+  },
+  {
+    "id": "SC900-091", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Retention policies and labels",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "hard",
+    "question": "Match each retention need to the Microsoft Purview mechanism that most directly fits it.",
+    "items": [
+      { "id": "1", "text": "Apply the same retention settings broadly to content in a SharePoint site" },
+      { "id": "2", "text": "Apply a specific retention period to an individual document that differs from other documents, with no conflicting longer retention requirement" },
+      { "id": "3", "text": "Mark individual content as a record as part of its retention settings" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Retention policy" },
+      { "id": "B", "text": "Retention label" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "B" },
+    "explanation": "A retention policy applies settings at a site or mailbox scope, while retention labels assign item-level settings and can mark content as a record. If retention settings overlap, retention principles apply; a conflicting longer retention requirement can affect the effective outcome.",
+    "learningObjective": "Describe retention policies, retention labels, and retention label policies; describe records management",
+    "tags": ["retention", "retention-labels", "records-management"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/retention", "https://learn.microsoft.com/purview/records-management"]
+  },
+  {
+    "id": "SC900-092", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Records management",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "A records team needs a review step before content is permanently deleted at the end of its retention period. Which Microsoft Purview records management capability is designed for that step?",
+    "options": [
+      { "id": "A", "text": "A Conditional Access sign-in policy" },
+      { "id": "B", "text": "An Azure Firewall network rule" },
+      { "id": "C", "text": "A disposition review" },
+      { "id": "D", "text": "A Sentinel watchlist" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "Disposition review supports reviewing and validating content before permanent deletion under applicable retention settings.",
+    "optionExplanations": {
+      "A": "Conditional Access evaluates identity access, not records disposition.",
+      "B": "A network rule filters traffic and does not review content disposition.",
+      "C": "A disposition review supports validation before eligible content is deleted.",
+      "D": "A Sentinel watchlist supplies contextual security data, not records disposition."
+    },
+    "learningObjective": "Describe records management", "tags": ["records-management", "disposition", "retention"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/records-management"]
+  },
+  {
+    "id": "SC900-093", "domain": "compliance", "topic": "Insider Risk, eDiscovery & Audit", "subtopic": "Insider Risk Management",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "medium",
+    "question": "For each statement about Microsoft Purview Insider Risk Management, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "Policies can identify potentially risky activities for investigation." },
+      { "id": "2", "text": "Users are pseudonymized by default as part of its privacy-by-design approach." },
+      { "id": "3", "text": "A risk indicator by itself proves that a user intentionally committed misconduct." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "yes", "3": "no" },
+    "explanation": "Insider Risk Management identifies potential risks for investigation and pseudonymizes users by default. Potential risk signals can reflect inadvertent or malicious activity and do not establish intent by themselves.",
+    "learningObjective": "Describe insider risk management", "tags": ["insider-risk", "privacy", "investigation"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/insider-risk-management"]
+  },
+  {
+    "id": "SC900-094", "domain": "compliance", "topic": "Insider Risk, eDiscovery & Audit", "subtopic": "eDiscovery and Audit",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "medium",
+    "question": "For each statement about Microsoft Purview eDiscovery, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "Searches can include both mailboxes and sites." },
+      { "id": "2", "text": "Premium review sets provide a static set of copied content for analysis." },
+      { "id": "3", "text": "All search results are automatically deleted from their original locations when they are exported." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "yes", "3": "no" },
+    "explanation": "eDiscovery can search mailboxes and sites together. Premium review sets contain a static collection of copies for analysis, and export copies results rather than deleting the originals.",
+    "learningObjective": "Describe eDiscovery solutions in Microsoft Purview",
+    "tags": ["ediscovery", "search", "review-sets"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/edisc"]
+  },
+  {
+    "id": "SC900-095", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Sensitive information types",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "easy",
+    "question": "A data protection team wants to identify content containing patterns such as credit card numbers. Which Microsoft Purview classification capability is designed for this?",
+    "options": [
+      { "id": "A", "text": "A Sentinel playbook" },
+      { "id": "B", "text": "A sensitive information type" },
+      { "id": "C", "text": "A network security group" },
+      { "id": "D", "text": "A privileged role activation" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Sensitive information types are pattern-based classifiers that can identify data such as credit card or bank account numbers.",
+    "optionExplanations": {
+      "A": "A playbook automates security workflows, not pattern-based data classification.",
+      "B": "Sensitive information types recognize configured patterns of sensitive data.",
+      "C": "A network security group filters network traffic, not document contents.",
+      "D": "Role activation grants eligible privileged access; it does not classify data."
+    },
+    "learningObjective": "Describe the data classification capabilities", "tags": ["classification", "sensitive-information-types"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/sit-sensitive-information-type-learn-about"]
+  },
+  {
+    "id": "SC900-096", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Trainable classifiers",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An organization needs to identify a category of English business documents that is difficult to define with a simple text pattern and isn't covered by available pretrained classifiers. The documents and representative positive and negative training examples are unencrypted. Which Microsoft Purview capability best fits this need?",
+    "options": [
+      { "id": "A", "text": "A custom trainable classifier" },
+      { "id": "B", "text": "A pattern-based sensitive information type" },
+      { "id": "C", "text": "An exact data match sensitive information type" },
+      { "id": "D", "text": "A pretrained classifier for a different document category" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "A custom trainable classifier learns to categorize content from positive and negative examples, which helps when simple pattern matching is insufficient. Custom classifiers support English and classifiers work with unencrypted items.",
+    "optionExplanations": {
+      "A": "A custom trainable classifier learns a content category from examples.",
+      "B": "A pattern-based sensitive information type detects defined patterns rather than learning the document category from examples.",
+      "C": "Exact data match detects values from a structured sensitive-data source, rather than learning this document category from examples.",
+      "D": "A pretrained classifier for a different category isn't tailored to the required category."
+    },
+    "learningObjective": "Describe the data classification capabilities", "tags": ["classification", "trainable-classifiers"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/trainable-classifiers-learn-about", "https://learn.microsoft.com/purview/sit-sensitive-information-type-learn-about"]
+  },
+  {
+    "id": "SC900-097", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Sensitivity labels for containers",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "An administrator applies a sensitivity label to a Microsoft 365 group to control its privacy and external access settings. What does applying this container label do to the individual files in the group?",
+    "options": [
+      { "id": "A", "text": "It automatically applies the same sensitivity label to every individual file" },
+      { "id": "B", "text": "It permanently deletes every unlabeled file" },
+      { "id": "C", "text": "It converts each file into a regulatory record" },
+      { "id": "D", "text": "It does not automatically label the individual files" }
+    ],
+    "correctAnswer": ["D"],
+    "explanation": "Container label settings can control access to a group or site, but applying the label to the container does not automatically label individual items inside it.",
+    "optionExplanations": {
+      "A": "Container labels do not automatically apply their label to each item.",
+      "B": "Applying a container sensitivity label is not a deletion action.",
+      "C": "Sensitivity labels on containers do not declare their files regulatory records.",
+      "D": "The container is protected according to its label settings without automatically labeling individual files."
+    },
+    "learningObjective": "Describe sensitivity labels and sensitivity label policies", "tags": ["sensitivity-labels", "containers", "groups"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/sensitivity-labels"]
+  },
+  {
+    "id": "SC900-098", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Activity explorer",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A compliance analyst wants to investigate events from the past week in which users changed or removed sensitivity labels. Which Microsoft Purview view is intended for this activity?",
+    "options": [
+      { "id": "A", "text": "Content explorer's inventory of classified items" },
+      { "id": "B", "text": "A Microsoft Entra access review" },
+      { "id": "C", "text": "Activity explorer" },
+      { "id": "D", "text": "Azure network security group rules" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "Activity explorer provides a historical view of activities on labeled content, including label changes and removals, and reports up to 30 days of activity.",
+    "optionExplanations": {
+      "A": "Content explorer shows a snapshot of classified and labeled items rather than the historical activity view.",
+      "B": "Access reviews assess continued identity access, not labeling events.",
+      "C": "Activity explorer shows historical data-related activity including changes to sensitivity labels.",
+      "D": "NSG rules control network traffic, not historical labeling activities."
+    },
+    "learningObjective": "Describe the benefits of Content explorer and Activity explorer", "tags": ["activity-explorer", "classification", "audit"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/data-classification-activity-explorer", "https://learn.microsoft.com/purview/data-classification-content-explorer"]
+  }
+]

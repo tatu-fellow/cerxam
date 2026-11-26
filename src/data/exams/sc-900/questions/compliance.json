@@ -65,20 +65,20 @@
     "questionType": "single_choice",
     "presentation": "scenario",
     "difficulty": "medium",
-    "question": "A customer asks whether Microsoft uses customer data from its cloud services for user profiling and advertising. Which response best reflects Microsoft's published privacy commitments?",
+    "question": "A commercial customer asks how Microsoft processes customer data covered by the Microsoft Products and Services Data Protection Addendum (DPA). Which response best reflects the published privacy overview?",
     "options": [
       { "id": "A", "text": "Microsoft transfers customer data to every third party by default" },
       { "id": "B", "text": "Microsoft may use any customer data for advertising if it is encrypted at rest" },
       { "id": "C", "text": "Customer data is never processed by Microsoft under any circumstances" },
-      { "id": "D", "text": "Microsoft processes data to provide and operate services under documented instructions and does not use it for user profiling or advertising" }
+      { "id": "D", "text": "Microsoft processes data to provide services under documented instructions and for permitted business operations, not for user profiling or advertising" }
     ],
     "correctAnswer": ["D"],
-    "explanation": "Microsoft's privacy documentation states that it processes customer data to provide and operate services, including under documented instructions, and does not use the data for user profiling or advertising.",
+    "explanation": "Microsoft's commercial privacy overview describes processing DPA-covered customer data to provide products and services under documented customer instructions and for business operations incident to providing them. It states that this data isn't used for user profiling or advertising.",
     "optionExplanations": {
       "A": "The privacy documentation describes limited sharing, such as when authorized by the customer or required by law, not default transfer to every third party.",
-      "B": "Encryption does not authorize advertising use; the published commitment excludes user profiling and advertising.",
-      "C": "Microsoft does process data to provide, troubleshoot, maintain, and improve services, subject to its commitments.",
-      "D": "This reflects the published purpose and limits for processing customer data in Microsoft's privacy documentation."
+      "B": "Encryption does not authorize advertising use; the commercial privacy overview excludes user profiling and advertising for this data.",
+      "C": "Microsoft does process data for service delivery, troubleshooting, maintenance, and improvement, subject to the applicable terms.",
+      "D": "The overview describes processing under customer instructions and for permitted business operations, without using this data for profiling or advertising."
     },
     "learningObjective": "Describe the privacy principles of Microsoft",
     "tags": ["privacy", "customer-data", "data-processing"],

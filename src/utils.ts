@@ -8,6 +8,10 @@ export function isCorrect(question: Question, answer?: QuestionAnswer): boolean 
     return keys.every((key) => answer[key] === question.correctAnswer[key]);
   }
   if (!Array.isArray(answer)) return false;
+  if (question.questionType === "ordering") {
+    return answer.length === question.correctAnswer.length &&
+      answer.every((item, index) => item === question.correctAnswer[index]);
+  }
   return JSON.stringify([...answer].sort()) === JSON.stringify([...question.correctAnswer].sort());
 }
 export function shuffle<T>(items: T[]): T[] {

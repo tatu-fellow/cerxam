@@ -38,16 +38,16 @@
     "difficulty": "medium",
     "question": "A background application running in Azure must access another Azure resource without storing a developer's personal password in its configuration. Which identity type is the best fit?",
     "options": [
-      { "id": "A", "text": "A workload identity, such as a managed identity" },
-      { "id": "B", "text": "A guest user account for an external collaborator" },
+      { "id": "A", "text": "A guest user account for an external collaborator" },
+      { "id": "B", "text": "A workload identity, such as a managed identity" },
       { "id": "C", "text": "A device identity for a user workstation" },
       { "id": "D", "text": "A shared administrator user account" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["B"],
     "explanation": "Workload identities represent applications or other nonhuman workloads. Managed identities let supported Azure workloads authenticate without the developer embedding credentials.",
     "optionExplanations": {
-      "A": "A managed identity is a workload identity that can authenticate to supported services without app-managed credentials.",
-      "B": "A guest user represents a person outside the organization, not an application workload.",
+      "A": "A guest user represents a person outside the organization, not an application workload.",
+      "B": "A managed identity is a workload identity that can authenticate to supported services without app-managed credentials.",
       "C": "A device identity represents a device and does not replace the application's workload identity.",
       "D": "A shared human administrator account is not an appropriate application identity and creates credential-management risk."
     },
@@ -67,17 +67,17 @@
     "difficulty": "medium",
     "question": "A company has an on-premises Active Directory Domain Services environment and wants its users to access cloud resources using a connected identity. Which approach describes hybrid identity?",
     "options": [
-      { "id": "A", "text": "Connect on-premises identities with cloud identities and manage their relationship" },
+      { "id": "A", "text": "Copy passwords into each cloud application and manage them separately" },
       { "id": "B", "text": "Replace all user identities with network security group rules" },
-      { "id": "C", "text": "Copy passwords into each cloud application and manage them separately" },
+      { "id": "C", "text": "Connect on-premises identities with cloud identities and manage their relationship" },
       { "id": "D", "text": "Use Azure Firewall to synchronize directory objects" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["C"],
     "explanation": "Hybrid identity connects on-premises identity infrastructure with Microsoft Entra ID so organizations can use connected identities across environments.",
     "optionExplanations": {
-      "A": "Hybrid identity establishes a managed relationship between on-premises and cloud identities.",
+      "A": "Duplicating passwords in individual apps does not create a connected hybrid identity.",
       "B": "Network security groups filter traffic and do not provide identity synchronization or federation.",
-      "C": "Duplicating passwords in individual apps does not create a connected hybrid identity.",
+      "C": "Hybrid identity establishes a managed relationship between on-premises and cloud identities.",
       "D": "Azure Firewall controls network traffic; it does not synchronize directory objects."
     },
     "learningObjective": "Describe hybrid identity",
@@ -96,18 +96,18 @@
     "difficulty": "easy",
     "question": "A project team needs to collaborate with a partner's employees in Microsoft cloud applications while keeping those people represented as external users. Which capability is intended for this scenario?",
     "options": [
-      { "id": "A", "text": "Microsoft Entra External ID" },
+      { "id": "A", "text": "Microsoft Purview Records Management" },
       { "id": "B", "text": "Azure Bastion" },
       { "id": "C", "text": "Microsoft Defender for Endpoint" },
-      { "id": "D", "text": "Microsoft Purview Records Management" }
+      { "id": "D", "text": "Microsoft Entra External ID" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["D"],
     "explanation": "Microsoft Entra External ID supports identity and access scenarios involving people outside an organization, including business-to-business collaboration.",
     "optionExplanations": {
-      "A": "External ID supports secure collaboration with users outside the organization.",
+      "A": "Records Management governs records and retention, not external identities.",
       "B": "Azure Bastion provides secure browser-based RDP/SSH connectivity to virtual machines.",
       "C": "Defender for Endpoint protects and investigates endpoint devices.",
-      "D": "Records Management governs records and retention, not external identities."
+      "D": "External ID supports secure collaboration with users outside the organization."
     },
     "learningObjective": "Describe types of identities, including workload identities",
     "tags": ["external-identities", "b2b"],
@@ -134,7 +134,7 @@
       { "id": "no", "text": "No" }
     ],
     "correctAnswer": { "1": "yes", "2": "no", "3": "yes" },
-    "explanation": "MFA requires evidence from multiple factor categories, such as something known and something possessed. Repeating a password does not create another factor category.",
+    "explanation": "MFA requires evidence from multiple factor categories, such as something known and something possessed. Two different passwords are both knowledge factors, so they do not constitute two different factor categories.",
     "learningObjective": "Describe multifactor authentication (MFA)",
     "tags": ["mfa", "authentication", "matrix"],
     "sourceUrls": [
@@ -151,16 +151,16 @@
     "difficulty": "medium",
     "question": "An administrator wants users to sign in without a password using a phishing-resistant credential. Which option is a passwordless authentication method supported by Microsoft Entra?",
     "options": [
-      { "id": "A", "text": "FIDO2 security key or passkey" },
-      { "id": "B", "text": "A password stored in a shared spreadsheet" },
+      { "id": "A", "text": "A password stored in a shared spreadsheet" },
+      { "id": "B", "text": "FIDO2 security key or passkey" },
       { "id": "C", "text": "A longer password that is reused across applications" },
       { "id": "D", "text": "A security question whose answer is posted on a profile" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["B"],
     "explanation": "FIDO2 security keys and passkeys provide passwordless sign-in and are designed to resist phishing.",
     "optionExplanations": {
-      "A": "FIDO2 security keys and passkeys are passwordless authentication methods with phishing-resistant properties.",
-      "B": "A shared password is still password-based and exposes a reusable secret.",
+      "A": "A shared password is still password-based and exposes a reusable secret.",
+      "B": "FIDO2 security keys and passkeys are passwordless authentication methods with phishing-resistant properties.",
       "C": "A longer reused password is still password-based and can be phished or reused by attackers.",
       "D": "A security question is a knowledge-based secret, not a phishing-resistant passwordless credential."
     },
@@ -180,17 +180,17 @@
     "difficulty": "medium",
     "question": "An organization wants to block common and organization-specific weak passwords when users create or change them in Microsoft Entra ID. Which capability should it configure?",
     "options": [
-      { "id": "A", "text": "Microsoft Entra Password Protection" },
+      { "id": "A", "text": "Azure DDoS Protection" },
       { "id": "B", "text": "Microsoft Sentinel analytics rules" },
-      { "id": "C", "text": "Azure DDoS Protection" },
+      { "id": "C", "text": "Microsoft Entra Password Protection" },
       { "id": "D", "text": "Microsoft Purview eDiscovery" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["C"],
     "explanation": "Microsoft Entra Password Protection checks passwords against global and custom banned-password lists to prevent commonly used or organization-specific weak passwords.",
     "optionExplanations": {
-      "A": "Password Protection blocks banned passwords, including entries in an organization's custom list.",
+      "A": "DDoS Protection mitigates network denial-of-service attacks, not weak password creation.",
       "B": "Sentinel analytics rules detect and correlate security events; they do not enforce password selection.",
-      "C": "DDoS Protection mitigates network denial-of-service attacks, not weak password creation.",
+      "C": "Password Protection blocks banned passwords, including entries in an organization's custom list.",
       "D": "eDiscovery searches and manages content for investigations; it does not validate passwords."
     },
     "learningObjective": "Describe password protection and management capabilities",
@@ -209,18 +209,18 @@
     "difficulty": "medium",
     "question": "A company wants sign-in policy to require multifactor authentication when a user accesses a sensitive application from an unmanaged device. Which Microsoft Entra capability evaluates signals and applies this access requirement?",
     "options": [
-      { "id": "A", "text": "Conditional Access" },
+      { "id": "A", "text": "Azure Key Vault" },
       { "id": "B", "text": "Access reviews" },
       { "id": "C", "text": "Microsoft Purview Audit" },
-      { "id": "D", "text": "Azure Key Vault" }
+      { "id": "D", "text": "Conditional Access" }
     ],
-    "correctAnswer": ["A"],
+    "correctAnswer": ["D"],
     "explanation": "Conditional Access uses signals such as user, location, device, and application to make access decisions and apply controls such as requiring MFA.",
     "optionExplanations": {
-      "A": "Conditional Access evaluates sign-in signals and can require MFA or other access controls.",
+      "A": "Key Vault stores and controls access to secrets, keys, and certificates; it is not an identity access policy engine.",
       "B": "Access reviews periodically determine whether users should retain access; they do not evaluate each sign-in.",
       "C": "Purview Audit searches activity records after events; it does not enforce sign-in requirements.",
-      "D": "Key Vault stores and controls access to secrets, keys, and certificates; it is not an identity access policy engine."
+      "D": "Conditional Access evaluates sign-in signals and can require MFA or other access controls."
     },
     "learningObjective": "Describe Microsoft Entra Conditional Access",
     "tags": ["conditional-access", "mfa"],

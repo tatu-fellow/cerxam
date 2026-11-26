@@ -1,0 +1,232 @@
+[
+  {
+    "id": "SC900-061", "domain": "entra", "topic": "Entra ID & Identity Types", "subtopic": "Workload identities",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "hard",
+    "question": "Match each Microsoft Entra workload identity concept to its role.",
+    "items": [
+      { "id": "1", "text": "The global template describing an application across tenants" },
+      { "id": "2", "text": "The local representation of an application in a particular tenant" },
+      { "id": "3", "text": "A special service principal that removes the need for developers to manage credentials" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Application object" },
+      { "id": "B", "text": "Service principal" },
+      { "id": "C", "text": "Managed identity" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "An application object is a global template, a service principal represents the application in a tenant, and a managed identity is a special service principal whose credentials developers need not manage.",
+    "learningObjective": "Describe types of identities, including workload identities", "tags": ["workload-identity", "service-principal", "managed-identity"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals"]
+  },
+  {
+    "id": "SC900-062", "domain": "entra", "topic": "Entra ID & Identity Types", "subtopic": "Identity types",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "medium",
+    "question": "Match each entity to the type of identity that most directly represents it.",
+    "items": [
+      { "id": "1", "text": "A partner employee who collaborates with the organization" },
+      { "id": "2", "text": "An automated application accessing a cloud service" },
+      { "id": "3", "text": "A managed employee laptop" }
+    ],
+    "targets": [
+      { "id": "A", "text": "External human identity" },
+      { "id": "B", "text": "Workload identity" },
+      { "id": "C", "text": "Device identity" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "An external human identity represents a person outside the organization, a workload identity represents software, and a device identity represents a device.",
+    "learningObjective": "Describe types of identities, including workload identities", "tags": ["identity-types", "workload-identity", "device-identity"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/workload-id/workload-identities-overview", "https://learn.microsoft.com/entra/identity/devices/overview"]
+  },
+  {
+    "id": "SC900-063", "domain": "entra", "topic": "Entra ID & Identity Types", "subtopic": "Hybrid identity",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An organization synchronizes on-premises user and group information with Microsoft Entra ID. What is the primary purpose of synchronization in this hybrid scenario?",
+    "options": [
+      { "id": "A", "text": "Replace all authorization decisions with network firewall rules" },
+      { "id": "B", "text": "Keep corresponding identity information aligned between directories" },
+      { "id": "C", "text": "Encrypt every file in every application automatically" },
+      { "id": "D", "text": "Create a separate cloud password for every individual application" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Synchronization helps keep on-premises users and groups aligned with corresponding cloud identity information.",
+    "optionExplanations": {
+      "A": "Network rules do not replace identity authorization.",
+      "B": "Synchronization aligns identity data between the on-premises directory and Microsoft Entra ID.",
+      "C": "Identity synchronization is not a universal file-encryption service.",
+      "D": "Separate passwords per application are not the purpose of hybrid synchronization."
+    },
+    "learningObjective": "Describe hybrid identity", "tags": ["hybrid-identity", "synchronization"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/hybrid/whatis-hybrid-identity"]
+  },
+  {
+    "id": "SC900-064", "domain": "entra", "topic": "Authentication", "subtopic": "Authentication factors",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "medium",
+    "question": "Match each piece of authentication evidence to its factor category.",
+    "items": [
+      { "id": "1", "text": "A password the user knows" },
+      { "id": "2", "text": "A hardware security key the user possesses" },
+      { "id": "3", "text": "A fingerprint used as a biometric check" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Something you know" },
+      { "id": "B", "text": "Something you have" },
+      { "id": "C", "text": "Something you are" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "A password is knowledge, a hardware key is possession, and a fingerprint is a biometric factor.",
+    "learningObjective": "Describe multifactor authentication (MFA)", "tags": ["authentication", "mfa", "factors"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/authentication/concept-mfa-howitworks"]
+  },
+  {
+    "id": "SC900-065", "domain": "entra", "topic": "Authentication", "subtopic": "Password protection",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "hard",
+    "question": "For each statement about Microsoft Entra Password Protection, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "The global banned password list is automatically applied to users in a Microsoft Entra tenant." },
+      { "id": "2", "text": "An organization can add organization-specific terms to a custom banned password list." },
+      { "id": "3", "text": "The presence of any banned term always causes every otherwise strong password to be rejected." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "yes", "3": "no" },
+    "explanation": "The global list is automatically applied and custom terms can be configured. Password validation scores the overall password, so the presence of a banned term alone does not guarantee rejection.",
+    "learningObjective": "Describe password protection and management capabilities", "tags": ["password-protection", "banned-passwords", "matrix"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/authentication/concept-password-ban-bad"]
+  },
+  {
+    "id": "SC900-066", "domain": "entra", "topic": "Authentication", "subtopic": "Self-service password reset",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An organization enables self-service password reset for an eligible user with a cloud-managed password who has registered the authentication methods required by policy. What can the user do after forgetting the password?",
+    "options": [
+      { "id": "A", "text": "Disable the tenant's password policies without verification" },
+      { "id": "B", "text": "Reset another employee's password as a Global Administrator" },
+      { "id": "C", "text": "Bypass all application authorization checks" },
+      { "id": "D", "text": "Complete the configured verification and reset their own password without contacting the help desk" }
+    ],
+    "correctAnswer": ["D"],
+    "explanation": "Self-service password reset lets eligible users with the required registered methods verify their identity and reset their own passwords without help desk intervention.",
+    "optionExplanations": {
+      "A": "Self-service reset does not grant permission to disable tenant policies.",
+      "B": "Self-service reset is for the user's own account; it does not grant administrator permissions.",
+      "C": "Resetting a password does not bypass application authorization.",
+      "D": "Eligible users can complete the configured verification and reset their own passwords."
+    },
+    "learningObjective": "Describe password protection and management capabilities", "tags": ["sspr", "authentication", "password-management"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/authentication/concept-sspr-howitworks"]
+  },
+  {
+    "id": "SC900-067", "domain": "entra", "topic": "Access Management", "subtopic": "Conditional Access",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "hard",
+    "question": "Match each Conditional Access policy element to the role it plays in an access decision.",
+    "items": [
+      { "id": "1", "text": "The group of users and target application to which a policy applies" },
+      { "id": "2", "text": "The device state or location used to evaluate a sign-in" },
+      { "id": "3", "text": "The requirement that the user complete multifactor authentication" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Policy assignments" },
+      { "id": "B", "text": "Access signal or condition" },
+      { "id": "C", "text": "Grant control" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "Policies target identities and resources, evaluate signals such as device state and location, and can apply grant controls such as requiring MFA.",
+    "learningObjective": "Describe Microsoft Entra Conditional Access", "tags": ["conditional-access", "policy", "matching"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/conditional-access/overview"]
+  },
+  {
+    "id": "SC900-068", "domain": "entra", "topic": "Access Management", "subtopic": "Conditional Access",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "hard",
+    "question": "For each statement about Microsoft Entra Conditional Access, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "Policies can use device state and application as signals when making access decisions." },
+      { "id": "2", "text": "Conditional Access is intended to be the primary frontline defense against denial-of-service attacks." },
+      { "id": "3", "text": "A policy can require multifactor authentication before granting access." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "no", "3": "yes" },
+    "explanation": "Conditional Access evaluates identity-related signals and can require MFA. It is enforced after first-factor authentication and is not intended as frontline denial-of-service protection.",
+    "learningObjective": "Describe Microsoft Entra Conditional Access", "tags": ["conditional-access", "signals", "matrix"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/conditional-access/overview"]
+  },
+  {
+    "id": "SC900-069", "domain": "entra", "topic": "Access Management", "subtopic": "Role-based access control",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An administrator must grant a team permissions to manage an Azure virtual machine, rather than permissions to administer directory users. Which role system should be used for the virtual machine?",
+    "options": [
+      { "id": "A", "text": "Azure role-based access control" },
+      { "id": "B", "text": "A Microsoft Purview retention label" },
+      { "id": "C", "text": "A Microsoft Entra access review by itself" },
+      { "id": "D", "text": "A Microsoft Sentinel analytics rule" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Azure role-based access control governs permissions to Azure resources such as virtual machines; Microsoft Entra directory roles are a separate role system.",
+    "optionExplanations": {
+      "A": "Azure RBAC grants permissions to Azure resources such as VMs.",
+      "B": "Retention labels govern content lifecycle rather than VM management.",
+      "C": "An access review checks existing access but does not itself assign an Azure VM management role.",
+      "D": "Sentinel analytics rules detect suspicious activity rather than grant VM management permissions."
+    },
+    "learningObjective": "Describe Microsoft Entra roles and role-based access control (RBAC)", "tags": ["azure-rbac", "roles", "least-privilege"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/role-based-access-control/concept-understand-roles"]
+  },
+  {
+    "id": "SC900-070", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "Access reviews",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A group owner needs to periodically decide whether invited guests should retain access to a sensitive collaboration group. What action best fits Microsoft Entra access reviews?",
+    "options": [
+      { "id": "A", "text": "Configure a network DDoS mitigation rule" },
+      { "id": "B", "text": "Require the group owner to approve or deny continued guest access in a recurring review" },
+      { "id": "C", "text": "Replace each guest's identity with the group owner's account" },
+      { "id": "D", "text": "Disable all audit records for group membership" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Recurring access reviews can ask group owners to approve or deny continued access for guests.",
+    "optionExplanations": {
+      "A": "DDoS mitigation does not recertify group membership.",
+      "B": "Access reviews provide periodic reviewer decisions on whether access remains appropriate.",
+      "C": "Sharing the owner's identity does not review individual access and weakens accountability.",
+      "D": "Disabling audit records does not establish whether guest access remains necessary."
+    },
+    "learningObjective": "Describe access reviews", "tags": ["access-reviews", "external-identities", "governance"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-governance/access-reviews-overview"]
+  },
+  {
+    "id": "SC900-071", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "Privileged Identity Management",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "hard",
+    "question": "Match each Microsoft Entra Privileged Identity Management assignment or action to its description.",
+    "items": [
+      { "id": "1", "text": "The user must perform an action such as activation before using the role" },
+      { "id": "2", "text": "The user can use the assigned role without first activating it" },
+      { "id": "3", "text": "An eligible user performs the required steps to use a role for a configured period" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Eligible assignment" },
+      { "id": "B", "text": "Active assignment" },
+      { "id": "C", "text": "Role activation" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "Eligible assignments require activation; active assignments can be used without activation; activation makes an eligible assignment usable for a configured period.",
+    "learningObjective": "Describe the capabilities of Microsoft Entra Privileged Identity Management", "tags": ["pim", "eligible", "active", "matching"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-governance/privileged-identity-management/pim-configure"]
+  },
+  {
+    "id": "SC900-072", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "Identity Protection",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "A security team wants a detected risky sign-in to trigger an access requirement such as multifactor authentication. Which combination addresses this scenario?",
+    "options": [
+      { "id": "A", "text": "Use a retention label to evaluate the sign-in and a firewall rule to certify the user" },
+      { "id": "B", "text": "Use an access review alone to evaluate every sign-in in real time" },
+      { "id": "C", "text": "Use Microsoft Entra ID Protection risk signals with a risk-based Conditional Access policy" },
+      { "id": "D", "text": "Use Azure Bastion to detect leaked credentials and require MFA" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "ID Protection detects identity risks and can provide risk signals to Conditional Access, which applies configured access controls such as MFA.",
+    "optionExplanations": {
+      "A": "Retention labels govern content lifecycle; firewall rules do not evaluate identity risk for this policy.",
+      "B": "Access reviews periodically recertify access rather than evaluate each sign-in in real time.",
+      "C": "ID Protection risk signals can feed a risk-based Conditional Access policy.",
+      "D": "Bastion provides VM connectivity and is not the identity-risk and policy combination."
+    },
+    "learningObjective": "Describe Microsoft Entra ID Protection; describe Microsoft Entra Conditional Access", "tags": ["identity-protection", "conditional-access", "risk"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-protection/overview-identity-protection", "https://learn.microsoft.com/entra/identity/conditional-access/overview"]
+  }
+]
