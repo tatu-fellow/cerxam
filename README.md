@@ -18,7 +18,7 @@ Cerxam is an unofficial study app for practising Azure AI Fundamentals (AI-901) 
    - **Applied Scenarios:** practise scenario-style questions and simulations.
    - **Weak Areas:** revisit missed questions, or try a harder set if there is no history yet.
 
-Practice history is stored in your browser's local storage. It is not synced between devices.
+Practice history is stored separately for each exam in your browser's local storage. Existing AI-901 history is migrated automatically, and the dashboard clears only the current exam's history. History is not synced between devices.
 
 ## Project status
 
@@ -30,6 +30,7 @@ Contributions are welcome. Open an issue to discuss a substantial change, then c
 
 ```bash
 npm run validate:questions
+npm test
 npm run lint
 npm run build
 ```
