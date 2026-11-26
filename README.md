@@ -24,6 +24,8 @@ Practice history is stored separately for each exam in your browser's local stor
 
 The app is a working practice simulator with question feedback, timed exams, scenario questions, and session results by learning objective. Its question bank and exam alignment may change as the project is updated; it is not an official Microsoft product or exam simulator.
 
+Exam dashboards use browser-history URLs. Vite's development and preview servers provide the required SPA fallback. Production hosting must also serve `index.html` for unknown paths (for example, Azure Static Web Apps can use `navigationFallback` in `staticwebapp.config.json`). If hosting under a subpath, configure both Vite's `base` and the router's `basename`.
+
 ## Contributing
 
 Contributions are welcome. Open an issue to discuss a substantial change, then create a branch, make a focused change, and open a pull request to `master`. Include a clear description and run these checks before submitting:
