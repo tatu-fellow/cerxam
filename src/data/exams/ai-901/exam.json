@@ -1,0 +1,141 @@
+{
+  "id": "ai-901",
+  "code": "AI-901",
+  "title": "Azure AI Fundamentals",
+  "tagline": "Azure AI Fundamentals, practised deliberately.",
+  "description": "A study simulator aligned to the current AI-901 blueprint. Practice content is unofficial and designed to reinforce Microsoft Learn objectives.",
+  "questionIdPrefix": "AI901",
+  "questionFileOrder": [
+    "responsible-ai.json",
+    "ai-models.json",
+    "ai-workloads.json",
+    "generative-ai-agents.json",
+    "text-speech.json",
+    "vision.json",
+    "information-extraction.json",
+    "applied-scenarios.json",
+    "hard-challenge.json"
+  ],
+  "expectedQuestionCount": 160,
+  "status": "active",
+  "studyGuideUrl": "https://learn.microsoft.com/credentials/certifications/resources/study-guides/ai-901",
+  "skillsMeasuredDate": "2026-04-15",
+  "allowedSourceHosts": [
+    "learn.microsoft.com"
+  ],
+  "format": {
+    "durationMinutes": 45,
+    "questionCount": 45,
+    "readinessTarget": 85,
+    "minimumObjectiveTarget": 75
+  },
+  "modes": {
+    "scenario": {
+      "questionCount": 20
+    },
+    "weakFallback": {
+      "questionCount": 25
+    }
+  },
+  "domains": [
+    {
+      "id": "concepts",
+      "title": "AI Concepts & Capabilities",
+      "weight": {
+        "min": 40,
+        "max": 45
+      },
+      "sections": [
+        {
+          "id": "responsible-ai",
+          "title": "Responsible AI",
+          "topics": [
+            "Fairness",
+            "Reliability and safety",
+            "Privacy and security",
+            "Inclusiveness",
+            "Transparency",
+            "Accountability"
+          ]
+        },
+        {
+          "id": "ai-models",
+          "title": "AI Models & Configuration",
+          "topics": [
+            "Generative AI models",
+            "Model capabilities",
+            "Model selection",
+            "Deployment options",
+            "Configuration parameters"
+          ]
+        },
+        {
+          "id": "ai-workloads",
+          "title": "AI Workloads",
+          "topics": [
+            "Generative AI",
+            "Agentic AI",
+            "Text analysis",
+            "Speech",
+            "Computer vision",
+            "Information extraction"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foundry",
+      "title": "Microsoft Foundry",
+      "weight": {
+        "min": 55,
+        "max": 60
+      },
+      "sections": [
+        {
+          "id": "generative-ai-agents",
+          "title": "Generative AI & Agents",
+          "topics": [
+            "System prompts",
+            "User prompts",
+            "Model deployment",
+            "Foundry portal",
+            "Foundry SDK",
+            "Chat applications",
+            "Agents"
+          ]
+        },
+        {
+          "id": "text-speech",
+          "title": "Text & Speech",
+          "topics": [
+            "Text analysis",
+            "Multimodal spoken prompts",
+            "Azure Speech"
+          ]
+        },
+        {
+          "id": "vision",
+          "title": "Vision & Image Generation",
+          "topics": [
+            "Visual input",
+            "Multimodal models",
+            "Image generation",
+            "Vision applications"
+          ]
+        },
+        {
+          "id": "information-extraction",
+          "title": "Information Extraction",
+          "topics": [
+            "Documents",
+            "Forms",
+            "Images",
+            "Audio",
+            "Video",
+            "Content Understanding"
+          ]
+        }
+      ]
+    }
+  ]
+}

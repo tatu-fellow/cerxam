@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const questionsDir = path.join(root, "src", "data", "questions");
+const questionsDir = path.join(root, "src", "data", "exams", "ai-901", "questions");
 const files = (await readdir(questionsDir)).filter((file) => file.endsWith(".json")).sort();
 const errors = [];
 const questions = [];
