@@ -1,0 +1,373 @@
+[
+  {
+    "id": "SC900-103", "domain": "entra", "topic": "Entra ID & Identity Types", "subtopic": "Managed identities",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "Several Azure resources need to share one managed identity whose lifecycle is independent of the resources. Which type fits?",
+    "options": [
+      { "id": "A", "text": "A system-assigned managed identity on one resource" },
+      { "id": "B", "text": "A shared user-assigned managed identity" },
+      { "id": "C", "text": "A guest user's personal identity" },
+      { "id": "D", "text": "A device identity for an administrator's laptop" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "A user-assigned managed identity is a separate Azure resource that can be assigned to multiple resources.",
+    "optionExplanations": {
+      "A": "A system-assigned identity is tied to one resource and cannot be shared.",
+      "B": "A user-assigned identity has an independent lifecycle and supports multiple resources.",
+      "C": "A guest user represents a person, not a shared managed workload identity.",
+      "D": "A laptop's device identity does not represent the Azure workloads."
+    },
+    "learningObjective": "Describe types of identities, including workload identities", "tags": ["managed-identity", "workload-identity"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview"]
+  },
+  {
+    "id": "SC900-104", "domain": "entra", "topic": "Entra ID & Identity Types", "subtopic": "Managed identity lifecycle",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An Azure virtual machine has a system-assigned managed identity. What happens to that identity when the virtual machine is deleted?",
+    "options": [
+      { "id": "A", "text": "It automatically becomes a user-assigned identity shared by other VMs" },
+      { "id": "B", "text": "It remains available indefinitely as an independent Azure resource" },
+      { "id": "C", "text": "Its associated service principal is automatically deleted with the VM" },
+      { "id": "D", "text": "Its credentials are published for the application owner to reuse" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "A system-assigned managed identity shares the lifecycle of its Azure resource; its service principal is deleted when that resource is deleted.",
+    "optionExplanations": {
+      "A": "Deletion does not convert the identity to a shareable user-assigned identity.",
+      "B": "Independent lifecycle describes a user-assigned identity, not a system-assigned identity.",
+      "C": "Azure deletes the associated system-assigned service principal with the resource.",
+      "D": "Managed identity credentials are not published to application owners."
+    },
+    "learningObjective": "Describe types of identities, including workload identities", "tags": ["managed-identity", "lifecycle"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview"]
+  },
+  {
+    "id": "SC900-105", "domain": "entra", "topic": "Entra ID & Identity Types", "subtopic": "Hybrid sign-in methods",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "hard",
+    "question": "Match each hybrid sign-in approach to the way it supports authentication.",
+    "items": [
+      { "id": "1", "text": "Synchronize a derived password hash to Microsoft Entra ID for cloud sign-in" },
+      { "id": "2", "text": "Validate the user's password against on-premises Active Directory during sign-in" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Password hash synchronization" },
+      { "id": "B", "text": "Pass-through authentication" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B" },
+    "explanation": "Password hash synchronization synchronizes a hash to the cloud; pass-through authentication validates passwords against on-premises Active Directory.",
+    "learningObjective": "Describe hybrid identity", "tags": ["hybrid-identity", "authentication", "matching"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/hybrid/connect/whatis-phs", "https://learn.microsoft.com/entra/identity/hybrid/connect/how-to-connect-pta"]
+  },
+  {
+    "id": "SC900-106", "domain": "entra", "topic": "Authentication", "subtopic": "Passkeys",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "During a Microsoft Entra passkey sign-in, which operation demonstrates possession of the private key without sending the private key to the service?",
+    "options": [
+      { "id": "A", "text": "The authenticator signs a challenge, which the service verifies with the public key" },
+      { "id": "B", "text": "The user sends the private key to the application in an email" },
+      { "id": "C", "text": "The application replaces the challenge with the user's password" },
+      { "id": "D", "text": "The network security group decrypts the user's browser history" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "The authenticator signs the challenge with the private key; Microsoft Entra ID verifies the signature using the public key.",
+    "optionExplanations": {
+      "A": "A signed challenge proves control of the private key without transmitting it.",
+      "B": "Sending the private key would expose the credential and is not the passkey flow.",
+      "C": "The passkey flow uses a cryptographic challenge, not a substituted password.",
+      "D": "NSGs filter network traffic and do not authenticate passkeys."
+    },
+    "learningObjective": "Describe the authentication methods", "tags": ["passkeys", "authentication", "public-key"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/authentication/concept-authentication-passkeys-fido2"]
+  },
+  {
+    "id": "SC900-107", "domain": "entra", "topic": "Authentication", "subtopic": "Password writeback",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A hybrid user resets a password in the cloud. The organization wants the change applied to the user's on-premises Active Directory account as well. What capability supports this?",
+    "options": [
+      { "id": "A", "text": "A Conditional Access named location" },
+      { "id": "B", "text": "An access review" },
+      { "id": "C", "text": "A Sentinel data connector" },
+      { "id": "D", "text": "Self-service password reset writeback" }
+    ],
+    "correctAnswer": ["D"],
+    "explanation": "When configured for supported hybrid users, password writeback sends cloud password changes or resets to on-premises Active Directory.",
+    "optionExplanations": {
+      "A": "A named location supplies an access-policy signal, not password synchronization.",
+      "B": "Access reviews reassess access assignments, not passwords.",
+      "C": "A Sentinel connector ingests security information, not password changes.",
+      "D": "Password writeback applies supported cloud password changes to on-premises AD DS."
+    },
+    "learningObjective": "Describe password protection and management capabilities", "tags": ["sspr", "password-writeback", "hybrid-identity"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/authentication/concept-sspr-writeback"]
+  },
+  {
+    "id": "SC900-108", "domain": "entra", "topic": "Authentication", "subtopic": "Passkey types",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "hard",
+    "question": "For each statement about passkey storage, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "A device-bound passkey's private key is stored on one physical device." },
+      { "id": "2", "text": "A synced passkey can be made available to other devices through its passkey provider." },
+      { "id": "3", "text": "All passkeys require a user to send their password to every application." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "yes", "3": "no" },
+    "explanation": "Device-bound private keys stay on one device; synced passkeys can be shared through a provider. Passkeys provide passwordless authentication.",
+    "learningObjective": "Describe the authentication methods", "tags": ["passkeys", "device-bound", "synced"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/authentication/concept-authentication-passkeys-fido2"]
+  },
+  {
+    "id": "SC900-109", "domain": "entra", "topic": "Access Management", "subtopic": "Conditional Access report-only",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An administrator wants to assess how a new Conditional Access policy would affect sign-ins before enforcing its grant controls. Which policy state supports this?",
+    "options": [
+      { "id": "A", "text": "A permanently deleted policy" },
+      { "id": "B", "text": "Report-only mode" },
+      { "id": "C", "text": "An active block policy" },
+      { "id": "D", "text": "An expired access package" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Report-only mode evaluates supported policies and records results without enforcing their grant or session controls.",
+    "optionExplanations": {
+      "A": "A deleted policy cannot provide report-only evaluation.",
+      "B": "Report-only evaluation lets administrators inspect prospective policy impact.",
+      "C": "An active block policy enforces the block instead of only reporting it.",
+      "D": "An expired access package is not a Conditional Access policy evaluation state."
+    },
+    "learningObjective": "Describe Microsoft Entra Conditional Access", "tags": ["conditional-access", "report-only", "policy"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/conditional-access/concept-conditional-access-report-only"]
+  },
+  {
+    "id": "SC900-110", "domain": "entra", "topic": "Access Management", "subtopic": "Conditional Access decisions",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "Two enforced Conditional Access policies apply to the same sign-in. One grants access after MFA, while the other blocks access. What is the resulting decision?",
+    "options": [
+      { "id": "A", "text": "MFA always overrides the block" },
+      { "id": "B", "text": "Access is granted because one policy allows it" },
+      { "id": "C", "text": "The block prevents access" },
+      { "id": "D", "text": "Both policies are automatically deleted" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "Block access is the most restrictive Conditional Access decision; a matching enforced block is not overridden by a separate grant policy.",
+    "optionExplanations": {
+      "A": "A grant requiring MFA does not override an applicable block.",
+      "B": "All applicable enforced policies must be satisfied, and block is the most restrictive decision.",
+      "C": "The applicable block prevents the sign-in from being granted access.",
+      "D": "Evaluating policies does not delete them."
+    },
+    "learningObjective": "Describe Microsoft Entra Conditional Access", "tags": ["conditional-access", "block", "policy"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/conditional-access/overview"]
+  },
+  {
+    "id": "SC900-111", "domain": "entra", "topic": "Access Management", "subtopic": "Administrative units",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A company wants a regional helpdesk administrator to manage only users in that region, rather than users throughout the tenant. What can scope the Microsoft Entra role assignment?",
+    "options": [
+      { "id": "A", "text": "A Microsoft Entra administrative unit containing the regional users" },
+      { "id": "B", "text": "A Purview retention label" },
+      { "id": "C", "text": "An Azure DDoS mitigation policy" },
+      { "id": "D", "text": "A Sentinel watchlist alone" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Administrative units can scope supported Microsoft Entra role permissions to a defined set of users, groups, or devices.",
+    "optionExplanations": {
+      "A": "The role can be scoped to an administrative unit containing the relevant users.",
+      "B": "A retention label controls content lifecycle, not directory role scope.",
+      "C": "DDoS mitigation protects availability rather than limiting directory administration.",
+      "D": "A watchlist supplies Sentinel reference data and does not scope an Entra role."
+    },
+    "learningObjective": "Describe Microsoft Entra roles and role-based access control (RBAC)", "tags": ["entra-roles", "administrative-units", "scope"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/role-based-access-control/administrative-units"]
+  },
+  {
+    "id": "SC900-112", "domain": "entra", "topic": "Access Management", "subtopic": "Administrative unit membership",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "hard",
+    "question": "A group is added to a Microsoft Entra administrative unit, but its members are not separately added. For each statement, select Yes if accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "The group itself can be in the scoped management permissions of an appropriate administrator." },
+      { "id": "2", "text": "Every user in the group automatically becomes individually manageable within that administrative unit." },
+      { "id": "3", "text": "Individual users can be added directly to the administrative unit when their individual management is required." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "no", "3": "yes" },
+    "explanation": "Adding a group scopes management of the group, not automatic management of each member's individual user properties.",
+    "learningObjective": "Describe Microsoft Entra roles and role-based access control (RBAC)", "tags": ["administrative-units", "groups", "scope"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/identity/role-based-access-control/administrative-units"]
+  },
+  {
+    "id": "SC900-113", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "Entitlement management",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A project needs a requestable bundle of group membership, application access, and a SharePoint site for internal and external collaborators. What does entitlement management use to bundle these resources?",
+    "options": [
+      { "id": "A", "text": "An Azure Firewall rule collection" },
+      { "id": "B", "text": "A user risk detection" },
+      { "id": "C", "text": "A Microsoft Purview sensitivity label" },
+      { "id": "D", "text": "An access package" }
+    ],
+    "correctAnswer": ["D"],
+    "explanation": "An access package bundles resource access for a project or task and is governed through entitlement management policies.",
+    "optionExplanations": {
+      "A": "Firewall rules filter network traffic rather than bundling identity access requests.",
+      "B": "A risk detection reports suspicious activity; it is not an access bundle.",
+      "C": "A sensitivity label classifies or protects data rather than bundling project access.",
+      "D": "An access package bundles access to resources such as groups, apps, and sites."
+    },
+    "learningObjective": "Describe Microsoft Entra ID Governance", "tags": ["entitlement-management", "access-package"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-governance/entitlement-management-overview"]
+  },
+  {
+    "id": "SC900-114", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "Access package policies",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "medium",
+    "question": "Match each entitlement management element to its purpose.",
+    "items": [
+      { "id": "1", "text": "Bundle resource roles needed for a project" },
+      { "id": "2", "text": "Define who may request access, who approves it, and when it expires" },
+      { "id": "3", "text": "Contain related access packages and resources for delegation" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Access package" },
+      { "id": "B", "text": "Access package policy" },
+      { "id": "C", "text": "Catalog" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "Access packages bundle resources, policies govern assignments, and catalogs contain related packages and resources for delegation.",
+    "learningObjective": "Describe Microsoft Entra ID Governance", "tags": ["entitlement-management", "catalog", "policy"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-governance/entitlement-management-overview"]
+  },
+  {
+    "id": "SC900-115", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "Lifecycle workflows",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An organization wants to automatically disable accounts when employees leave, using an identity lifecycle process. Which Microsoft Entra ID Governance capability is intended for this?",
+    "options": [
+      { "id": "A", "text": "A network security group" },
+      { "id": "B", "text": "Lifecycle workflows" },
+      { "id": "C", "text": "An Azure Firewall application rule" },
+      { "id": "D", "text": "A Microsoft Purview DLP simulation" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Lifecycle workflows automate tasks for joiner, mover, and leaver events, including supported user account management tasks.",
+    "optionExplanations": {
+      "A": "An NSG filters network traffic rather than managing identity lifecycle events.",
+      "B": "Lifecycle workflows can automate account actions for departing users.",
+      "C": "A firewall rule filters traffic; it does not disable a departing employee's account.",
+      "D": "DLP simulation evaluates data protection policy impact, not identity lifecycle tasks."
+    },
+    "learningObjective": "Describe Microsoft Entra ID Governance", "tags": ["lifecycle-workflows", "leaver", "identity-governance"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-governance/what-are-lifecycle-workflows"]
+  },
+  {
+    "id": "SC900-116", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "Joiner mover leaver",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "easy",
+    "question": "Match each identity lifecycle event to its category.",
+    "items": [
+      { "id": "1", "text": "A new employee starts work" },
+      { "id": "2", "text": "An employee changes departments and needs different access" },
+      { "id": "3", "text": "An employee leaves the organization" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Joiner" },
+      { "id": "B", "text": "Mover" },
+      { "id": "C", "text": "Leaver" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "Joiners enter the organization, movers change roles or boundaries, and leavers depart or otherwise leave the scope of access.",
+    "learningObjective": "Describe Microsoft Entra ID Governance", "tags": ["identity-lifecycle", "joiner-mover-leaver"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-governance/what-are-lifecycle-workflows"]
+  },
+  {
+    "id": "SC900-117", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "PIM activation approval",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An eligible Microsoft Entra role is configured to require approval for activation. A user requests activation. When can the user use the role?",
+    "options": [
+      { "id": "A", "text": "Immediately upon being eligible, without activation" },
+      { "id": "B", "text": "Before the request is submitted" },
+      { "id": "C", "text": "After the activation request is approved and other configured requirements are satisfied" },
+      { "id": "D", "text": "Only after the role assignment has been permanently deleted" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "When approval is required, the activation request is pending until an approver approves it and applicable activation requirements are satisfied.",
+    "optionExplanations": {
+      "A": "Eligibility alone is not an active assignment.",
+      "B": "The user must first request activation and meet the configured requirements.",
+      "C": "Approval and other configured activation controls must be satisfied.",
+      "D": "Deleting the assignment does not activate the role."
+    },
+    "learningObjective": "Describe the capabilities of Microsoft Entra Privileged Identity Management", "tags": ["pim", "approval", "activation"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-governance/privileged-identity-management/pim-configure"]
+  },
+  {
+    "id": "SC900-118", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "PIM monitoring",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "medium",
+    "question": "For each statement about Microsoft Entra Privileged Identity Management, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "PIM can notify relevant people when privileged roles are activated." },
+      { "id": "2", "text": "PIM provides audit history that can support an access investigation." },
+      { "id": "3", "text": "PIM eliminates the need to review privileged role assignments." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "yes", "3": "no" },
+    "explanation": "PIM supports activation notifications, audit history, and access reviews for privileged roles; monitoring does not remove the need for review.",
+    "learningObjective": "Describe the capabilities of Microsoft Entra Privileged Identity Management", "tags": ["pim", "audit", "notifications"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-governance/privileged-identity-management/pim-configure"]
+  },
+  {
+    "id": "SC900-119", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "Identity Protection reports",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "medium",
+    "question": "Match each Microsoft Entra ID Protection report to the information it provides.",
+    "items": [
+      { "id": "1", "text": "Individual risk detections" },
+      { "id": "2", "text": "Sign-ins with one or more risk detections" },
+      { "id": "3", "text": "Users associated with risky sign-ins or risk detections" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Risk detections" },
+      { "id": "B", "text": "Risky sign-ins" },
+      { "id": "C", "text": "Risky users" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "ID Protection offers separate reports for detections, risky sign-ins, and risky users to help investigators examine identity risk.",
+    "learningObjective": "Describe Microsoft Entra ID Protection", "tags": ["identity-protection", "reports", "investigation"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-protection/overview-identity-protection"]
+  },
+  {
+    "id": "SC900-120", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "Identity risk signals",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "easy",
+    "question": "Microsoft finds a publicly available credential pair that matches an organization's user account. Which Microsoft Entra ID Protection detection category can flag this situation?",
+    "options": [
+      { "id": "A", "text": "A records disposition review" },
+      { "id": "B", "text": "Leaked credentials" },
+      { "id": "C", "text": "A network security group priority" },
+      { "id": "D", "text": "A sensitivity label downgrade" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Leaked credentials are one of the signals Microsoft Entra ID Protection uses to identify potentially compromised identities.",
+    "optionExplanations": {
+      "A": "Disposition review concerns retained records rather than identity credentials.",
+      "B": "Leaked credentials are an identity risk detection.",
+      "C": "An NSG priority orders network rules and is not a credential risk detection.",
+      "D": "A label downgrade is a data classification activity, not the leaked-credential detection."
+    },
+    "learningObjective": "Describe Microsoft Entra ID Protection", "tags": ["identity-protection", "leaked-credentials"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-protection/overview-identity-protection", "https://learn.microsoft.com/entra/id-protection/id-protection-faq"]
+  },
+  {
+    "id": "SC900-121", "domain": "entra", "topic": "Identity Protection & Governance", "subtopic": "Access review reviewers",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An administrator creates an access review for a business-critical enterprise application and enables required justification. Each assigned user must personally decide whether they still need the application. Which reviewer choice fits this requirement?",
+    "options": [
+      { "id": "A", "text": "A single designated reviewer who decides on behalf of every user" },
+      { "id": "B", "text": "Self-review by each assigned user" },
+      { "id": "C", "text": "No reviewer and no review decisions" },
+      { "id": "D", "text": "A network security group rule instead of a reviewer" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Access reviews for connected applications can use self-review, allowing assigned users to review their own access and provide a justification.",
+    "optionExplanations": {
+      "A": "A designated reviewer makes decisions for users instead of each user reviewing their own access.",
+      "B": "Self-review assigns each user the decision about their own access.",
+      "C": "Without reviewers or decisions, users cannot personally review and justify their access.",
+      "D": "An NSG filters network traffic; it cannot act as an access-review reviewer."
+    },
+    "learningObjective": "Describe access reviews", "tags": ["access-reviews", "enterprise-applications", "governance"],
+    "sourceUrls": ["https://learn.microsoft.com/entra/id-governance/access-reviews-overview"]
+  }
+]

@@ -1,0 +1,227 @@
+[
+  {
+    "id": "SC900-149", "domain": "compliance", "topic": "Service Trust Portal & Privacy", "subtopic": "Service Trust Portal access",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "medium",
+    "question": "For each statement about access to Microsoft Service Trust Portal resources, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "Some compliance materials require an authenticated Microsoft cloud services account." },
+      { "id": "2", "text": "Some materials require acceptance of the applicable nondisclosure agreement." },
+      { "id": "3", "text": "Every restricted document is available to every anonymous visitor." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "yes", "3": "no" },
+    "explanation": "Some Service Trust Portal materials require authentication and acceptance of a nondisclosure agreement; restricted documents can also require specified roles.",
+    "learningObjective": "Describe the Service Trust Portal offerings", "tags": ["service-trust-portal", "access", "compliance"],
+    "sourceUrls": ["https://learn.microsoft.com/microsoft-365/compliance/get-started-with-service-trust-portal"]
+  },
+  {
+    "id": "SC900-150", "domain": "compliance", "topic": "Service Trust Portal & Privacy", "subtopic": "Privacy and third-party access",
+    "questionType": "single_choice", "presentation": "standard", "difficulty": "medium",
+    "question": "According to Microsoft's commercial cloud privacy documentation, when can Microsoft share customer data with a third party?",
+    "options": [
+      { "id": "A", "text": "Whenever the third party requests direct, unrestricted access" },
+      { "id": "B", "text": "Only when authorized by the customer or required by applicable law" },
+      { "id": "C", "text": "Automatically for advertising without customer authorization" },
+      { "id": "D", "text": "Whenever a user creates a retention label" }
+    ],
+    "correctAnswer": ["B"], "explanation": "Microsoft's privacy documentation states that it shares data with third parties only when authorized by the customer or required by applicable law.",
+    "optionExplanations": {
+      "A": "A request does not itself authorize unrestricted access.",
+      "B": "The published commitment identifies customer authorization or applicable legal requirements.",
+      "C": "The published commitment does not authorize automatic advertising use.",
+      "D": "Creating a retention label is not an authorization for third-party sharing."
+    },
+    "learningObjective": "Describe the privacy principles of Microsoft", "tags": ["privacy", "third-party", "customer-data"],
+    "sourceUrls": ["https://learn.microsoft.com/compliance/assurance/assurance-privacy"]
+  },
+  {
+    "id": "SC900-151", "domain": "compliance", "topic": "Purview Compliance Management", "subtopic": "Compliance assessments",
+    "questionType": "single_choice", "presentation": "standard", "difficulty": "medium",
+    "question": "In Microsoft Purview Compliance Manager, what is an assessment?",
+    "options": [
+      { "id": "A", "text": "A group of controls from a specific regulation, standard, or policy" },
+      { "id": "B", "text": "A guarantee that the organization is legally compliant" },
+      { "id": "C", "text": "A network rule blocking inbound traffic" },
+      { "id": "D", "text": "A list of virtual machine passwords" }
+    ],
+    "correctAnswer": ["A"], "explanation": "An assessment groups controls from a particular regulation, standard, or policy to help track compliance activities.",
+    "optionExplanations": {
+      "A": "An assessment is a grouping of controls against a relevant requirement set.",
+      "B": "An assessment supports compliance work but is not a legal guarantee.",
+      "C": "A network rule is not a Compliance Manager assessment.",
+      "D": "An assessment is not a password list."
+    },
+    "learningObjective": "Describe Compliance Manager", "tags": ["compliance-manager", "assessment", "controls"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/compliance-manager"]
+  },
+  {
+    "id": "SC900-152", "domain": "compliance", "topic": "Purview Compliance Management", "subtopic": "Action categories",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "hard",
+    "question": "Match each Compliance Manager improvement-action category to the example.",
+    "items": [
+      { "id": "1", "text": "Encrypt information at rest to reduce exposure" },
+      { "id": "2", "text": "Audit system access to identify irregular activity" },
+      { "id": "3", "text": "Respond to a privacy incident to limit and reverse damage" }
+    ],
+    "targets": [{ "id": "A", "text": "Preventative" }, { "id": "B", "text": "Detective" }, { "id": "C", "text": "Corrective" }],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "Preventative actions address risk before an incident, detective actions identify irregularities, and corrective actions reduce or reverse incident effects.",
+    "learningObjective": "Describe the uses and benefits of compliance score", "tags": ["compliance-score", "improvement-actions", "risk"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/compliance-score-calculation"]
+  },
+  {
+    "id": "SC900-153", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Exact data match",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "A data protection team needs a custom sensitive information type that matches values from its own structured dataset rather than relying only on a generic pattern. Which classification method is intended for this?",
+    "options": [
+      { "id": "A", "text": "A Sentinel workbook" },
+      { "id": "B", "text": "An Azure Firewall rule" },
+      { "id": "C", "text": "Exact data match" },
+      { "id": "D", "text": "A privileged role activation" }
+    ],
+    "correctAnswer": ["C"], "explanation": "Exact data match supports custom sensitive information types that compare content against values in a structured sensitive data source.",
+    "optionExplanations": {
+      "A": "A workbook visualizes data rather than defining a sensitive information type.",
+      "B": "A firewall rule filters network traffic.",
+      "C": "Exact data match uses an organization's structured values for classification.",
+      "D": "Role activation changes privileged access rather than classifying data."
+    },
+    "learningObjective": "Describe the data classification capabilities", "tags": ["classification", "sensitive-information-types", "exact-data-match"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/sit-learn-about-exact-data-match-based-sits"]
+  },
+  {
+    "id": "SC900-154", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Activity explorer capabilities",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "hard",
+    "question": "A compliance analyst is evaluating Activity explorer for investigating data-related events. For each statement, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "With Endpoint DLP enabled, activity can include copying a file to the clipboard on an onboarded device." },
+      { "id": "2", "text": "Activities are guaranteed to appear in real time as soon as they occur." },
+      { "id": "3", "text": "Date range and activity type can be used to filter the activity data." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "no", "3": "yes" },
+    "explanation": "Activity explorer can include endpoint DLP activities such as copying a file to the clipboard. It isn't a real-time view: events arrive on the audit-log schedule. Date range and activity type are available filters.",
+    "learningObjective": "Describe the benefits of Content explorer and Activity explorer", "tags": ["activity-explorer", "endpoint-dlp", "classification"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/data-classification-activity-explorer"]
+  },
+  {
+    "id": "SC900-155", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Event-based retention",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An organization must retain contract records for five years after each contract expires, rather than five years after the files were created. What should the records team evaluate?",
+    "options": [
+      { "id": "A", "text": "An access review" },
+      { "id": "B", "text": "A network security group" },
+      { "id": "C", "text": "A Defender for Endpoint isolation action" },
+      { "id": "D", "text": "Event-based retention using a retention label" }
+    ],
+    "correctAnswer": ["D"], "explanation": "An event-based retention label can start the retention period when a specified event, such as a contract expiration, occurs.",
+    "optionExplanations": {
+      "A": "An access review assesses access rather than triggering content retention.",
+      "B": "An NSG filters network traffic.",
+      "C": "Device isolation is a security response action.",
+      "D": "Event-based retention starts the configured period from the relevant event."
+    },
+    "learningObjective": "Describe records management", "tags": ["records-management", "event-based-retention", "retention-labels"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/event-driven-retention"]
+  },
+  {
+    "id": "SC900-156", "domain": "compliance", "topic": "Information Protection & Data Lifecycle", "subtopic": "Regulatory records",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "A records team is considering applying a retention label that marks content as a regulatory record. Which statement about the restrictions is accurate?",
+    "options": [
+      { "id": "A", "text": "A container administrator can remove the label from the marked item" },
+      { "id": "B", "text": "No administrator can remove the regulatory record label after it is applied" },
+      { "id": "C", "text": "An administrator can shorten the label's retention period after the label is saved" },
+      { "id": "D", "text": "An auto-apply retention label policy can apply the regulatory record label" }
+    ],
+    "correctAnswer": ["B"], "explanation": "A regulatory record label cannot be removed after application, including by a global administrator; the restrictions make careful planning important.",
+    "optionExplanations": {
+      "A": "A container administrator can remove a label from a locked record, but not from a regulatory record.",
+      "B": "The applied regulatory record label cannot be removed, even by a global administrator.",
+      "C": "After the label is saved, its retention period can be extended but not shortened.",
+      "D": "Regulatory record labels aren't supported by auto-labeling policies; they must be applied using retention label policies."
+    },
+    "learningObjective": "Describe records management", "tags": ["records-management", "regulatory-record", "retention"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/records-management"]
+  },
+  {
+    "id": "SC900-157", "domain": "compliance", "topic": "Insider Risk, eDiscovery & Audit", "subtopic": "eDiscovery holds",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A legal team needs to preserve mailbox and site content relevant to an investigation against inadvertent deletion. What eDiscovery capability addresses this need?",
+    "options": [
+      { "id": "A", "text": "A case hold on the relevant content locations" },
+      { "id": "B", "text": "An Azure DDoS protection plan" },
+      { "id": "C", "text": "A user password reset" },
+      { "id": "D", "text": "A Sentinel workbook" }
+    ],
+    "correctAnswer": ["A"], "explanation": "An eDiscovery case hold preserves content in selected locations for an investigation.",
+    "optionExplanations": {
+      "A": "A case hold preserves relevant content locations during an investigation.",
+      "B": "DDoS protection mitigates denial-of-service attacks.",
+      "C": "Password reset recovers account access rather than preserving content.",
+      "D": "A workbook visualizes security data rather than placing content on hold."
+    },
+    "learningObjective": "Describe eDiscovery solutions in Microsoft Purview", "tags": ["ediscovery", "hold", "investigation"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/edisc"]
+  },
+  {
+    "id": "SC900-158", "domain": "compliance", "topic": "Insider Risk, eDiscovery & Audit", "subtopic": "eDiscovery review",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A legal reviewer needs to tag collected case documents as relevant or nonresponsive before further analysis. Which premium eDiscovery feature supports this work?",
+    "options": [
+      { "id": "A", "text": "A Conditional Access policy" },
+      { "id": "B", "text": "An Azure virtual network" },
+      { "id": "C", "text": "Review set tagging" },
+      { "id": "D", "text": "A password ban list" }
+    ],
+    "correctAnswer": ["C"], "explanation": "Review set tagging allows reviewers to classify case content and use those tags to filter subsequent review.",
+    "optionExplanations": {
+      "A": "Conditional Access controls sign-in access.",
+      "B": "A virtual network provides connectivity.",
+      "C": "Review set tags capture reviewer judgments about collected items.",
+      "D": "A password ban list helps reject weak passwords."
+    },
+    "learningObjective": "Describe eDiscovery solutions in Microsoft Purview", "tags": ["ediscovery", "review-sets", "tagging"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/edisc"]
+  },
+  {
+    "id": "SC900-159", "domain": "compliance", "topic": "Insider Risk, eDiscovery & Audit", "subtopic": "Audit retention",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "An organization with Audit (Premium) wants to retain eligible user audit records for 10 years. In addition to the applicable Premium license and an appropriate policy, what is required?",
+    "options": [
+      { "id": "A", "text": "An Azure Bastion Premium host" },
+      { "id": "B", "text": "A new network security group" },
+      { "id": "C", "text": "A sensitivity label on every mailbox" },
+      { "id": "D", "text": "The 10-Year Audit Log Retention add-on license for the user" }
+    ],
+    "correctAnswer": ["D"], "explanation": "Ten-year retention for eligible user audit records requires the applicable Audit (Premium) licensing, the per-user add-on, and an appropriate retention policy.",
+    "optionExplanations": {
+      "A": "Bastion provides VM access and is unrelated to audit retention licensing.",
+      "B": "An NSG does not provide audit retention licensing.",
+      "C": "Sensitivity labels do not substitute for the audit retention add-on.",
+      "D": "The additional per-user add-on and appropriate policy are required."
+    },
+    "learningObjective": "Describe audit solutions in Microsoft Purview", "tags": ["audit", "audit-premium", "retention"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/audit-solutions-overview"]
+  },
+  {
+    "id": "SC900-160", "domain": "compliance", "topic": "Insider Risk, eDiscovery & Audit", "subtopic": "Insider risk escalation",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An insider risk investigation requires additional legal review of relevant content. Which integration can help the risk team escalate the case for that review?",
+    "options": [
+      { "id": "A", "text": "Create an Azure Firewall policy" },
+      { "id": "B", "text": "Escalate the Insider Risk Management case to Microsoft Purview eDiscovery" },
+      { "id": "C", "text": "Add the user to a network security group" },
+      { "id": "D", "text": "Turn off all audit logging" }
+    ],
+    "correctAnswer": ["B"], "explanation": "Insider Risk Management cases can be escalated to eDiscovery for additional legal review.",
+    "optionExplanations": {
+      "A": "A firewall policy filters network traffic rather than managing legal case review.",
+      "B": "The integration supports escalation to an eDiscovery case.",
+      "C": "NSGs are network controls, not user memberships or legal cases.",
+      "D": "Disabling audit logging does not support case escalation."
+    },
+    "learningObjective": "Describe insider risk management; describe eDiscovery solutions in Microsoft Purview", "tags": ["insider-risk", "ediscovery", "escalation"],
+    "sourceUrls": ["https://learn.microsoft.com/purview/edisc"]
+  }
+]

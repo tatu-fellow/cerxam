@@ -1,0 +1,274 @@
+[
+  {
+    "id": "SC900-122", "domain": "security", "topic": "Azure Infrastructure Security", "subtopic": "WAF modes",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "medium",
+    "question": "Match each Application Gateway WAF mode to its behavior for detected threats.",
+    "items": [
+      { "id": "1", "text": "Monitor and log threats without blocking requests" },
+      { "id": "2", "text": "Can block requests when configured rules or anomaly scoring require blocking" }
+    ],
+    "targets": [{ "id": "A", "text": "Detection mode" }, { "id": "B", "text": "Prevention mode" }],
+    "correctAnswer": { "1": "A", "2": "B" },
+    "explanation": "Detection mode monitors and logs, while prevention mode can block attacks detected by WAF rules.",
+    "learningObjective": "Describe Azure Web Application Firewall (WAF)", "tags": ["waf", "detection", "prevention"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/web-application-firewall/ag/ag-overview"]
+  },
+  {
+    "id": "SC900-123", "domain": "security", "topic": "Azure Infrastructure Security", "subtopic": "WAF policies",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "Two websites behind an Application Gateway WAF_v2 need different web-attack rules. Which approach supports this requirement?",
+    "options": [
+      { "id": "A", "text": "Create separate WAF policies and associate them with the relevant sites or listeners" },
+      { "id": "B", "text": "Apply the same gateway-level WAF policy to both sites without site-specific policies" },
+      { "id": "C", "text": "Use only network security group rules to configure site-specific HTTP attack rules" },
+      { "id": "D", "text": "Configure separate backend HTTP settings without assigning site-specific WAF policies" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Application Gateway WAF_v2 supports policies associated at gateway, site, or path scope so different sites can use different rules. WAF policy associations are supported only for WAF_v2.",
+    "optionExplanations": {
+      "A": "Separate WAF_v2 policies can provide site-specific WAF settings.",
+      "B": "The same gateway-level policy without site-specific policies does not provide different rules per site.",
+      "C": "Network security groups filter network traffic but do not configure site-specific HTTP attack rules.",
+      "D": "Backend HTTP settings configure gateway-to-backend connections, not site-specific WAF rules."
+    },
+    "learningObjective": "Describe Azure Web Application Firewall (WAF)", "tags": ["waf", "policy", "application-gateway"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/web-application-firewall/ag/ag-overview",
+      "https://learn.microsoft.com/azure/virtual-network/network-security-groups-overview",
+      "https://learn.microsoft.com/azure/application-gateway/how-application-gateway-works"
+    ]
+  },
+  {
+    "id": "SC900-124", "domain": "security", "topic": "Azure Infrastructure Security", "subtopic": "DDoS protection tiers",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A team wants enhanced Azure DDoS mitigation for a single public IP using a pay-per-protected-IP model. Which tier is intended for that model?",
+    "options": [
+      { "id": "A", "text": "Azure Bastion Developer" },
+      { "id": "B", "text": "DDoS IP Protection" },
+      { "id": "C", "text": "Microsoft Defender for Identity" },
+      { "id": "D", "text": "A Key Vault Premium vault" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "DDoS IP Protection uses a pay-per-protected-IP model for enhanced DDoS mitigation.",
+    "optionExplanations": {
+      "A": "Bastion Developer provides VM access, not DDoS mitigation.",
+      "B": "DDoS IP Protection is priced per protected IP.",
+      "C": "Defender for Identity detects identity threats rather than providing the IP protection tier.",
+      "D": "Key Vault stores cryptographic material rather than mitigating DDoS traffic."
+    },
+    "learningObjective": "Describe Azure DDoS Protection", "tags": ["ddos", "public-ip", "tiers"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/ddos-protection/ddos-protection-overview"]
+  },
+  {
+    "id": "SC900-125", "domain": "security", "topic": "Azure Infrastructure Security", "subtopic": "Virtual network peering",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "medium",
+    "question": "For each statement about Azure virtual network peering, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "Peering can connect resources in different Azure virtual networks." },
+      { "id": "2", "text": "Traffic between peered virtual networks uses the Microsoft backbone rather than the public internet." },
+      { "id": "3", "text": "Peering prevents network security groups from restricting traffic between the networks." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "yes", "3": "no" },
+    "explanation": "Peering connects virtual networks over Microsoft's backbone; NSGs can still restrict traffic.",
+    "learningObjective": "Describe network segmentation with Azure virtual networks", "tags": ["virtual-network", "peering", "nsg"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/virtual-network/virtual-network-peering-overview"]
+  },
+  {
+    "id": "SC900-126", "domain": "security", "topic": "Azure Infrastructure Security", "subtopic": "Azure Bastion connectivity",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "easy",
+    "question": "A user connects to an Azure VM through Azure Bastion in a browser. What transport protects the connection from the browser to Bastion?",
+    "options": [
+      { "id": "A", "text": "An unencrypted public RDP session to the VM" },
+      { "id": "B", "text": "A file retention policy" },
+      { "id": "C", "text": "TLS over HTTPS" },
+      { "id": "D", "text": "An anonymous FTP session" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "Azure Bastion provides browser-based RDP or SSH connectivity over TLS, using the VM's private IP address.",
+    "optionExplanations": {
+      "A": "Bastion avoids requiring a public IP on the VM and uses TLS for the client connection.",
+      "B": "Retention policies govern data lifecycle, not transport security.",
+      "C": "The browser connects to Bastion over TLS.",
+      "D": "Anonymous FTP is not Bastion's secure browser transport."
+    },
+    "learningObjective": "Describe Azure Bastion", "tags": ["azure-bastion", "tls", "remote-access"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/bastion/bastion-overview"]
+  },
+  {
+    "id": "SC900-127", "domain": "security", "topic": "Azure Infrastructure Security", "subtopic": "Key Vault tiers",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An organization needs Azure Key Vault keys protected in hardware security modules. Which Key Vault tier offers HSM-protected keys?",
+    "options": [
+      { "id": "A", "text": "A Microsoft Entra Free tenant" },
+      { "id": "B", "text": "Azure Bastion Basic" },
+      { "id": "C", "text": "A Sentinel workbook" },
+      { "id": "D", "text": "Azure Key Vault Premium" }
+    ],
+    "correctAnswer": ["D"],
+    "explanation": "Key Vault Premium offers HSM-protected keys for customers with hardware-backed key protection requirements.",
+    "optionExplanations": {
+      "A": "The directory licensing tier is not a Key Vault HSM key tier.",
+      "B": "Bastion is a VM connectivity service rather than a key vault tier.",
+      "C": "A workbook visualizes data and is not a key protection tier.",
+      "D": "Key Vault Premium supports HSM-protected keys."
+    },
+    "learningObjective": "Describe Azure Key Vault", "tags": ["key-vault", "hsm", "keys"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/key-vault/general/overview"]
+  },
+  {
+    "id": "SC900-128", "domain": "security", "topic": "Azure Infrastructure Security", "subtopic": "Azure Firewall Premium",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A network team needs signature-based intrusion detection and prevention as part of its Azure Firewall deployment. Which Azure Firewall tier provides this capability?",
+    "options": [
+      { "id": "A", "text": "Azure Firewall Premium" },
+      { "id": "B", "text": "Azure Bastion Basic" },
+      { "id": "C", "text": "Microsoft Purview Audit" },
+      { "id": "D", "text": "Microsoft Entra Password Protection" }
+    ],
+    "correctAnswer": ["A"],
+    "explanation": "Azure Firewall Premium includes signature-based intrusion detection and prevention capabilities.",
+    "optionExplanations": {
+      "A": "Firewall Premium provides signature-based IDPS.",
+      "B": "Bastion is a remote VM access service, not a Firewall tier.",
+      "C": "Purview Audit searches activity records, not network signatures.",
+      "D": "Password Protection helps prevent weak passwords rather than inspecting network traffic."
+    },
+    "learningObjective": "Describe Azure Firewall", "tags": ["azure-firewall", "idps", "premium"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/firewall/overview"]
+  },
+  {
+    "id": "SC900-129", "domain": "security", "topic": "Defender for Cloud & Security Management", "subtopic": "Just-in-time VM access",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "An organization wants VM management ports restricted normally and opened only for approved, time-limited administrative access. Which Defender for Cloud feature addresses this?",
+    "options": [
+      { "id": "A", "text": "A sensitivity label" },
+      { "id": "B", "text": "Just-in-time machine access" },
+      { "id": "C", "text": "An eDiscovery hold" },
+      { "id": "D", "text": "An access package catalog" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Defender for Cloud just-in-time machine access restricts selected management ports and can permit approved access for a specified time.",
+    "optionExplanations": {
+      "A": "A sensitivity label protects content rather than VM management ports.",
+      "B": "Just-in-time machine access reduces management-port exposure.",
+      "C": "An eDiscovery hold preserves content for an investigation.",
+      "D": "An access package catalog organizes identity governance resources."
+    },
+    "learningObjective": "Describe enhanced security features provided by cloud workload protection", "tags": ["defender-for-cloud", "jit", "virtual-machines"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/defender-for-cloud/just-in-time-access-overview"]
+  },
+  {
+    "id": "SC900-130", "domain": "security", "topic": "Defender for Cloud & Security Management", "subtopic": "Just-in-time access expiry",
+    "questionType": "yes_no_matrix", "presentation": "standard", "difficulty": "hard",
+    "question": "For each statement about just-in-time access to supported Azure VMs in Defender for Cloud, select Yes if it is accurate; otherwise select No.",
+    "items": [
+      { "id": "1", "text": "An approved request can temporarily permit selected ports from an appropriate IP address or range." },
+      { "id": "2", "text": "Network security group settings are restored after the approved period expires." },
+      { "id": "3", "text": "Expiration necessarily terminates all connections that were already established." }
+    ],
+    "targets": [{ "id": "yes", "text": "Yes" }, { "id": "no", "text": "No" }],
+    "correctAnswer": { "1": "yes", "2": "yes", "3": "no" },
+    "explanation": "Just-in-time access temporarily permits approved traffic and restores NSG rules after expiry; already established connections are not interrupted.",
+    "learningObjective": "Describe enhanced security features provided by cloud workload protection", "tags": ["defender-for-cloud", "jit", "nsg"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/defender-for-cloud/just-in-time-access-overview"]
+  },
+  {
+    "id": "SC900-131", "domain": "security", "topic": "Defender for Cloud & Security Management", "subtopic": "Attack path analysis",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A security team wants to prioritize an internet-exposed weakness that could lead through other cloud resources to sensitive data. Which Defender for Cloud capability analyzes this chain?",
+    "options": [
+      { "id": "A", "text": "Retention label publishing" },
+      { "id": "B", "text": "A password reset registration" },
+      { "id": "C", "text": "Attack path analysis" },
+      { "id": "D", "text": "A VM console session" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "Attack path analysis uses contextual cloud security graph data to identify potential paths from exploitable entry points to important assets.",
+    "optionExplanations": {
+      "A": "Publishing labels does not analyze cloud attack paths.",
+      "B": "Password reset registration prepares recovery methods rather than analyzing resource relationships.",
+      "C": "Attack path analysis highlights potential exploitable chains to critical assets.",
+      "D": "A console session provides interactive access rather than graph-based risk analysis."
+    },
+    "learningObjective": "Describe Cloud Security Posture Management (CSPM)", "tags": ["defender-for-cloud", "attack-path", "cspm"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/defender-for-cloud/concept-attack-path"]
+  },
+  {
+    "id": "SC900-132", "domain": "security", "topic": "Defender for Cloud & Security Management", "subtopic": "Cloud security explorer",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "A team wants to proactively query relationships between cloud assets, permissions, and vulnerabilities using graph-based searches. Which Defender for Cloud capability is intended for this?",
+    "options": [
+      { "id": "A", "text": "Azure Bastion" },
+      { "id": "B", "text": "Microsoft Purview Content Explorer" },
+      { "id": "C", "text": "Microsoft Entra self-service password reset" },
+      { "id": "D", "text": "Cloud security explorer" }
+    ],
+    "correctAnswer": ["D"],
+    "explanation": "Cloud security explorer supports graph-based queries over contextual security data to proactively find cloud risks.",
+    "optionExplanations": {
+      "A": "Bastion supplies VM connectivity rather than graph queries.",
+      "B": "Content Explorer displays classified content, not cloud asset attack relationships.",
+      "C": "Password reset recovers credentials rather than querying cloud security context.",
+      "D": "Cloud security explorer queries the cloud security graph."
+    },
+    "learningObjective": "Describe Cloud Security Posture Management (CSPM)", "tags": ["defender-for-cloud", "security-explorer", "graph"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/defender-for-cloud/concept-attack-path"]
+  },
+  {
+    "id": "SC900-133", "domain": "security", "topic": "Defender for Cloud & Security Management", "subtopic": "Regulatory compliance",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "medium",
+    "question": "A cloud security team assigns a regulatory compliance standard to an Azure subscription in Defender for Cloud. Where can it review the resulting resource assessments and recommendations?",
+    "options": [
+      { "id": "A", "text": "The Azure Bastion connection page" },
+      { "id": "B", "text": "The Defender for Cloud regulatory compliance dashboard" },
+      { "id": "C", "text": "The Microsoft Entra password reset page" },
+      { "id": "D", "text": "A Key Vault certificate request" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Defender for Cloud evaluates assigned standards and presents resource assessments and remediation recommendations in its regulatory compliance dashboard.",
+    "optionExplanations": {
+      "A": "The Bastion page is for VM connectivity.",
+      "B": "The regulatory compliance dashboard shows assessments against assigned standards.",
+      "C": "Password reset does not display cloud regulatory assessments.",
+      "D": "A certificate request manages a certificate rather than compliance assessment results."
+    },
+    "learningObjective": "Describe how security policies, standards, and recommendations improve the cloud security posture", "tags": ["defender-for-cloud", "regulatory-compliance", "standards"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/defender-for-cloud/update-regulatory-compliance-packages"]
+  },
+  {
+    "id": "SC900-134", "domain": "security", "topic": "Defender for Cloud & Security Management", "subtopic": "Cloud secure score",
+    "questionType": "single_choice", "presentation": "scenario", "difficulty": "hard",
+    "question": "A team reviews the risk-based Cloud secure score in the Microsoft Defender portal. Which factors contribute to the score?",
+    "options": [
+      { "id": "A", "text": "Only the number of open incidents and their severity" },
+      { "id": "B", "text": "Only the number of cloud subscriptions and their monthly cost" },
+      { "id": "C", "text": "Recommendation risk levels, asset risk factors, and asset criticality" },
+      { "id": "D", "text": "Only the number of security alerts generated per day" }
+    ],
+    "correctAnswer": ["C"],
+    "explanation": "Cloud secure score assesses cloud security posture using open recommendation risk levels, asset risk factors, and asset criticality. Higher-risk recommendations contribute more to the score.",
+    "optionExplanations": {
+      "A": "Incident counts and severity alone are not the inputs used by the cloud posture score.",
+      "B": "The score measures security posture rather than subscription count and cost.",
+      "C": "The risk-based model considers recommendation risk, asset risk factors, and criticality.",
+      "D": "The score is not calculated solely from the daily number of security alerts."
+    },
+    "learningObjective": "Describe how security policies, standards, and recommendations improve the cloud security posture", "tags": ["secure-score", "risk", "recommendations"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/defender-for-cloud/secure-score-security-controls"]
+  },
+  {
+    "id": "SC900-135", "domain": "security", "topic": "Defender for Cloud & Security Management", "subtopic": "Storage malware scanning",
+    "questionType": "matching", "presentation": "case_study", "difficulty": "medium",
+    "question": "Match each Defender for Storage malware scanning need to the scanning option.",
+    "items": [
+      { "id": "1", "text": "Automatically scan supported blobs when uploaded or modified" },
+      { "id": "2", "text": "Scan a specific existing blob during an investigation" }
+    ],
+    "targets": [{ "id": "A", "text": "On-upload malware scanning" }, { "id": "B", "text": "On-demand malware scanning" }],
+    "correctAnswer": { "1": "A", "2": "B" },
+    "explanation": "On-upload scanning checks supported blobs as they are uploaded or modified; on-demand scanning can target existing items.",
+    "learningObjective": "Describe enhanced security features provided by cloud workload protection", "tags": ["defender-for-cloud", "storage", "malware"],
+    "sourceUrls": ["https://learn.microsoft.com/azure/defender-for-cloud/defender-for-storage-malware-scan"]
+  }
+]

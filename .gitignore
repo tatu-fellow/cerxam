@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local implementation plans
+/*implementation*.md
+
+# Local validation reports
+/QUESTION_VALIDATION_REPORT*.md

@@ -1,0 +1,174 @@
+[
+  {
+    "id": "SC900-001",
+    "domain": "concepts",
+    "topic": "Security & Compliance Concepts",
+    "subtopic": "Shared responsibility",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "easy",
+    "question": "A company moves its application to a SaaS service. Which security responsibility generally remains with the customer?",
+    "options": [
+      { "id": "A", "text": "Patching the operating system that runs the SaaS application" },
+      { "id": "B", "text": "Managing its users, access, and the data it puts in the service" },
+      { "id": "C", "text": "Securing the provider's physical datacenters" },
+      { "id": "D", "text": "Maintaining the provider's application servers" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "The provider manages the SaaS infrastructure and application, while the customer remains responsible for its data and how its users access and use the service.",
+    "optionExplanations": {
+      "A": "The SaaS provider manages the service operating system; the customer remains responsible for its data and user access.",
+      "B": "Customer data and user identities/access remain customer responsibilities even when the provider operates the application.",
+      "C": "Physical datacenter security is part of the cloud provider's responsibility, not the customer's SaaS task.",
+      "D": "The SaaS provider maintains the application servers; the customer manages its own data and access."
+    },
+    "learningObjective": "Describe the shared responsibility model",
+    "tags": ["shared-responsibility", "saas"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/azure/security/fundamentals/shared-responsibility"
+    ]
+  },
+  {
+    "id": "SC900-002",
+    "domain": "concepts",
+    "topic": "Security & Compliance Concepts",
+    "subtopic": "Defense in depth",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "medium",
+    "question": "A team wants to reduce the chance that one failed security control exposes a sensitive application. Which approach best applies defense in depth?",
+    "options": [
+      { "id": "A", "text": "Use a single perimeter firewall and trust traffic that passes it" },
+      { "id": "B", "text": "Combine identity controls, network filtering, application protection, and data safeguards" },
+      { "id": "C", "text": "Replace all security controls with a yearly compliance assessment" },
+      { "id": "D", "text": "Allow administrators to bypass controls so they can respond faster" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Defense in depth uses complementary controls at multiple layers, so a weakness in one layer does not automatically defeat every other safeguard.",
+    "optionExplanations": {
+      "A": "A single perimeter control creates one point of failure; defense in depth adds protection across multiple layers.",
+      "B": "Identity, network, application, and data safeguards form multiple complementary layers.",
+      "C": "An assessment can identify gaps but does not replace operational security controls.",
+      "D": "Unrestricted bypasses weaken the layers instead of adding independent safeguards."
+    },
+    "learningObjective": "Describe defense-in-depth",
+    "tags": ["defense-in-depth", "layers"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/3-describe-defense-depth"
+    ]
+  },
+  {
+    "id": "SC900-003",
+    "domain": "concepts",
+    "topic": "Security & Compliance Concepts",
+    "subtopic": "Zero Trust",
+    "questionType": "single_choice",
+    "presentation": "scenario",
+    "difficulty": "easy",
+    "question": "An employee connects from a familiar office network, but the sign-in request is unusual. Which Zero Trust approach should the organization take?",
+    "options": [
+      { "id": "A", "text": "Trust the request because it originated on the corporate network" },
+      { "id": "B", "text": "Verify the request using available signals and grant only the access needed" },
+      { "id": "C", "text": "Disable sign-in checks for employees using managed devices" },
+      { "id": "D", "text": "Give the employee permanent administrator access to avoid future prompts" }
+    ],
+    "correctAnswer": ["B"],
+    "explanation": "Zero Trust does not grant implicit trust based on network location. It verifies explicitly and applies least-privilege access.",
+    "optionExplanations": {
+      "A": "Zero Trust rejects implicit trust based solely on a familiar network location.",
+      "B": "Explicit verification and least privilege are core Zero Trust principles.",
+      "C": "A managed device can contribute to an access decision, but it does not remove the need to verify the request.",
+      "D": "Permanent broad privileges violate least privilege and do not verify each access request."
+    },
+    "learningObjective": "Describe the Zero Trust model",
+    "tags": ["zero-trust", "least-privilege"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/security/zero-trust/zero-trust-overview"
+    ]
+  },
+  {
+    "id": "SC900-004",
+    "domain": "concepts",
+    "topic": "Security & Compliance Concepts",
+    "subtopic": "Encryption, hashing, and GRC",
+    "questionType": "matching",
+    "presentation": "case_study",
+    "difficulty": "medium",
+    "question": "A security team is documenting common safeguards and governance activities. Match each activity to the concept it most directly represents.",
+    "items": [
+      { "id": "1", "text": "Transform stored data so it is unreadable without the required key" },
+      { "id": "2", "text": "Compare a fixed-length digest to check whether a file changed" },
+      { "id": "3", "text": "Define accountability and evaluate risks against obligations" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Encryption" },
+      { "id": "B", "text": "Cryptographic hashing" },
+      { "id": "C", "text": "Governance, risk, and compliance (GRC)" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C" },
+    "explanation": "Encryption protects confidentiality by making data unreadable without the key. Hashing produces a digest used to detect changes. GRC connects governance and risk management with compliance obligations.",
+    "learningObjective": "Describe encryption and hashing; describe Governance, Risk, and Compliance (GRC) concepts",
+    "tags": ["encryption", "hashing", "grc", "case-study"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/5-describe-encryption-hashing",
+      "https://learn.microsoft.com/training/modules/describe-security-concepts-methodologies/6-describe-compliance-concepts"
+    ]
+  },
+  {
+    "id": "SC900-005",
+    "domain": "concepts",
+    "topic": "Identity Concepts",
+    "subtopic": "Authentication and authorization",
+    "questionType": "matching",
+    "presentation": "case_study",
+    "difficulty": "easy",
+    "question": "A user signs in to a business application and then attempts to open a restricted report. Match each step to the identity concept it illustrates.",
+    "items": [
+      { "id": "1", "text": "The service checks evidence that the person is the claimed user" },
+      { "id": "2", "text": "The service determines whether the signed-in user may open the report" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Authentication" },
+      { "id": "B", "text": "Authorization" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B" },
+    "explanation": "Authentication verifies identity; authorization determines what an authenticated identity is permitted to access.",
+    "learningObjective": "Define authentication; define authorization",
+    "tags": ["identity", "authentication", "authorization", "case-study"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/describe-identity-principles-concepts/2-define-authentication-authorization"
+    ]
+  },
+  {
+    "id": "SC900-006",
+    "domain": "concepts",
+    "topic": "Identity Concepts",
+    "subtopic": "Identity services and federation",
+    "questionType": "matching",
+    "presentation": "case_study",
+    "difficulty": "medium",
+    "question": "A security team is reviewing foundational identity concepts. Match each description to the concept it most directly represents.",
+    "items": [
+      { "id": "1", "text": "Center security decisions on verified user and service identities rather than trusting network location" },
+      { "id": "2", "text": "Create, maintain, and manage identity information and provide authentication services" },
+      { "id": "3", "text": "Store and make information about network objects such as user accounts available to administrators" },
+      { "id": "4", "text": "Establish trust so an identity authenticated by one organization can access resources in another" }
+    ],
+    "targets": [
+      { "id": "A", "text": "Identity as the primary security perimeter" },
+      { "id": "B", "text": "Identity provider" },
+      { "id": "C", "text": "Directory service, such as Active Directory" },
+      { "id": "D", "text": "Federation" }
+    ],
+    "correctAnswer": { "1": "A", "2": "B", "3": "C", "4": "D" },
+    "explanation": "Modern security centers controls on identity, an identity provider manages identity information and authentication, directory services store and expose identity objects, and federation establishes trust between identity systems.",
+    "learningObjective": "Define identity as the primary security perimeter; describe identity providers; describe the concept of directory services and Active Directory; describe the concept of federation",
+    "tags": ["identity", "identity-provider", "active-directory", "federation", "case-study"],
+    "sourceUrls": [
+      "https://learn.microsoft.com/training/modules/describe-identity-principles-concepts/3-define-identity-primary-security-perimeter",
+      "https://learn.microsoft.com/training/modules/describe-identity-principles-concepts/4-describe-role-identity-provider",
+      "https://learn.microsoft.com/training/modules/describe-identity-principles-concepts/5-describe-concept-of-directory-services-active-directory",
+      "https://learn.microsoft.com/training/modules/describe-identity-principles-concepts/6-describe-concept-federation"
+    ]
+  }
+]

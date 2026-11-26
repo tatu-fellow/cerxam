@@ -4,7 +4,7 @@ export type Confidence = "guess" | "somewhat" | "certain";
 export interface Option { id: string; text: string; explanation?: string; }
 export interface Item { id: string; text: string; }
 export interface BaseQuestion {
-  id: string; domain: "concepts" | "foundry"; topic: string; subtopic: string;
+  id: string; domain: string; topic: string; subtopic: string;
   questionType: string; presentation: string; difficulty: Difficulty; question: string;
   explanation: string; learningObjective: string; tags: string[]; sourceUrls: string[]; code?: string;
   optionExplanations?: Record<string,string>;
@@ -21,4 +21,3 @@ export type MatchingAnswer = Record<string,string>;
 export type QuestionAnswer = string[] | MatchingAnswer;
 export type Answers = Record<string, QuestionAnswer>;
 export type ConfidenceAnswers = Record<string, Confidence>;
-export interface AttemptRecord { questionId: string; objective: string; correct: boolean; confidence?: Confidence; timestamp: string; }

@@ -1,0 +1,38 @@
+{
+  "id": "replace-with-exam-id",
+  "code": "EXAM-CODE",
+  "title": "Replace with the certification title",
+  "description": "Replace with an unofficial study-simulator description for this exam.",
+  "questionIdPrefix": "EXAM",
+  "status": "beta",
+  "studyGuideUrl": "REPLACE_WITH_OFFICIAL_STUDY_GUIDE_URL",
+  "skillsMeasuredDate": "YYYY-MM-DD",
+  "allowedSourceHosts": [
+    "learn.microsoft.com"
+  ],
+  "format": {
+    "durationMinutes": 45,
+    "questionCount": 45,
+    "readinessTarget": 85,
+    "minimumObjectiveTarget": 75
+  },
+  "domains": [
+    {
+      "id": "domain-1",
+      "title": "Replace with a domain title",
+      "weight": {
+        "min": 100,
+        "max": 100
+      },
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Replace with a section title",
+          "topics": [
+            "Replace with an official exam objective"
+          ]
+        }
+      ]
+    }
+  ]
+}
